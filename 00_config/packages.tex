@@ -1,0 +1,50 @@
+% ===== ENCODING UND SPRACHE =====
+\usepackage[utf8]{inputenc}        % UTF-8 für Umlaute
+\usepackage[T1]{fontenc}           % Bessere Fontdarstellung
+\usepackage[ngerman]{babel}        % Deutsche Silbentrennung, Datumsformat
+\usepackage{lmodern}               % Moderne Latin Modern Schrift
+
+% ===== SEITENLAYOUT =====
+\usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}              % Zeilenabstand-Kontrolle
+\usepackage[headsepline]{scrlayer-scrpage}  % Kopf-/Fußzeilen
+
+% ===== MATHEMATIK UND EINHEITEN =====
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}             % Erweiterte Mathe-Tools
+\usepackage{siunitx}               % Korrekte Einheiten (€, m², kg, etc.)
+
+% ===== TABELLEN =====
+\usepackage{booktabs}              % Professionelle Tabellen (\toprule, \midrule, \bottomrule)
+\usepackage{longtable}             % Mehrseitige Tabellen
+\usepackage{array}                 % Erweiterte Tabellenfunktionen
+\usepackage{multirow}              % Mehrzeilige Tabellenzellen
+\usepackage{tabularx}              % Automatische Spaltenbreiten
+
+% ===== GRAFIKEN UND ABBILDUNGEN =====
+\usepackage{graphicx}              % Bilder einbinden (PDF, PNG, JPG)
+\usepackage{subcaption}            % Unterabbildungen (a), (b), (c)
+\usepackage{tikz}                  % Technische Zeichnungen und Diagramme
+\usepackage{pgfplots}              % Professionelle Plots und Diagramme
+\usepackage{xcolor}                % Farbdefinitionen
+
+% ===== LITERATURVERZEICHNIS =====
+\usepackage[backend=biber,style=numeric-comp,sorting=none,natbib=true]{biblatex}
+\addbibresource{08_bibliography/literatur.bib}
+
+% ===== VERWEISE UND LINKS =====
+\usepackage[hidelinks]{hyperref}   % Anklickbare Links (unsichtbar gedruckt)
+\usepackage{cleveref}              % Intelligente Querverweise (\cref{})
+
+% ===== LISTEN UND AUFZÄHLUNGEN =====
+\usepackage{enumitem}              % Bessere Kontrolle über Listen
+
+% ===== ANFÜHRUNGSZEICHEN UND ZITATE =====
+\usepackage{csquotes}              % Korrekte deutsche Anführungszeichen
+
+% ===== ABKÜRZUNGSVERZEICHNIS =====
+\usepackage{acronym}               % Automatisches Abkürzungsverzeichnis
+
+% ===== SPEZIELLE BAUINGENIEUR-PAKETE =====
+\usepackage{textcomp}              % Zusätzliche Symbole
+\usepackage{gensymb}               % Grad-Symbol und andere

@@ -1,13 +1,28 @@
+
 \documentclass[12pt,a4paper,oneside,ngerman]{scrreprt}
 
-\title{Masterarbeit_Target Value Design_Lasse Krisztian_184406}
-\author{Lasse Krisztian}
-\date{August 2025}
+% === KONFIGURATION LADEN ===
+\input{00_config/packages}
+\input{00_config/settings}
+\input{00_config/metadata}
 
 \begin{document}
 
-\maketitle
+% === TITELSEITE ===
+\input{01_frontmatter/titlepage}
 
-\section{Introduction}
+% === VORSPANN ===
+\frontmatter
+\tableofcontents
+\listoffigures
+\listoftables
+
+% === HAUPTTEIL ===
+\mainmatter
+\input{02_mainmatter/ch1_Einleitung}
+
+% === LITERATURVERZEICHNIS ===
+\backmatter
+\printbibliography[title=Literaturverzeichnis]
 
 \end{document}

@@ -1,0 +1,87 @@
+% ===== ZEILENABSTAND =====
+\onehalfspacing                    % 1,5-facher Zeilenabstand (Standard für Masterarbeiten)
+
+% ===== KOPF- UND FUSSZEILEN =====
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+\ohead{\headmark}                  % Kapitelname rechts oben
+\ofoot{\pagemark}                  % Seitenzahl rechts unten
+
+% ===== DEUTSCHE BESCHRIFTUNGEN FÜR QUERVERWEISE =====
+\crefname{figure}{Abbildung}{Abbildungen}
+\crefname{table}{Tabelle}{Tabellen}
+\crefname{equation}{Gleichung}{Gleichungen}
+\crefname{chapter}{Kapitel}{Kapitel}
+\crefname{section}{Abschnitt}{Abschnitte}
+\crefname{subsection}{Unterabschnitt}{Unterabschnitte}
+
+% ===== EINHEITEN-KONFIGURATION (DEUTSCH) =====
+\sisetup{
+    locale=DE,                     % Deutsche Notation
+    per-mode=fraction,             % Bruchdarstellung für Einheiten (m/s)
+    output-decimal-marker={,},     % Komma statt Punkt
+    group-separator={.},           % Tausender-Punkte (1.000 statt 1,000)
+    group-minimum-digits=4         % Gruppierung ab 4 Stellen
+}
+
+% ===== FARBEN DEFINIEREN =====
+\definecolor{tu-green}{RGB}{99,154,58}      % TU Dortmund Grün
+\definecolor{tu-blue}{RGB}{0,69,136}        % TU Dortmund Blau  
+\definecolor{highlight}{RGB}{220,50,50}     % Rot für Markierungen
+\definecolor{gray-light}{RGB}{245,245,245}  % Hellgrau für Tabellen
+
+% ===== GRAFIK-EINSTELLUNGEN =====
+\graphicspath{{05_figures/}}                % Standardpfad für alle Bilder
+
+% ===== TIKZ/PGFPLOTS KONFIGURATION =====
+\usetikzlibrary{positioning,shapes,arrows,calc}
+\pgfplotsset{compat=1.18}
+
+% Standardfarben für Diagramme
+\pgfplotscreateplotcyclelist{tu-colors}{
+    {tu-green, mark=*},
+    {tu-blue, mark=square*},
+    {highlight, mark=triangle*},
+}
+
+% ===== TABELLEN-STYLING =====
+% Professionelle Tabellen mit booktabs
+\setlength{\heavyrulewidth}{1.2pt}
+\setlength{\lightrulewidth}{0.6pt}
+
+% ===== LISTEN-KONFIGURATION =====
+\setlist[itemize]{nosep, left=0pt}          % Kompakte Aufzählungen
+\setlist[enumerate]{nosep, left=0pt}        % Kompakte Nummerierungen
+
+% ===== ABKÜRZUNGSVERZEICHNIS-STIL =====
+\renewcommand*{\acsfont}[1]{\textsc{#1}}    % Abkürzungen in Kapitälchen
+
+% ===== ZUSÄTZLICHE HYPERLINK-EINSTELLUNGEN =====
+% (Grundeinstellungen bereits in packages.tex definiert)
+\hypersetup{
+    bookmarksnumbered=true,        % Nummerierte Bookmarks im PDF
+    bookmarksopen=true,            % Bookmarks aufgeklappt
+    pdfstartview=FitH             % PDF startet mit Seitenbreite
+}
+
+% ===== QUELLENANGABEN KONFIGURATION =====
+% Anpassungen für deutsches Literaturverzeichnis
+\DefineBibliographyStrings{ngerman}{
+    andothers = {et\,al\adddot},
+    pages = {S\adddot},
+    page = {S\adddot}
+}
+
+% ===== CAPTION-STYLING =====
+\captionsetup{
+    format=plain,
+    font=small,
+    labelfont=bf,
+    textfont=it,
+    justification=centering,
+    singlelinecheck=false
+}
+
+% ===== ZUSÄTZLICHE ABSTÄNDE =====
+\setlength{\parindent}{0pt}        % Keine Einrückung bei Absätzen
+\setlength{\parskip}{6pt}          % Abstand zwischen Absätzen
