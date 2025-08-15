@@ -1,25 +1,25 @@
+\documentclass[12pt,a4paper,oneside,ngerman]{scrbook}
 
-\documentclass[12pt,a4paper,oneside,ngerman]{scrreprt}
-
-% === KONFIGURATION LADEN ===
-\input{00_config/packages}
-\input{00_config/settings}
-\input{00_config/metadata}
+% === KONFIGURATION LADEN (richtige Reihenfolge!) ===
+\input{00_config/packages}        % Zuerst Pakete
+\input{00_config/settings}        % Dann Einstellungen  
+\input{00_config/metadata}        % Zuletzt Metadaten
 
 \begin{document}
 
 % === TITELSEITE ===
 \input{01_frontmatter/titlepage}
 
-% === VORSPANN ===
+% === VORSPANN (römische Seitenzahlen) ===
 \frontmatter
 \tableofcontents
 \listoffigures
 \listoftables
 
-% === HAUPTTEIL ===
+% === HAUPTTEIL (arabische Seitenzahlen) ===
 \mainmatter
 \input{02_mainmatter/ch1_Einleitung}
+\input{02_mainmatter/ch2}
 
 % === LITERATURVERZEICHNIS ===
 \backmatter
