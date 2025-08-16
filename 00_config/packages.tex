@@ -30,7 +30,18 @@
 \usepackage{xcolor}                % Farbdefinitionen
 
 % ===== LITERATURVERZEICHNIS =====
-\usepackage[backend=biber,style=verbose-trad1,autocite=footnote]{biblatex}
+\usepackage[
+    backend=biber,
+    style=authoryear-icomp,  
+    maxbibnames=3,
+    maxcitenames=2,
+    autocite=footnote,
+    date=year,
+    dateuncertain=true,
+    eprint=false,
+    url=false,
+    sorting=nyt
+]{biblatex}
 \addbibresource{08_bibliography/literatur.bib}
 
 % ===== VERWEISE UND LINKS =====
