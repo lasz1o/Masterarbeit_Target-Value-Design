@@ -3,9 +3,10 @@
 \usepackage[T1]{fontenc}           % Bessere Fontdarstellung
 \usepackage[ngerman]{babel}        % Deutsche Silbentrennung, Datumsformat
 \usepackage{lmodern}               % Moderne Latin Modern Schrift
+\usepackage{microtype}
 
 % ===== SEITENLAYOUT =====
-\usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[left=3cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
 \usepackage{setspace}              % Zeilenabstand-Kontrolle
 \usepackage[headsepline]{scrlayer-scrpage}  % Kopf-/Fußzeilen
 
@@ -29,7 +30,7 @@
 \usepackage{xcolor}                % Farbdefinitionen
 
 % ===== LITERATURVERZEICHNIS =====
-\usepackage[backend=biber,style=numeric-comp,sorting=none,natbib=true]{biblatex}
+\usepackage[backend=biber,style=authortitle,autocite=footnote]{biblatex}
 \addbibresource{08_bibliography/literatur.bib}
 
 % ===== VERWEISE UND LINKS =====
