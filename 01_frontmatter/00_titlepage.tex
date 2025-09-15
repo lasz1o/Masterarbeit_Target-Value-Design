@@ -1,1 +1,52 @@
-\maketitle
+\begin{titlepage}
+    \centering
+    
+    % === UNIVERSITÄTS-LOGO UND NAME (oben) ===
+    \vspace*{1cm}
+    
+    % TU Dortmund Logo
+    \includegraphics[width=0.3\textwidth]{tud_logo_cmyk}\\[0.5cm]
+    
+    {\Large \textbf{\universitaet}}\\[0.3cm]
+    {\large \fakultaet}\\[0.2cm]
+    {\normalsize \lehrstuhl}\\[2cm]
+    
+    % === TITEL DER ARBEIT ===
+    {\huge \textbf{\@title}}\\[1.5cm]
+    
+    % === ART DER ARBEIT ===
+    {\Large Masterarbeit}\\[0.3cm]
+    {\large zur Erlangung des akademischen Grades}\\[0.2cm]
+    {\large \textbf{\abschluss}}\\[0.2cm]
+    {\normalsize im Studiengang \textbf{\studiengang}}\\[2cm]
+    
+    % === VERFASSER ===
+    \begin{tabular}{ll}
+        \textbf{Verfasser:} & \@author \\[0.2cm]
+        \textbf{Matrikelnummer:} & \matrikelnummer \\[0.2cm]
+        \textbf{E-Mail:} & \emailadresse \\[1cm]
+    \end{tabular}\\[1.5cm]
+    
+    % === BETREUUNG ===
+    \begin{tabular}{ll}
+        \textbf{Erstprüfer:} & \professor \\[0.2cm]
+        \textbf{Erstbetreuer:} & \erstbetreuer \\[0.2cm]
+        \textbf{Zweitbetreuer:} & \zweitbetreuer \\[1cm]
+    \end{tabular}\\[1cm]
+    
+    % === TERMINE ===
+    \begin{tabular}{ll}
+        \textbf{Bearbeitungszeitraum:} & \bearbeitungszeitraum \\[0.2cm]
+        \textbf{Abgabedatum:} & \abgabedatum \\
+    \end{tabular}
+    
+    \vfill
+    
+    % === DATUM (unten) ===
+    {\normalsize Dortmund, \abgabejahr}
+    
+\end{titlepage}
+
+% Leere Rückseite für doppelseitigen Druck
+\thispagestyle{empty}
+\cleardoublepage
