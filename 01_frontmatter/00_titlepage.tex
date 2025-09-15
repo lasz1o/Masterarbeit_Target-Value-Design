@@ -1,52 +1,52 @@
 \begin{titlepage}
-    \centering
+    \begin{center} % Zentriert den gesamten Inhalt horizontal
     
-    % === UNIVERSITÄTS-LOGO UND NAME (oben) ===
-    \vspace*{1cm}
-    
-    % TU Dortmund Logo
-    \includegraphics[width=0.3\textwidth]{tud_logo_cmyk}\\[0.5cm]
-    
-    {\Large \textbf{\universitaet}}\\[0.3cm]
+    % --- BLOCK 1: KOPFBEREICH ---
+    \includegraphics[width=0.7\textwidth]{tud_logo_cmyk}\\
     {\large \fakultaet}\\[0.2cm]
-    {\normalsize \lehrstuhl}\\[2cm]
+    {\normalsize \lehrstuhl}
     
-    % === TITEL DER ARBEIT ===
-    \makeatletter % <--- HIER EINFÜGEN
-    \parbox{0.8\textwidth}{\centering\Large\bfseries\@title}\\[1.5cm]
+    \vspace{1.5cm} 
     
-    % === ART DER ARBEIT ===
-    {\Large Masterarbeit}\\[0.3cm]
-    {\large zur Erlangung des akademischen Grades}\\[0.2cm]
-    {\large \textbf{\abschluss}}\\[0.2cm]
-    {\normalsize im Studiengang \textbf{\studiengang}}\\[2cm]
+    % --- BLOCK 2: TITEL DER ARBEIT ---
+    \makeatletter
+    \parbox{0.9\textwidth}{\centering\Large\bfseries\@title}
+    \makeatother
     
-    % === VERFASSER ===
-    \begin{tabular}{ll}
-        \textbf{Verfasser:} & \@author \\[0.2cm] % <--- \@author ist jetzt zugänglich
-        \textbf{Matrikelnummer:} & \matrikelnummer \\[0.2cm]
-        \textbf{E-Mail:} & \emailadresse \\[1cm]
-    \end{tabular}\\[1.5cm]
-    \makeatother % <--- HIER EINFÜGEN
+    \vspace{1.5cm} % Fester Abstand unter dem Titel
     
-    % === BETREUUNG ===
-    \begin{tabular}{ll}
-        \textbf{Erstprüfer:} & \professor \\[0.2cm]
-        \textbf{Erstbetreuer:} & \erstbetreuer \\[0.2cm]
-        \textbf{Zweitbetreuer:} & \zweitbetreuer \\[1cm]
-    \end{tabular}\\[1cm]
+    % --- BLOCK 3: ART DER ARBEIT ---
+    {\large Masterarbeit}\\
+    {\normalsize zur Erlangung des akademischen Grades}\\
+    {\normalsize \textbf{\abschluss}}\\
+    {\normalsize im Studiengang \textbf{\studiengang}}
     
-    % === TERMINE ===
-    \begin{tabular}{ll}
-        \textbf{Bearbeitungszeitraum:} & \bearbeitungszeitraum \\[0.2cm]
+      \vspace{0.5cm} % Fester Abstand unter dem Titel
+    
+    % --- BLOCK 4: VERFASSER, BETREUER, DATUM ---
+    \rule{0.8\textwidth}{0.1pt} % Feine horizontale Linie
+    \vspace{1cm}
+    
+    \makeatletter
+   
+    \begin{tabular}{r@{\hspace{1.5em}}l}
+        \textbf{Verfasser:} & \@author \\
+        \textbf{Matrikelnummer:} & \matrikelnummer \\
+        \textbf{E-Mail:} & \emailadresse \\[0.75cm]
+        
+        \textbf{Erstprüfer:} & \professor \\
+        \textbf{Erstbetreuer:} & \erstbetreuer \\
+        \textbf{Zweitbetreuer:} & \zweitbetreuer \\[0.75cm]
+        
+        \textbf{Bearbeitungszeitraum:} & \bearbeitungszeitraum \\
         \textbf{Abgabedatum:} & \abgabedatum \\
     \end{tabular}
+    \makeatother
     
-    \vfill
-    
-    % === DATUM (unten) ===
-    {\normalsize Dortmund, \abgabejahr}
-    
+    \vspace{1cm}
+   {\normalsize Dortmund, den \today}
+
+    \end{center}
 \end{titlepage}
 
 % Leere Rückseite für doppelseitigen Druck
