@@ -12,6 +12,7 @@
     {\normalsize \lehrstuhl}\\[2cm]
     
     % === TITEL DER ARBEIT ===
+    \makeatletter % <--- HIER EINFÜGEN
     {\huge \textbf{\@title}}\\[1.5cm]
     
     % === ART DER ARBEIT ===
@@ -22,10 +23,11 @@
     
     % === VERFASSER ===
     \begin{tabular}{ll}
-        \textbf{Verfasser:} & \@author \\[0.2cm]
+        \textbf{Verfasser:} & \@author \\[0.2cm] % <--- \@author ist jetzt zugänglich
         \textbf{Matrikelnummer:} & \matrikelnummer \\[0.2cm]
         \textbf{E-Mail:} & \emailadresse \\[1cm]
     \end{tabular}\\[1.5cm]
+    \makeatother % <--- HIER EINFÜGEN
     
     % === BETREUUNG ===
     \begin{tabular}{ll}
