@@ -6,13 +6,78 @@
 
 \section{Forschungsdesign und methodische Verortung}
 \label{sec: 3.1}
-
 %   - Ziel: Wahl der Methodik begründen und wissenschaftlich einordnen.
 %   - Inhalt:
 %     - Wiederholung der Forschungsfrage.
 %     - Begründung für literaturbasierten, konzeptionell-analytischen Ansatz.
 %     - Abgrenzung zu anderen Methoden (z.B. empirisch).
 %     - Optional: Visualisierung des Vorgehens als einfaches Flussdiagramm.
+\subsection{Herleitung des Forschungsbedarfs aus der Forschungsfrage}
+\label{sec: 3.1.1}
+
+%   Wiederholung der Forschungsfrage prägnant
+%   Ableitung der notwendingen Schritte zur Beantwortung
+%   
+
+
+\subsection{Einordnung in das Forschungsparadigma: Ein qualitativ-konstruktiver Ansatz}
+\label{sec: 3.1.2}
+
+\subsection{Wahl des konkreten Forschungsdesigns: Die konzeptionell-analytische Arbeit}
+\label{sec: 3.1.3}
+
+  \subsection{Gütekriterien des qualitativen Forschungsdesigns}
+\label{sec: 3.1.4}
+
+\subsection{Visualisierung des Forschungsprozesses}
+\label{sec: 3.1.5}
+
+% Definition von Stilen, um den Code sauber zu halten
+\tikzset{
+  phase/.style={rectangle, rounded corners, draw=black, fill=gray!10,
+                text width=0.85\textwidth, minimum height=1.5cm, text centered},
+  pfeil/.style={-latex, thick}
+}
+
+\begin{figure}[hbt!]
+  \makebox[\textwidth][c]{
+    \begin{tikzpicture}
+      \tikzset{
+        phase/.style={rectangle, rounded corners, draw=black, fill=gray!10,
+                      text width=0.9\textwidth, minimum height=1.5cm, text centered},
+        pfeil/.style={-latex, thick}
+      }
+
+      \node[phase] (phase1) {
+        \textbf{Phase 1: Forschungsdesign (Kap. 3.1)}\\
+        \small Problemstellung, Methodische Verortung, Konzeptionell-analytischer Ansatz
+      };
+
+      \node[phase, below=0.8cm of phase1] (phase2) {
+        \textbf{Phase 2: Literaturanalyse (Kap. 3.2)}\\
+        \small Systematische Recherche, Qualitative Inhaltsanalyse, Identifikation von Bausteinen
+      };
+
+      \node[phase, below=0.8cm of phase2] (phase3) {
+        \textbf{Phase 3: Modellkonstruktion (Kap. 3.3)}\\
+        \small Synthese der Bausteine, Modellierung des idealtypischen TVD-Prozesses
+      };
+
+      \node[phase, below=0.8cm of phase3] (phase4) {
+        \textbf{Phase 4: Kontextanalyse \& Transfer (Kap. 3.4)}\\
+        \small Fit-Gap-Analyse (Vergleich mit HOAI/VOB), Ableitung des Transferleitfadens
+      };
+
+      \draw[pfeil] (phase1) -- (phase2);
+      \draw[pfeil] (phase2) -- (phase3);
+      \draw[pfeil] (phase3) -- (phase4);
+
+    \end{tikzpicture}
+  }
+  \caption{Schematische Darstellung des vierphasigen Forschungsprozesses}
+  \label{fig:forschungsprozess_tikz}
+\end{figure}
+
 
 \section{Systematische Literaturrecherche und -analyse}
 \label{sec: 3.2}
@@ -42,3 +107,4 @@
 %     - Analysefokus: Strukturelle, rechtliche (HOAI/VOB) und kulturelle Gegebenheiten.
 %     - Identifikation: Ziel ist das Aufdecken von Reibungspunkten und Anpassungsbedarfen ("Fit-Gap-Analyse").
 %     - Struktur des Leitfadens: Erläutern, wie die Ergebnisse zu konkreten Handlungsempfehlungen aufbereitet werden.
+
