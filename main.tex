@@ -7,6 +7,7 @@
 
 \begin{document}
 
+\pagenumbering{gobble}  % Schaltet Seitenzahlen komplett aus
 \input{01_frontmatter/00_titlepage}
 \input{01_frontmatter/01_abstract}
 \input{01_frontmatter/02_acknowledgements}
@@ -16,6 +17,8 @@
 \tableofcontents
 \input{01_frontmatter/acronyms}
 \listoffigures
+\thispagestyle{plain}  % Zeigt Seitennummer im Abbildungsverzeichnis
+
 \listoftables
 
 

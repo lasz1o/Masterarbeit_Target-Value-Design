@@ -4,11 +4,16 @@
 % ===== KAPITEL-ABSTÄNDE ANPASSEN =====
 \renewcommand*{\chapterheadstartvskip}{\vspace*{-\topskip}}
 
+% ===== KAPITEL-ABSTÄNDE ANPASSEN =====
+\renewcommand*{\chapterheadstartvskip}{\vspace*{-\topskip}}
+
 % ===== KOPF- UND FUSSZEILEN =====
 \pagestyle{scrheadings}
 \clearpairofpagestyles
+
+% Normale Seiten
 \ohead{\headmark}                  % Kapitelname rechts oben
-\ofoot{\pagemark}                  % Seitenzahl rechts unten
+\ofoot[\pagemark]{\pagemark}      % Seitenzahl rechts unten (WICHTIG: auch bei plain!)
 
 %% ===== DEUTSCHE BESCHRIFTUNGEN FÜR QUERVERWEISE =====
 \crefname{figure}{Abbildung}{Abbildungen}
