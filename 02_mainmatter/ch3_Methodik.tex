@@ -78,16 +78,150 @@
   \label{fig:forschungsprozess_tikz}
 \end{figure}
 
+\FloatBarrier
 
 \section{Systematische Literaturrecherche und -analyse}
 \label{sec: 3.2}
 
 %   - Ziel: Das Vorgehen bei der Literatursuche und -auswahl exakt dokumentieren.
 %   - Inhalt:
+
+Für die systematische Literaturrecherche werden zunächst relevante Datenbanken identifiziert. Der Prozess wurde in drei Stufen gegliedert:
+
+1. Größe - International \& Interdisziplinär
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Scopus}: Bietet eine extrem breite Abdeckung von ingenieurwissenschaftlichen und technischen Publikationen.
+    \item \textbf{Web of Science}: Ist ähnlich umfassend wie Scopus und eine Standarddatenbank in der Wissenschaft.
+\end{itemize}
+2. Fachspezifische Datenbanken mit Relevanz für Bauingenieurwesen bzw. Baubetrieb
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Scopus}: Bietet eine extrem breite Abdeckung von ingenieurwissenschaftlichen und technischen Publikationen.
+    \item \textbf{Web of Science}: Ist ähnlich umfassend wie Scopus und eine Standarddatenbank in der Wissenschaft.
+\end{itemize}
+3. Graue Literatur - Der Blick in die Praxis
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Scopus}: Bietet eine extrem breite Abdeckung von ingenieurwissenschaftlichen und technischen Publikationen.
+    \item \textbf{Web of Science}: Ist ähnlich umfassend wie Scopus und eine Standarddatenbank in der Wissenschaft.
+\end{itemize}
+
+Die hier Angewandte Suchstrategie verwendet Schlüsselbegriffe bzw. Wörter und Kombinationen auf deutsch und englisch:
+
+\begin{table}[hbt!]
+  \centering
+  \caption{Systematische Gliederung der Suchbegriffe und -operatoren}
+  \label{tab:suchstrategie}
+  \begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X l}
+    \toprule
+    \textbf{Such-Konzept} & \textbf{Englische Schlagwörter} & \textbf{Deutsche Schlagwörter} & \textbf{Operatoren} \\
+    \midrule
+    Kernthema & "Target Value Design", "TVD", "Target Costing" & "Target Value Design", "TVD", "Zielkostenmanagement" & \texttt{OR} \\
+    \addlinespace
+    Kontext & "construction", "building industry", "AEC" & "Bauwesen", "Bauwirtschaft", "Bauprojekte" & \texttt{OR} \\
+    \addlinespace
+    Spez. Kontext & "Germany", "German construction" & "deutsche Baupraxis", "Deutschland", "HOAI", "VOB" & \texttt{OR} \\
+    \addlinespace
+    Ziel (Prozess) & "process*", "method*", "framework", "implementation" & "Prozess*", "Methode*", "Anwendung", "Vorgehensmodell" & \texttt{OR}, \texttt{*} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\clearpage
+
+Ergebnis der Literaturrecherche
+
+\begin{figure}[hbt!]
+  \centering
+  
+  % --- TIKZ CODE FÜR DAS PRISMA-FLUSSDIAGRAMM ---
+  \begin{tikzpicture}[
+    node distance=0.5cm and 1cm, % Vertikaler und horizontaler Abstand
+    % Stil für die Haupt-Boxen im Prozess
+    mainbox/.style={
+      rectangle, 
+      draw=black, 
+      fill=gray!10, 
+      text width=0.60\textwidth, 
+      minimum height=1.5cm, 
+      text centered
+    },
+    % Stil für die Boxen mit den Ausschlussgründen
+    sidebox/.style={
+      rectangle, 
+      draw=black, 
+      fill=gray!10, 
+      text width=0.35\textwidth, 
+      minimum height=1.5cm, 
+      align=left
+    },
+    % Stil für die seitlichen Beschriftungen (Identifizierung, etc.)
+    labelbox/.style={
+      rotate=90, 
+      font=\bfseries
+    }
+  ]
+
+  % --- DEFINITION DER KNOTEN (BOXEN) ---
+  
+  % Stufe 1: Identifizierung
+  \node[mainbox] (ident) {
+    \textbf{Identifizierte Datensätze aus Datenbanken} \\ (Anzahl N = ...)
+  };
+  \node[labelbox, left=0.5cm of ident.west, anchor=center] {Identifizierung};
+
+  % Stufe 2: Screening
+  \node[mainbox, below=1.5cm of ident] (screen1) {
+    \textbf{Datensätze nach Entfernung von Duplikaten} \\ (Anzahl N = ...)
+  };
+  \node[mainbox, below=1cm of screen1] (screen2) {
+    \textbf{Geprüfte Datensätze (Titel/Abstract)} \\ (Anzahl N = ...)
+  };
+  \node[labelbox, left=0.5cm of screen1.west, anchor=east] {Screening};
+  
+  % Stufe 3: Eignung
+  \node[mainbox, below=1.5cm of screen2] (elig) {
+    \textbf{Gelesene Volltext-Artikel} \\ (Anzahl N = ...)
+  };
+  \node[labelbox, left=0.5cm of elig.west, anchor=center] {Eignung};
+
+  % Stufe 4: Einschluss
+  \node[mainbox, below=1.5cm of elig] (incl) {
+    \textbf{In die Synthese eingeschlossene Studien} \\ (Anzahl N = ...)
+  };
+  \node[labelbox, left=0.5cm of incl.west, anchor=center] {Einschluss};
+
+  % Ausschluss-Boxen
+  \node[sidebox, right=of screen2] (excl1) {
+    \textbf{Ausgeschlossene Datensätze:} \\ (Anzahl N = ...) \\
+    \textit{Gründe: Falsches Fachgebiet, keine wiss. Quelle, etc.}
+  };
+  \node[sidebox, right=of elig] (excl2) {
+    \textbf{Ausgeschlossene Volltext-Artikel:} \\ (Anzahl N = ...) \\
+    \textit{Gründe: Methodische Schwächen, kein relevanter Fokus, etc.}
+  };
+
+  % --- ZEICHNEN DER PFEILE ---
+  \draw[-latex, thick] (ident) -- (screen1);
+  \draw[-latex, thick] (screen1) -- (screen2);
+  \draw[-latex, thick] (screen2) -- (elig);
+  \draw[-latex, thick] (elig) -- (incl);
+  
+  % Pfeile zu den Ausschluss-Boxen
+  \draw[-latex, thick] (screen2) -- (excl1);
+  \draw[-latex, thick] (elig) -- (excl2);
+
+  \end{tikzpicture}
+  % --- ENDE DES TIKZ-CODES ---
+
+  \caption{PRISMA-Flussdiagramm des systematischen Literaturrechercheprozesses}
+  \label{fig:prisma_flowchart}
+\end{figure}
+
 %     - Recherchestrategie: Genutzte Datenbanken (Scopus, etc.), Fachinstitutionen (GLCI, etc.).
 %     - Suchbegriffe: Beispiele für Keyword-Kombinationen (DE/EN).
 %     - Auswahlkriterien: Inklusions-/Exklusionskriterien (Relevanz, Aktualität, Qualität).
 %     - Analysemethode: Qualitative Inhaltsanalyse zur Identifikation von Prozessbausteinen, Rollen, Werkzeugen.
+
+\FloatBarrier
 
 \section{Prozessbeschreibung und Modellierung}
 \label{sec: 3.3}
@@ -97,6 +231,8 @@
 %     - Synthese: Zusammenführung der identifizierten Bausteine aus diversen Quellen.
 %     - Modellierungsansatz: Begründung für die Wahl eines Prozessmodells (z.B. Flussdiagramm, Swimlane).
 %     - Validierung: Logische Prüfung des Modells auf Konsistenz und Vollständigkeit basierend auf der Literatur.
+
+\FloatBarrier
 
 \section{Kontextanalyse und Ableitung des Transferleitfadens}
 \label{sec: 3.4}
