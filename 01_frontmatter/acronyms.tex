@@ -1,13 +1,16 @@
 \chapter*{Abkürzungsverzeichnis}
 \markright{Abkürzungsverzeichnis}
 
-\begin{acronym}[HOAI]  % Längste Abkürzung für Spaltenbreite
-    \acro{TVD}{Target Value Design}
-    \acro{PRISMA}{Preferred Reporting Items for Systematic Reviews and Meta-Analyses}
+% Short-first nur bei der ersten Stelle; danach gilt "benutzt".
+\newcommand{\acsf}[1]{\acs{#1} (\acl{#1})\acused{#1}}
+
+\begin{acronym}[PRISMA]  % Längste Abkürzung für Spaltenbreite
+    \acro{BIM}{Building Information Modeling}
     \acro{IPA}{Integrierte Projektabwicklung}
     \acro{IPD}{Integrated Project Delivery}
     \acro{LC}{Lean Construction}
-    \acro{BIM}{Building Information Modeling}
     \acro{HOAI}{Honorarordnung für Architekten und Ingenieure}
+    \acro{PRISMA}{Preferred Reporting Items for Systematic Reviews and Meta-Analyses}
+    \acro{TVD}{Target Value Design}
     \acro{VOB}{Vergabe- und Vertragsordnung für Bauleistungen}
 \end{acronym}
