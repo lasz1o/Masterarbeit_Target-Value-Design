@@ -194,7 +194,8 @@ Im ersten Schritt der Literaturrecherche wurden zunächst relevante zunächst re
 \end{itemize}
 
 Diese initiale Sammlung stellt eine erste Grundlage für den nachfolgenden Auswahlprozess dar. Inwieweit diese Auswahl erschöpfende Ergebnisse liefert, wird, unter Berücksichtigung sowohl der inhaltlichen Divergenz der Datenbanken, als auch des zusätzlichen Erkenntnisgewinns durch neu hinzukommende Quellen, im Laufe des Filterprozesses überprüft.\\
-Für die gewählten Datenbanken galt es im folgenden eine geeignete Suchstrategie zu wählen bzw. zu entwickeln. Hierfür wurden erste Filterkriterien und geeignete Schlüsselbegriffe und Operatoren auf deutsch und englisch definiert:
+Für die gewählten Datenbanken galt es im Folgenden, eine systematische und reproduzierbare Suchstrategie zu entwickeln. Um die Komplexität einer Vielzahl von Einzelabfragen zu reduzieren, wurde ein umfassender "Master-Suchstring"  für die jeweilige Sprache (Deutsch und Englisch) konzipiert. Dieser Ansatz kombiniert die zuvor definierten Schlüsselwörter mithilfe boolescher Operatoren zu einer einzigen, umfassenden Suchanfrage pro Datenbank.
+Die zugrundeliegenden Suchkonzepte, die dazugehörigen Schlüsselbegriffe sowie die verwendeten Operatoren sind in \cref{tab:suchstrategie} systematisch gegliedert.
 
 \begin{table}[hbt!]
   \centering
@@ -214,6 +215,30 @@ Für die gewählten Datenbanken galt es im folgenden eine geeignete Suchstrategi
     \bottomrule
   \end{tabularx}
 \end{table}
+
+\FloatBarrier
+
+Aus der Kombination der in \cref{tab:suchstrategie} gezeigten Konzepte mittels \texttt{AND}-Verknüpfungen ergeben sich die folgenden finalen Suchstrings für die Anwendung in den Datenbanken:
+
+\textbf{Englischer Master-Suchstring:}
+\begin{verbatim}
+( "Target Value Design" OR "TVD" OR "Target Costing" )
+AND
+( "construction" OR "building industry" OR "AEC" )
+AND
+( "process*" OR "method*" OR "framework" OR "implementation" )
+\end{verbatim}
+
+\textbf{Deutscher Master-Suchstring:}
+\begin{verbatim}
+( "Target Value Design" OR "TVD" OR "Zielkostenmanagement" )
+AND
+( "Bauwesen" OR "Bauwirtschaft" OR "Bauprojekte" )
+AND
+( "Prozess*" OR "Methode*" OR "Anwendung" OR "Vorgehensmodell" )
+\end{verbatim}
+
+Diese Vorgehensweise stellt sicher, dass in jeder durchgeführten Suche alle relevanten Aspekte der Forschungsfrage abgedeckt sind und die Ergebnisse über die verschiedenen Datenbanken hinweg vergleichbar bleiben.
 
 \FloatBarrier
 
