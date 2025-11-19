@@ -88,6 +88,42 @@ Eine kollaborative Kultur und gemeinsame Entscheidungsfindung.\\
 \subsection{Internationale Erfolge und Status Quo in Deutschland}
 \label{sec:2.2.3}
 
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Projektphasen},
+        ylabel={Kosten / Aufwand},
+        xmin=0, xmax=10,
+        ymin=0, ymax=10,
+        xticklabels={},
+        yticklabels={},
+        axis lines=left,
+        legend style={at={(0.5,0.95)},anchor=north},
+        ]
+
+        % Cost of change (konventionell)
+        \addplot[
+            thick,
+        ]
+        coordinates {(0,1) (2,1.5) (4,2) (6,4) (8,7) (10,10)};
+        \addlegendentry{Cost of Change}
+
+        % Level of Effort (konventionell)
+        \addplot[
+            thick,
+        ]
+        coordinates {(0,0.5) (2,2) (4,4) (6,3.5) (8,2) (10,1)};
+        \addlegendentry{Design Effort (trad.)}
+
+        % Level of Effort (IPD/BIM)
+        \addplot[
+            thick,
+            dashed
+        ]
+        coordinates {(0,1) (2,4) (4,6) (6,4) (8,2) (10,1)};
+        \addlegendentry{Design Effort (IPD/BIM)}
+
+    \end{axis}
+\end{tikzpicture}
 
 
 International: Hohe Erfolgsquoten im angelsächsischen Raum (USA, UK, Australien mit "Project Alliancing") bei der Einhaltung von Kosten und Terminen (Quelle z.B. cook2014).\\
