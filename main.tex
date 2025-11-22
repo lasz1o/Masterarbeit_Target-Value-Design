@@ -1,4 +1,9 @@
-\documentclass[12pt,a4paper,oneside,ngerman]{scrbook}
+\documentclass[
+12pt,
+a4paper,
+oneside,
+ngerman,
+]{scrbook}
 
 % === KONFIGURATION LADEN (richtige Reihenfolge!) ===
 \input{00_config/packages}        % Zuerst Pakete
@@ -19,8 +24,14 @@
 \tableofcontents
 \input{01_frontmatter/acronyms}
 \listoffigures
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\thispagestyle{plain}
+\cleardoublepage
 \thispagestyle{plain}  % Zeigt Seitennummer im Abbildungsverzeichnis
 \listoftables
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\thispagestyle{plain}
+\cleardoublepage
 
 
 % === HAUPTTEIL (arabische Seitenzahlen) ===
@@ -36,5 +47,20 @@
 % === LITERATURVERZEICHNIS ===
 \backmatter
 \printbibliography[title=Literaturverzeichnis]
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
+% === ANHANG ===
+\appendix
+\chapter{Anhang}
+\label{ch:anhang}
+% Hier kannst du später deine Anhänge einfügen
+% Beispiel:
+% \section{Interviewleitfaden}
+% \section{Zusätzliche Tabellen}
+
+% === EIDESSTATTLICHE ERKLÄRUNG ===
+\chapter*{Eidesstattliche Erklärung}
+\addcontentsline{toc}{chapter}{Eidesstattliche Erklärung}
+\markboth{Eidesstattliche Erklärung}{Eidesstattliche Erklärung}
 
 \end{document}
