@@ -33,6 +33,9 @@ ngerman,
 \thispagestyle{plain}
 \cleardoublepage
 
+% Seitenzahl des Vorspanns speichern
+\newcounter{savepage}
+\setcounter{savepage}{\value{page}}
 
 % === HAUPTTEIL (arabische Seitenzahlen) ===
 \mainmatter
@@ -44,8 +47,13 @@ ngerman,
 %\input{02_mainmatter/ch6_Infrastruktur}
 \input{02_mainmatter/ch7_Fazit}
 
-% === LITERATURVERZEICHNIS ===
+% === NACHSPANN (römische Seitenzahlen fortgesetzt) ===
 \backmatter
+% Römische Nummerierung manuell fortsetzen
+\setcounter{page}{\value{savepage}}
+\renewcommand{\thepage}{\Roman{page}}
+
+% Literaturverzeichnis (wird ins Inhaltsverzeichnis aufgenommen)
 \printbibliography[title=Literaturverzeichnis]
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 
@@ -53,14 +61,27 @@ ngerman,
 \appendix
 \chapter{Anhang}
 \label{ch:anhang}
-% Hier kannst du später deine Anhänge einfügen
-% Beispiel:
-% \section{Interviewleitfaden}
+% Anhänge als PDFs einfügen
+% Beispiel für einzelne Seiten:
+% \includepdf[pages=1, pagecommand={\section{Interviewleitfaden}}]{04_appendices/interview.pdf}
+% \includepdf[pages=2-, pagecommand={}]{04_appendices/interview.pdf}
+
+% Beispiel für komplette PDFs mit mehreren Seiten:
+% \section{Fragebogen}
+% \includepdf[pages=-, pagecommand={}]{04_appendices/fragebogen.pdf}
+
 % \section{Zusätzliche Tabellen}
+% \includepdf[pages=-, pagecommand={}]{04_appendices/tabellen.pdf}
 
 % === EIDESSTATTLICHE ERKLÄRUNG ===
-\chapter*{Eidesstattliche Erklärung}
+% Keine Chapter-Überschrift, nur ins Inhaltsverzeichnis aufnehmen
+
+\cleardoublepage
+
+% Eidesstattliche Erklärung als PDF einfügen
+% Die Überschrift ist bereits im PDF enthalten
 \addcontentsline{toc}{chapter}{Eidesstattliche Erklärung}
-\markboth{Eidesstattliche Erklärung}{Eidesstattliche Erklärung}
+\includepdf[pages=-, pagecommand={\thispagestyle{plain}}]{03_backmatter/eidesstattliche_erklaerung.pdf}
+
 
 \end{document}
