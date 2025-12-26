@@ -1,0 +1,205 @@
+
+\begin{tikzpicture}[node distance=1.5cm, auto]
+
+% Knoten vertikal anordnen
+\node[startevent] (start) {};
+\node[task, below=of start] (task1) {Entwicklung\\ Projekt Business-Case};
+\node[task, below=of task1] (task2) {Definition des\\Werteverständnis};
+\node[gateway, below=of task2] (gateway2) {×};
+
+% Verzweigungen horizontal
+\node[task, below left=1.5cm and 2cm of gateway2] (task3) {Ablehnung\\senden};
+\node[task, below right=1.5cm and 2cm of gateway2] (task4) {Bestellung\\bestätigen};
+
+\node[endevent, below=of task3] (end1) {};
+\node[endevent, below=of task4] (end2) {};
+
+% Label
+\node[right=0.3cm of start] {\small Start};
+\node[right=0.3cm of end1] {\small Ende};
+\node[right=0.3cm of end2] {\small Ende};
+\node[right=0.3cm of gateway2] {\small Verfügbar?};
+
+% Gerade Verbindungen
+\draw[flow] (start) -- (task1);
+\draw[flow] (task1) -- (task2);
+\draw[flow] (task2) -- (gateway2);
+
+% RECHTWINKLIGE PFEILE MIT ANKERPUNKTEN (löst das Verspringen!)
+% Erst vertikal nach unten, dann horizontal mit Ankerpunkten
+\draw[flow] (gateway2.south) -- ++(0,-0.5) -| node[left, pos=0.75] {\small Nein} (task3.north);
+\draw[flow] (gateway2.south) -- ++(0,-0.5) -| node[right, pos=0.75] {\small Ja} (task4.north);
+
+% Gerade Pfeile nach unten
+\draw[flow] (task3) -- (end1);
+\draw[flow] (task4) -- (end2);
+
+\end{tikzpicture}
+
+\FloatBarrier
+
+\clearpage
+\begin{tikzpicture}[node distance=1.5cm and 0.5cm, auto]
+
+% Definiere die Breite und Höhe der Lanes
+\def\lanewidth{5.15}
+\def\laneheight{20}
+\def\headerheight{1.2}
+
+% ===== LANE HINTERGRÜNDE =====
+% Spalte 1 (Links) - Auftraggeber
+\fill[gray!5] (0,0) rectangle (\lanewidth,-\laneheight);
+% Spalte 2 (Mitte) - Kernteam
+\fill[gray!10] (\lanewidth,0) rectangle (2*\lanewidth,-\laneheight);
+% Spalte 3 (Rechts) - Cluster-Teams
+\fill[gray!5] (2*\lanewidth,0) rectangle (3*\lanewidth,-\laneheight);
+
+% ===== TRENNLINIEN =====
+% Horizontale Linie unter Header
+\draw[very thick] (0,0) -- (3*\lanewidth,0);
+\draw[very thick] (0,-\headerheight) -- (3*\lanewidth,-\headerheight);
+% Vertikale Linien
+\draw[very thick] (0,0) -- (0,-\laneheight);
+\draw[very thick] (\lanewidth,0) -- (\lanewidth,-\laneheight);
+\draw[very thick] (2*\lanewidth,0) -- (2*\lanewidth,-\laneheight);
+\draw[very thick] (3*\lanewidth,0) -- (3*\lanewidth,-\laneheight);
+% Untere Linie
+\draw[very thick] (0,-\laneheight) -- (3*\lanewidth,-\laneheight);
+
+% ===== HEADER BESCHRIFTUNGEN =====
+% Spalte 1
+\node[align=center, font=\bfseries] at (\lanewidth/2,-0.6) {Bauherr (AG)};
+
+% Spalte 2
+\node[align=center, font=\bfseries] at (\lanewidth+\lanewidth/2,-0.6) {Kernteam /\\ Objektplanung};
+
+% Spalte 3
+\node[align=center, font=\bfseries] at (2*\lanewidth+\lanewidth/2,-0.6) {Cluster-Teams};
+
+% ===== BPMN ELEMENTE (Beispiel) =====
+% Spalte 1 - Auftraggeber
+\node[startevent] at (\lanewidth/2,-2) (start) {};
+\node[task, below=of start] (task1) {Nutzerwerte & Projektziele definieren};
+\node[task, below=of task1] (task2) {Freigabe\\erteilen};
+
+% Spalte 2 - Kernteam
+\node[task] at (\lanewidth+\lanewidth/2,-3) (task3) {Planung\\erstellen};
+\node[gateway, below=of task3] (gateway1) {×};
+\node[task, below=of gateway1] (task4) {Koordination\\durchführen};
+
+% Spalte 3 - Cluster-Teams
+\node[task] at (2*\lanewidth+\lanewidth/2,-4.5) (task5) {Umsetzung\\durchführen};
+\node[endevent, below=of task5] (end1) {};
+
+% ===== VERBINDUNGEN =====
+% Innerhalb Spalte 1
+\draw[flow] (start) -- (task1);
+\draw[flow] (task1) -- (task2);
+
+% Von Spalte 1 zu Spalte 2 (gestrichelt für Message Flow)
+\draw[flow, dashed] (task1.east) -- (task3.west);
+
+% Innerhalb Spalte 2
+\draw[flow] (task3) -- (gateway1);
+\draw[flow] (gateway1) -- (task4);
+
+% Von Spalte 2 zu Spalte 3
+\draw[flow, dashed] (gateway1.east) -| node[above, pos=0.25] {\small Ja} (task5.north);
+
+% Von Spalte 2 zu Spalte 1
+\draw[flow, dashed] (task4.west) -- (task2.east);
+
+% Innerhalb Spalte 3
+\draw[flow] (task5) -- (end1);
+
+\end{tikzpicture}
+
+\FloatBarrier
+\clearpage
+
+% In deinem Dokument:
+\begin{tikzpicture}[node distance=1.5cm and 0.5cm, auto]
+
+% Definiere individuelle Breiten für jede Lane
+\def\laneonewidth{6}      % Breite Spalte 1 (Auftraggeber)
+\def\lanetwowidth{6}      % Breite Spalte 2 (Kernteam)
+\def\lanethreewidth{3}    % Breite Spalte 3 (Cluster-Teams)
+\def\laneheight{22}       % Höhe der Lanes (verlängert für mehr Tasks)
+\def\headerheight{1.2}    % Höhe des Headers
+
+% Berechnete Positionen
+\pgfmathsetmacro{\laneoneend}{\laneonewidth}
+\pgfmathsetmacro{\lanetwoend}{\laneonewidth+\lanetwowidth}
+\pgfmathsetmacro{\lanethreeend}{\laneonewidth+\lanetwowidth+\lanethreewidth}
+
+% ===== LANE HINTERGRÜNDE =====
+\fill[gray!5] (0,0) rectangle (\laneoneend,-\laneheight);
+\fill[gray!10] (\laneoneend,0) rectangle (\lanetwoend,-\laneheight);
+\fill[gray!5] (\lanetwoend,0) rectangle (\lanethreeend,-\laneheight);
+
+% ===== TRENNLINIEN =====
+\draw[very thick] (0,0) -- (\lanethreeend,0);
+\draw[very thick] (0,-\headerheight) -- (\lanethreeend,-\headerheight);
+\draw[very thick] (0,0) -- (0,-\laneheight);
+\draw[very thick] (\laneoneend,0) -- (\laneoneend,-\laneheight);
+\draw[very thick] (\lanetwoend,0) -- (\lanetwoend,-\laneheight);
+\draw[very thick] (\lanethreeend,0) -- (\lanethreeend,-\laneheight);
+\draw[very thick] (0,-\laneheight) -- (\lanethreeend,-\laneheight);
+
+% ===== HEADER BESCHRIFTUNGEN =====
+\node[align=center, font=\bfseries] at (\laneonewidth/2,-0.6) {Auftraggeber (Bauherr)};
+\node[align=center, font=\bfseries] at (\laneoneend+\lanetwowidth/2,-0.6) {Kernteam};
+\node[align=center, font=\bfseries] at (\lanetwoend+\lanethreewidth/2,-0.6) {Cluster-\\Teams};
+
+% ===== SPALTE 1: AUFTRAGGEBER =====
+% 1. Start-Event
+\node[startevent] at (\laneonewidth/2,-2,5) (start) {};
+\node[=0.3cm of start, text width=4cm, font=\small] {Projektbedarf festgestellt};
+
+% 2. Task: Nutzerwerte & Projektziele definieren
+\node[task, below=1.2cm of start, text width=4cm, align=center] (task1) {Nutzerwerte \&\\Projektziele definieren};
+
+% 3. Task: Business Case & Allowable Cost ermitteln
+\node[task, below=1.2cm of task1, text width=4cm, align=center] (task2) {Business Case \&\\Allowable Cost ermitteln};
+
+% 4. Gateway: Business Case positiv?
+\node[gateway, below=1.2cm of task2] (gateway1) {×};
+\node[right=0.3cm of gateway1, font=\small] {Business Case positiv?};
+
+% Nein → Abbruch
+\node[endevent, left=1cm of gateway1] (end_abbruch) {};
+\node[below=0.1cm of end_abbruch, font=\small] {Abbruch};
+
+% 5. Task: Kompetenzbasiertes Auswahlverfahren vorbereiten
+\node[task, below=1.2cm of gateway1, text width=4cm, align=center] (task3) {Kompetenzbasiertes\\Auswahlverfahren\\vorbereiten};
+
+% 6. Task: Auswahlgespräche führen & Entscheidung
+\node[task, below=1.2cm of task3, text width=4cm, align=center] (task4) {Auswahlgespräche führen\\\& Entscheidung};
+
+% ===== SPALTE 2: KERNTEAM =====
+% 7. Task: Vertragsunterzeichnung / Onboarding
+\node[task, text width=4cm, align=center] at (\laneoneend+\lanetwowidth/2,-15) (task5) {Vertragsunterzeichnung\\/ Onboarding};
+
+% 8. End-Event: Kernteam ist formiert
+\node[endevent, below=1.5cm of task5] (end_kernteam) {};
+
+% ===== SPALTE 3: CLUSTER-TEAMS =====
+
+% ===== VERBINDUNGEN =====
+% Spalte 1 interne Flows
+\draw[flow] (start) -- (task1);
+\draw[flow] (task1) -- (task2);
+\draw[flow] (task2) -- (gateway1);
+
+% Gateway Verzweigungen
+\draw[flow] (gateway1.west) -| node[above, pos=0.15] {\small Nein} (end_abbruch);
+\draw[flow] (gateway1.south) -- node[right, pos=0.1] {\small Ja} (task3);
+\draw[flow] (task3) -- (task4);
+
+% Von Spalte 1 zu Spalte 2 (gestrichelt = Message Flow)
+\draw[flow, dashed] (task4.east) -| node[above, pos=0.15] {\small Beschreibung} (task5.west);
+
+% Spalte 2 interne Flows
+\draw[flow] (task5) -- (end_kernteam);
+
+\end{tikzpicture}

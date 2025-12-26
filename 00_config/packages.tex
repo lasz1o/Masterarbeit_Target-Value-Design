@@ -68,6 +68,26 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 
+% BPMN Stil-Definitionen (in deine Präambel oder vor das Diagramm)
+\tikzset{
+    % Start Event (Kreis)
+    startevent/.style={circle, draw=black, thick, minimum size=1cm, fill=white},
+    % End Event (dicker Kreis)
+    endevent/.style={circle, draw=black, line width=3pt, minimum size=1cm, fill=white},
+    % Task (abgerundetes Rechteck)
+    task/.style={rectangle, draw=black, thick, rounded corners=3pt, minimum width=3cm, minimum height=1cm, align=center, fill=white},
+    % Gateway (Raute)
+    gateway/.style={diamond, draw=black, thick, minimum size=1.2cm, fill=white, inner sep=0pt},
+    % Subprocess
+    subprocess/.style={rectangle, draw=black, thick, rounded corners=3pt, minimum width=3cm, minimum height=1cm, align=center, fill=white},
+    % Pfeile
+    flow/.style={-{Latex[length=3mm]}, thick},
+    % Pool
+    pool/.style={rectangle, draw=black, very thick, minimum width=15cm, minimum height=8cm},
+    % Lane
+    lane/.style={rectangle, draw=black, thick}
+}
+
 % Platzierung von Diagrammen und Tabellen
 \usepackage{placeins}
 
