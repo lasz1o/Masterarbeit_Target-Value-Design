@@ -31,32 +31,77 @@ Das zugrunde gelegte Modell gliedert sich folglich in:
 
 \clearpage
 
-\section{Phase 0 - Projektdefinition und Wertbestimmung}
+\section{Phase 0 - Projektdefinition und Wertbestimmung (Project Definition)}
 \label{sec:4.2}
-Die Phase der Projektdefinition und Wertbestimmung (Phase 0) bildet das fundamentale Ausgangsniveau des Target Value Design, in dem die Projektziele und der finanzielle Rahmen (Allowable Cost) ausschließlich auf Basis des Business Case und losgelöst von spezifischen Designlösungen festgelegt werden\autocite[S. 2]{ballard_target_2012}.
-Der Ablauf gliedert sich dabei in drei wesentliche Schritte: die Formulierung eines belastbaren Business Case, die Ableitung der Allowable Cost sowie einen initialen Marktabgleich zur Verifizierung der generellen Machbarkeit.
-Am Ausgangspunkt dieser Phase steht der Business Case, dessen Entstehung abhängig von den Interessen und Zielen des Bauherren stark variieren kann\autocite[S.20]{hill_target_2017}.
-Hinsichtlich der Akteursbeteiligung ist Phase 0 durch eine Dominanz der Auftraggeber-Sphäre geprägt. Zwar können externe Berater oder Analysten zur Erstellung von Marktanalysen hinzugezogen werden, die Verantwortung für die Definition des Funktionsprogramms liegt jedoch exklusiv beim Bauherrn. Es gilt in dieser frühen Phase, das reine 'Leistungsprogramm' (Raumprogramm, technische Anforderungen) um die Dimension der 'Nutzerwerte' zu erweitern, die später als Entscheidungsgrundlage für Design-Alternativen dienen.
 
-Funktionsprogramm oder Leistungsprogramm 
+Die Phase der Projektdefinition (Phase 0) bildet das fundamentale Ausgangsniveau des Target Value Design. Anders als in konventionellen Planungsabläufen, bei denen der Entwurf oft frühzeitig auf physische Lösungsansätze fokussiert, konzentriert sich Phase 0 ausschließlich auf die Definition des \enquote{Warum} (Business Case) und des finanziellen \enquote{Wie viel} (Allowable Cost). 
 
-Ableitung der Allowable Cost als das was der Bauherr für den erwarteten Nutzen/Wert bereit ist zu zahlen\\
-Kostenschätzung - Estimated Cost (EC) meist basierend auf einem Benchmarking (historische Daten) oder parametrischen (Modell-)Simulationen \autocite[S.5]{ballard_target_2025}.\\
-Beide Ansätze sind ähnlich effektiv, wenn sie dem Projekt entsprechend gewählt und angewandt werden so Ballard (2025). Dementsprechend kann die Kostenschätzung mittels Modellsimulation bei Projekten mit verhältnismäßig hohem Innovationsgrad bessere Ergebnisse erzielen, als der Ansatz mit historischen Kostendaten und letztere umgekehrt bei häufiger Umgesetzten Projekttypen bzw. Designs eine verlässliche Kostenbasis liefern\autocite[S.5]{ballard_target_2025}.\\.
+Ziel dieser Phase ist es, den Wert aus Sicht des Bauherrn so präzise zu definieren, dass er in den nachfolgenden Phasen als harter Steuerungsmaßstab dienen kann. Design-Lösungen oder spezifische architektonische Ausformulierungen spielen zu diesem Zeitpunkt noch keine Rolle. Die Phase ist durch eine klare Dominanz der Auftraggeber-Sphäre geprägt: Der Bauherr muss, ggf. unterstützt durch Analysten, festlegen, welchen Nutzen das Projekt stiften soll und welches Investment dafür wirtschaftlich tragbar ist, noch bevor das eigentliche Planungsteam konstituiert wird \autocite[vgl.]{ballard_target_2025}.
 
-Nachdem die beiden Größen AC und EC hinreichend genau definiert wurden erfolgt eine erste Validierung der Machbarkeit in Form einer einfachen Gap-Analyse. Dabei werden die Allowable Cost (AC) den Estimated Costs (EC) gegenübergestellt:
+Der Ablauf gliedert sich dabei in drei wesentliche Schritte: die Formulierung eines belastbaren Wertversprechens, die Ableitung des finanziellen Rahmens sowie einen initialen Marktabgleich zur Verifizierung der generellen Machbarkeit.
 
-\begin{itemize}[leftmargin=2em]
-    \item \textbf{Szenario A (EC $<$ AC)}: Das Projekt ist in der aktuellen Form nicht machbar. Anpassung der Ziele (Scope) oder Abbruch ("Revise or stop")
-    \item \textbf{Szenario B (EC $\le$ AC)}: Das Projekt ist machbar. Übergang zur Validierung.
+\subsection{Definition des Wertversprechens (Business Case \& Value)}
+\label{sec:4.2.1}
+Am Ausgangspunkt dieser Phase steht der Business Case, dessen Entstehung abhängig von den Interessen und Zielen des Bauherren stark variieren kann \autocite[vgl.]{hill_target_2017}. Während in der klassischen Bedarfsplanung (z.B. nach DIN 18205) häufig das \enquote{Raumprogramm} (Output) im Vordergrund steht, fordert der TVD-Ansatz eine Fokussierung auf den \enquote{Nutzen} (Outcome). Es gilt, das reine Leistungsprogramm um die Dimension der Nutzerwerte zu erweitern.
+
+Diese Anforderungen werden als \textbf{Conditions of Satisfaction (CoS)} definiert. Sie beschreiben die Bedingungen, unter denen der Bauherr das Projekt als Erfolg wertet. Um späteren \enquote{Design Churn} (unnötige Planungsänderungen) zu vermeiden, ist hierbei eine strikte Priorisierung notwendig \autocite[vgl.]{zimina_target_2012}:
+\begin{itemize}
+    \item \textbf{Needs (Muss-Kriterien):} Diese Aspekte sind unverzichtbar für die Erfüllung des Business Case (z.B. Patientensicherheit im Krankenhaus, gesetzliche Vorgaben). Ein Nichterfüllen führt zum Scheitern des Projekts.
+    \item \textbf{Wants (Wunsch-Kriterien):} Diese Aspekte steigern den Wert, sind jedoch verhandelbar (z.B. spezifische Ausstattungsqualitäten), falls das Budget dies erfordert.
+\end{itemize}
+Diese Unterscheidung bildet die Grundlage für spätere Value-Engineering-Entscheidungen im Designprozess.
+
+\subsection{Ermittlung des finanziellen Rahmens (AC vs. EC)}
+\label{sec:4.2.2}
+Parallel zur Wertdefinition erfolgt die Festlegung der finanziellen Eckpfeiler. Hierbei prallen im TVD-Prozess zwei methodisch getrennte Sichtweisen aufeinander: die finanzielle Tragfähigkeit des Bauherrn und die Realität des Baumarktes.
+
+\textbf{1. Allowable Cost (AC): Die Sicht des Bauherrn}\\
+Die Allowable Cost repräsentieren den Betrag, den der Bauherr maximal investieren \textit{darf}, damit sein Business Case (z.B. Renditeerwartung, Refinanzierung) positiv bleibt. Diese Größe wird \enquote{top-down} ermittelt und ist explizit \textit{keine} Kostenschätzung des Gebäudes, sondern eine betriebswirtschaftliche Setzung \autocite[vgl.]{ballard_target_2012}.
+
+\textbf{2. Estimated Cost (EC): Die Sicht des Marktes}\\
+Um die Realisierbarkeit der Anforderungen zu prüfen, wird den AC eine Marktprognose gegenübergestellt (Estimated Cost). Da in Phase 0 noch kein detaillierter Entwurf vorliegt, kommen hierbei stochastische oder empirische Methoden zum Einsatz. Nach Ballard et al. (2025) sind hierbei zwei Ansätze zu unterscheiden, deren Eignung vom Innovationsgrad des Projekts abhängt:
+\begin{itemize}
+    \item \textbf{Benchmarking (Historische Daten):} Bei Standard-Typologien (z.B. Wohnungsbau) liefern Datenbanken aus abgewickelten Projekten verlässliche Referenzwerte.
+    \item \textbf{Parametrische Simulation:} Bei komplexen Projekten mit hohem Innovationsgrad, für die keine historischen Vergleichsdaten existieren, erzielen modellbasierte Simulationen oft präzisere Ergebnisse als reine Kennzahlenvergleiche \autocite[vgl.]{ballard_target_2025}.
 \end{itemize}
 
-Im Szenario A sind die Estimated Costs aus der Kostenschätzung höher als die vom Bauherren festgelegten Allowable Costs für das Projekt mit den zuvor definierten Anforderungen.
+\subsection{Initiale Machbarkeitsanalyse (The Gap)}
+\label{sec:4.2.3}
+Der Abschluss der Phase 0 bildet das erste entscheidende \enquote{Gate} im TVD-Prozess. Hierbei werden die Allowable Cost (AC) und die Estimated Costs (EC) in einer Gap-Analyse gegenübergestellt ($\Delta = EC - AC$). Das Ergebnis bestimmt das weitere Vorgehen:
 
-Bauherr muss einschätzen EC = AC möglich?
+\begin{itemize}
+    \item \textbf{Szenario A ($EC \gg AC$):} Die Marktkosten übersteigen das Budget massiv (z.B. > 30\%). Das Projekt ist in der aktuellen Form unrealistisch. Es folgt die Entscheidung \enquote{Revise or Stop}: Entweder müssen die Anforderungen (CoS) drastisch reduziert oder der Business Case verworfen werden.
+    \item \textbf{Szenario B ($EC > AC$):} Die Kosten liegen moderat über dem Budget (z.B. 5--15\%). Dies ist der \enquote{Idealfall} für den Start eines TVD-Projekts. Die Lücke definiert das \enquote{Stretch Goal}, das durch Innovation und Effizienzsteigerung im folgenden Designprozess geschlossen werden soll.
+    \item \textbf{Szenario C ($EC \leq AC$):} Der Marktpreis liegt unter dem Budget. In diesem Fall sollten die Allowable Costs nach unten korrigiert werden, um unnötige Ausgaben (Verschwendung) zu vermeiden.
+\end{itemize}
 
-ja, EC = AC
-nein, Revision (Anpassung Scope) oder Abbruch. 
+Erst wenn eine prinzipielle Machbarkeit (Szenario B oder C) bestätigt ist, wird das Projekt für die nächste Phase freigegeben und die Rekrutierung des integrierten Teams eingeleitet.
+
+
+% Die Phase der Projektdefinition und Wertbestimmung (Phase 0) bildet das fundamentale Ausgangsniveau des Target Value Design, in dem die Projektziele und der finanzielle Rahmen (Allowable Cost) ausschließlich auf Basis des Business Case und losgelöst von spezifischen Designlösungen festgelegt werden\autocite[S. 2]{ballard_target_2012}.
+% Der Ablauf gliedert sich dabei in drei wesentliche Schritte: die Formulierung eines belastbaren Business Case, die Ableitung der Allowable Cost sowie einen initialen Marktabgleich zur Verifizierung der generellen Machbarkeit.
+% Am Ausgangspunkt dieser Phase steht der Business Case, dessen Entstehung abhängig von den Interessen und Zielen des Bauherren stark variieren kann\autocite[S.20]{hill_target_2017}.
+% Hinsichtlich der Akteursbeteiligung ist Phase 0 durch eine Dominanz der Auftraggeber-Sphäre geprägt. Zwar können externe Berater oder Analysten zur Erstellung von Marktanalysen hinzugezogen werden, die Verantwortung für die Definition des Funktionsprogramms liegt jedoch exklusiv beim Bauherrn. Es gilt in dieser frühen Phase, das reine 'Leistungsprogramm' (Raumprogramm, technische Anforderungen) um die Dimension der 'Nutzerwerte' zu erweitern, die später als Entscheidungsgrundlage für Design-Alternativen dienen.
+
+% Funktionsprogramm oder Leistungsprogramm 
+
+% Ableitung der Allowable Cost als das was der Bauherr für den erwarteten Nutzen/Wert bereit ist zu zahlen\\
+% Kostenschätzung - Estimated Cost (EC) meist basierend auf einem Benchmarking (historische Daten) oder parametrischen (Modell-)Simulationen \autocite[S.5]{ballard_target_2025}.\\
+% Beide Ansätze sind ähnlich effektiv, wenn sie dem Projekt entsprechend gewählt und angewandt werden so Ballard (2025). Dementsprechend kann die Kostenschätzung mittels Modellsimulation bei Projekten mit verhältnismäßig hohem Innovationsgrad bessere Ergebnisse erzielen, als der Ansatz mit historischen Kostendaten und letztere umgekehrt bei häufiger Umgesetzten Projekttypen bzw. Designs eine verlässliche Kostenbasis liefern\autocite[S.5]{ballard_target_2025}.\\.
+
+% Nachdem die beiden Größen AC und EC hinreichend genau definiert wurden erfolgt eine erste Validierung der Machbarkeit in Form einer einfachen Gap-Analyse. Dabei werden die Allowable Cost (AC) den Estimated Costs (EC) gegenübergestellt:
+
+% \begin{itemize}[leftmargin=2em]
+%     \item \textbf{Szenario A (EC $<$ AC)}: Das Projekt ist in der aktuellen Form nicht machbar. Anpassung der Ziele (Scope) oder Abbruch ("Revise or stop")
+%     \item \textbf{Szenario B (EC $\le$ AC)}: Das Projekt ist machbar. Übergang zur Validierung.
+% \end{itemize}
+
+% Im Szenario A sind die Estimated Costs aus der Kostenschätzung höher als die vom Bauherren festgelegten Allowable Costs für das Projekt mit den zuvor definierten Anforderungen.
+
+% Bauherr muss einschätzen EC = AC möglich?
+
+% ja, EC = AC
+% nein, Revision (Anpassung Scope) oder Abbruch. 
 
 
 \clearpage
