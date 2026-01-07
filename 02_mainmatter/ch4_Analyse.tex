@@ -44,6 +44,8 @@ Der Ablauf gliedert sich dabei in drei wesentliche Schritte: die Formulierung ei
 \label{sec:4.2.1}
 Am Ausgangspunkt dieser Phase steht der Business Case, dessen Entstehung abhängig von den Interessen und Zielen des Bauherren stark variieren kann \autocite[vgl.]{hill_target_2017}. Während in der klassischen Bedarfsplanung (z.B. nach DIN 18205) häufig das \enquote{Raumprogramm} (Output) im Vordergrund steht, fordert der TVD-Ansatz eine Fokussierung auf den \enquote{Nutzen} (Outcome). Es gilt, das reine Leistungsprogramm um die Dimension der Nutzerwerte zu erweitern.
 
+Eine besondere Herausforderung in der Definition des Wertversprechens liegt in der Differenzierung der Interessengruppen. Nach den Prinzipien des Lean Construction ist streng zwischen dem zahlenden Kunden (Paying Customer) und dem tatsächlichen Nutzer (End User) zu unterscheiden. Oft decken sich deren Ziele nicht vollständig (z.B. Minimierung der Investitionskosten vs. Optimierung der Arbeitsabläufe). Eine erfolgreiche Phase 0 muss daher zwingend die ‚Voice of the Customer‘ durch Nutzerworkshops oder Bedarfsanalysen integrieren. Werden die Endnutzerbedürfnisse in dieser frühen Phase ignoriert, führt dies in späteren Phasen häufig zu kostspieligen Änderungswünschen, die das Target Value Design destabilisieren können.\autocite[vgl.]{zimina_target_2012}
+
 Diese Anforderungen werden als \textbf{Conditions of Satisfaction (CoS)} definiert. Sie beschreiben die Bedingungen, unter denen der Bauherr das Projekt als Erfolg wertet. Um späteren \enquote{Design Churn} (unnötige Planungsänderungen) zu vermeiden, ist hierbei eine strikte Priorisierung notwendig \autocite[vgl.]{zimina_target_2012}:
 \begin{itemize}
     \item \textbf{Needs (Muss-Kriterien):} Diese Aspekte sind unverzichtbar für die Erfüllung des Business Case (z.B. Patientensicherheit im Krankenhaus, gesetzliche Vorgaben). Ein Nichterfüllen führt zum Scheitern des Projekts.
@@ -59,11 +61,13 @@ Parallel zur Wertdefinition erfolgt die Festlegung der finanziellen Eckpfeiler. 
 Die Allowable Cost repräsentieren den Betrag, den der Bauherr maximal investieren \textit{darf}, damit sein Business Case (z.B. Renditeerwartung, Refinanzierung) positiv bleibt. Diese Größe wird \enquote{top-down} ermittelt und ist explizit \textit{keine} Kostenschätzung des Gebäudes, sondern eine betriebswirtschaftliche Setzung \autocite[vgl.]{ballard_target_2012}.
 
 \textbf{2. Estimated Cost (EC): Die Sicht des Marktes}\\
-Um die Realisierbarkeit der Anforderungen zu prüfen, wird den AC eine Marktprognose gegenübergestellt (Estimated Cost). Da in Phase 0 noch kein detaillierter Entwurf vorliegt, kommen hierbei stochastische oder empirische Methoden zum Einsatz. Nach Ballard et al. (2025) sind hierbei zwei Ansätze zu unterscheiden, deren Eignung vom Innovationsgrad des Projekts abhängt:
+Um die Realisierbarkeit der Anforderungen zu prüfen, wird den AC eine Marktprognose gegenübergestellt (Estimated Cost). Da in Phase 0 noch kein detaillierter Entwurf vorliegt, kommen hierbei stochastische oder empirische Methoden zum Einsatz. Nach Ballard et al. (2025) sind zwei Ansätze zu unterscheiden:
 \begin{itemize}
-    \item \textbf{Benchmarking (Historische Daten):} Bei Standard-Typologien (z.B. Wohnungsbau) liefern Datenbanken aus abgewickelten Projekten verlässliche Referenzwerte.
-    \item \textbf{Parametrische Simulation:} Bei komplexen Projekten mit hohem Innovationsgrad, für die keine historischen Vergleichsdaten existieren, erzielen modellbasierte Simulationen oft präzisere Ergebnisse als reine Kennzahlenvergleiche \autocite[vgl.]{ballard_target_2025}.
+    \item \textbf{Benchmarking (Historische Daten):} Bei Standard-Typologien liefern Datenbanken aus abgewickelten Projekten Referenzwerte. Ballard et al. warnen jedoch davor, dass historische Daten oft die Ineffizienzen (Waste) vergangener Projekte beinhalten und daher eher als konservative Obergrenze denn als absolute Wahrheit zu betrachten sind.
+    \item \textbf{Parametrische Simulation:} Bei komplexen Projekten mit hohem Innovationsgrad erzielen modellbasierte Simulationen oft präzisere Ergebnisse als reine Kennzahlenvergleiche \autocite[vgl.]{ballard_target_2025}.
 \end{itemize}
+
+Ein kritischer Erfolgsfaktor bei der Ermittlung der Estimated Cost ist die Qualität der zugrunde liegenden Daten. Ballard et al. (2025) weisen darauf hin, dass reines Benchmarking auf Basis historischer Kostendatenbanken (in Deutschland z.B. BKI) Risiken birgt. Da diese Daten den Durchschnitt vergangener – oft ineffizient abgewickelter – Projekte abbilden, besteht die Gefahr, dass Verschwendung (Waste) in die eigene Kostenschätzung ‚importiert‘ wird. Die Estimated Costs sollten daher nicht als unumstößliche Wahrheit, sondern als konservative Obergrenze betrachtet werden, die es durch Lean-Methoden zu unterbieten gilt. \autocite[vgl.]{ballard_target_2025}
 
 \subsection{Initiale Machbarkeitsanalyse (The Gap)}
 \label{sec:4.2.3}
@@ -75,33 +79,11 @@ Der Abschluss der Phase 0 bildet das erste entscheidende \enquote{Gate} im TVD-P
     \item \textbf{Szenario C ($EC \leq AC$):} Der Marktpreis liegt unter dem Budget. In diesem Fall sollten die Allowable Costs nach unten korrigiert werden, um unnötige Ausgaben (Verschwendung) zu vermeiden.
 \end{itemize}
 
-Erst wenn eine prinzipielle Machbarkeit (Szenario B oder C) bestätigt ist, wird das Projekt für die nächste Phase freigegeben und die Rekrutierung des integrierten Teams eingeleitet.
+Es ist hervorzuheben, dass eine moderate Lücke (Szenario B) im TVD nicht als Planungsfehler, sondern als strategischer Treiber verstanden wird. Diese Differenz fungiert als \enquote{Stretch Goal} (ehrgeiziges Ziel). Sie erzeugt einen konstruktiven Innovationsdruck, der das spätere Planungsteam dazu zwingt, verlassene Pfade des \enquote{Business as Usual} zu verlassen und proaktiv nach effizienteren Lösungen zu suchen. Ohne dieses Spannungsfeld tendieren Projekte dazu, lediglich bestehende Standards zu reproduzieren.
+Zudem bildet dieses \enquote{Gap} die ökonomische Basis für das in Phase 1 und 2 folgende Inzentivierungsmodell (\textit{Pain/Gain-Share}). Nur wenn eine Lücke existiert, die durch Optimierung geschlossen und unterboten werden kann, entsteht der finanzielle Spielraum (\enquote{Pot}), aus dem spätere Boni für das Planungsteam ausgeschüttet werden können.
 
+Erst wenn diese prinzipielle Machbarkeit bestätigt ist, wird das Projekt freigegeben und die Rekrutierung des integrierten Teams eingeleitet.
 
-% Die Phase der Projektdefinition und Wertbestimmung (Phase 0) bildet das fundamentale Ausgangsniveau des Target Value Design, in dem die Projektziele und der finanzielle Rahmen (Allowable Cost) ausschließlich auf Basis des Business Case und losgelöst von spezifischen Designlösungen festgelegt werden\autocite[S. 2]{ballard_target_2012}.
-% Der Ablauf gliedert sich dabei in drei wesentliche Schritte: die Formulierung eines belastbaren Business Case, die Ableitung der Allowable Cost sowie einen initialen Marktabgleich zur Verifizierung der generellen Machbarkeit.
-% Am Ausgangspunkt dieser Phase steht der Business Case, dessen Entstehung abhängig von den Interessen und Zielen des Bauherren stark variieren kann\autocite[S.20]{hill_target_2017}.
-% Hinsichtlich der Akteursbeteiligung ist Phase 0 durch eine Dominanz der Auftraggeber-Sphäre geprägt. Zwar können externe Berater oder Analysten zur Erstellung von Marktanalysen hinzugezogen werden, die Verantwortung für die Definition des Funktionsprogramms liegt jedoch exklusiv beim Bauherrn. Es gilt in dieser frühen Phase, das reine 'Leistungsprogramm' (Raumprogramm, technische Anforderungen) um die Dimension der 'Nutzerwerte' zu erweitern, die später als Entscheidungsgrundlage für Design-Alternativen dienen.
-
-% Funktionsprogramm oder Leistungsprogramm 
-
-% Ableitung der Allowable Cost als das was der Bauherr für den erwarteten Nutzen/Wert bereit ist zu zahlen\\
-% Kostenschätzung - Estimated Cost (EC) meist basierend auf einem Benchmarking (historische Daten) oder parametrischen (Modell-)Simulationen \autocite[S.5]{ballard_target_2025}.\\
-% Beide Ansätze sind ähnlich effektiv, wenn sie dem Projekt entsprechend gewählt und angewandt werden so Ballard (2025). Dementsprechend kann die Kostenschätzung mittels Modellsimulation bei Projekten mit verhältnismäßig hohem Innovationsgrad bessere Ergebnisse erzielen, als der Ansatz mit historischen Kostendaten und letztere umgekehrt bei häufiger Umgesetzten Projekttypen bzw. Designs eine verlässliche Kostenbasis liefern\autocite[S.5]{ballard_target_2025}.\\.
-
-% Nachdem die beiden Größen AC und EC hinreichend genau definiert wurden erfolgt eine erste Validierung der Machbarkeit in Form einer einfachen Gap-Analyse. Dabei werden die Allowable Cost (AC) den Estimated Costs (EC) gegenübergestellt:
-
-% \begin{itemize}[leftmargin=2em]
-%     \item \textbf{Szenario A (EC $<$ AC)}: Das Projekt ist in der aktuellen Form nicht machbar. Anpassung der Ziele (Scope) oder Abbruch ("Revise or stop")
-%     \item \textbf{Szenario B (EC $\le$ AC)}: Das Projekt ist machbar. Übergang zur Validierung.
-% \end{itemize}
-
-% Im Szenario A sind die Estimated Costs aus der Kostenschätzung höher als die vom Bauherren festgelegten Allowable Costs für das Projekt mit den zuvor definierten Anforderungen.
-
-% Bauherr muss einschätzen EC = AC möglich?
-
-% ja, EC = AC
-% nein, Revision (Anpassung Scope) oder Abbruch. 
 
 
 \clearpage
@@ -114,14 +96,57 @@ Erst wenn eine prinzipielle Machbarkeit (Szenario B oder C) bestätigt ist, wird
 \section{Phase 1 - Validierung und Zielkostenbestimmung}
 \label{sec:4.3}
 
+Die Phase 1 markiert den operativen Startpunkt des Target Value Design. Während die vorangegangene Phase 0 durch die einseitige Definition der Rahmenbedingungen seitens Bauherrn geprägt war, erfolgt nun der Übergang in die integrierte Zusammenarbeit. Ziel dieser Phase ist es jedoch noch nicht, einen detaillierten Gebäudeentwurf zu erstellen. Vielmehr dient die Validierungsphase als vorgeschaltete technisch-ökonomische Machbarkeitsprüfung (\textit{Feasibility Validation}), welche die in Phase 0 getroffenen Annahmen (Business Case und Allowable Cost) verifiziert \autocite[vgl.]{ballard_target_2012}.
+
+Die Kernaufgabe besteht darin, aus den abstrakten Anforderungen des Bauherrn ein funktionales Lösungskonzept (\textit{Basis of Design}) zu entwickeln und dieses durch Marktpreise zu plausibilisieren. Dieser Prozessschritt verankert das Prinzip der \enquote{Validierung vor der Detaillierung}, wonach bereits vor dem Einsatz signifikanter Ressourcen für die Ausarbeitung von Plänen der Nachweis erbracht werden muss, dass das Projekt für das verfügbare Budget realisierbar ist. Scheitert dieser Nachweis, sieht das TVD-Modell an dieser Stelle eine explizite \enquote{No-Go}-Entscheidung (Projektabbruch) vor \autocite[vgl.]{ballard_target_2012}, um die Gefahr späterer Kostenüberschreitungen und Fehlinvestitionen zu minimieren \autocite[vgl. S. 171]{do_target_2014}. Erst mit dem erfolgreichen Abschluss einer verbindlichen Zielkostenvereinbarung (\textit{Target Cost}) wird das Projekt für die eigentliche Planungsphase (Design to Targets) freigegeben \autocite[vgl.]{ballard_target_2025}.
+
+\subsection{Teamstruktur und Wertdefinition}
+\label{sec:4.3.1}
+
+Der operative Beginn der Validierungsphase erfolgt durch die Zusammenstellung des Kernteams. Um die im \ac{TVD} geforderte Kostensicherheit bereits vor der detaillierten Planung zu gewährleisten, ist die frühzeitige Einbindung von Ausführungswissen zwingend erforderlich. Organisatorisch wird dies durch die Bildung von sogenannten \textbf{Clustern} (auch Systemgruppen oder \textit{Cross Functional Teams}) realisiert. Diese interdisziplinären Einheiten setzen sich aus Architekten, Fachplanern und Vertretern der ausführenden Schlüsselgewerke zusammen, wobei die Budgetverantwortung für spezifische Gebäudesysteme direkt auf diese Teams übertragen wird. \autocite[vgl. S.26]{ballard_target_2025}
+
+% Hier sollte noch das wording "Kernteam" verarbeitet werden und betont werden dass dieses aus den Schlüsselgewerken besteht weche wiederrum entwurfsabhängig sind.
+
+Im Gegensatz zur klassischen Projektabwicklung, bei der ausführende Firmen erst nach Abschluss der Planung vertraglich gebunden werden, integriert das TVD-Modell diese Akteure bereits in der Phase 1. Die vertragliche Grundlage hierfür bilden in der Regel vorgelagerte Dienstleistungsverträge (\textit{Preconstruction Services Agreements}), die eine Vergütung der Beratungs- und Kalkulationsleistungen vorsehen, ohne bereits die spätere Bauausführung fest zu beauftragen \autocite[vgl.]{heidemann_kooperative_2011}. Ziel dieser Struktur ist es, Planungs- und Kostenkompetenz in einer Entscheidungseinheit zu bündeln, um sofortiges Kostenfeedback zu ermöglichen.
+
+Inhaltlich beginnt die Zusammenarbeit des Kernteams mit einer gemeinsamen Definition des Werteverständnisses (\textit{Value Definition}. Diese greift die Vorgaben des Bauherren \enquote{Stimme des Kunden} auf und definiert die funktionalen Anforderungen, losgelöst von der physischen Lösung. Essenziell ist dabei der Transfer des Verständnisses vom reinen Bau-Soll hin zum wirtschaftlichen Zweck der Investition (\textit{Business Case}). Das Team muss die strategischen Ziele und Wertvorstellungen des Kunden verstehen, um in der späteren Planung Konflikte autonom lösen zu können \autocite[vgl. S.13]{ballard_target_2025}.
+
+Den Abschluss dieses Initialisierungsprozesses bildet die Überführung der subjektiven Kundenwünsche in objektive \textbf{\ac{CoS}}. Während die Wertvorstellungen oft abstrakt formuliert sind, stellen die CoS konkrete Kriterien dar (z.B. spezifische Anforderungen an Flexibilität, Akustik oder Energieeffizienz), die erfüllt sein müssen, damit das Projekt als erfolgreich betrachtet wird. Sie fungieren als qualitative Steuerungsgröße für alle weiteren Entscheidungen im Planungs- und Realisierungsprozess. Eine Kosteneinsparung, die zur Verletzung der \ac{CoS} führt, wird nicht als Effizienzgewinn, sondern als unzulässige Wertminderung betrachtet \autocite[vgl. S. 120]{ballard_target_2025}.
+
+\subsection{Konzeptentwicklung und Validierung}
+\label{sec:4.3.2}
+
+Auf Basis der definierten Wertziele entwickeln die Cluster das sogenannte \textbf{Basis of Design} (BoD). Im Gegensatz zum klassischen Vorentwurf, der oft bereits spezifische architektonische Lösungen fixiert, definiert das BoD primär funktionale Qualitäten und Systementscheidungen, die notwendig sind, um die \textit{Conditions of Satisfaction} zu erfüllen. Es dient als technischer Nachweis, dass die Anforderungen des Kunden innerhalb des Budgets realisierbar sind, ohne bereits eine detaillierte Planung vorwegzunehmen \autocite[vgl.]{lci_guide_2016}\,\autocite[vgl. S.~13]{ballard_target_2025}.
+
+Methodisch folgt dieser Prozess einer streng iterativen Logik. Anstatt Planung und Kalkulation sequenziell zu trennen, arbeiten Architekten und Kalkulatoren in kurzen Zyklen zusammen: Lösungsansätze werden skizziert und unmittelbar einer kostentechnischen Bewertung unterzogen. Dies ermöglicht ein sofortiges Feedback (\textit{Rapid Estimating}), wodurch Fehlentwicklungen frühzeitig erkannt und korrigiert werden können, noch bevor sie sich im Entwurf verfestigen. \autocite[vgl.]{zimina_target_2012}\,\autocite[vgl.]{ballard_target_2012}
+
+Als zentrales Steuerungsinstrument dient hierbei das \textbf{Cost Modeling} (Kostenmodellierung). Da in dieser frühen Phase oft noch keine detaillierten Mengen für eine klassische Kalkulation vorliegen, werden parametrische Kostenmodelle genutzt. Diese basieren auf historischen Daten und identifizieren die wesentlichen Kostentreiber (\textit{Cost Drivers}) des Entwurfs. Das Ziel ist es, die Kostenentwicklung proaktiv zu prognostizieren, anstatt sie nur reaktiv zu erfassen. \autocite[vgl. S.~104]{ballard_target_2025}\,\autocite[vgl.]{ballard_target_2012}
+
+Dabei gilt der fundamentale TVD-Grundsatz, dass die Kosten als unabhängige Entwurfsvariable betrachtet werden: Überschreitet ein technischer Lösungsansatz das anteilige Budget des Clusters, wird nicht das Budget erhöht, sondern die technische Lösung so lange variiert, bis sie kostenkonform ist. Das Design muss sich dem Budget anpassen, nicht umgekehrt. \autocite[vgl.]{zimina_target_2012}\,\autocite[vgl.]{ballard_target_2012}
+
+Dieser Prozess mündet in einem kontinuierlichen \textbf{Validierungs-Check}. Das Team gleicht fortlaufend ab, ob das entwickelte \textit{Basis of Design} sowohl die qualitativen Anforderungen (CoS) erfüllt als auch die ökonomische Grenze der \textit{Allowable Cost} einhält. Nur wenn diese Kongruenz nachgewiesen ist, gilt das Konzept als validiert. \autocite[vgl.]{lci_guide_2016}\,\autocite[vgl. S.~15]{ballard_target_2025} 
+
+\subsection{Budgetfreigabe und Zielkostenfestlegung}
+\label{sec:4.3.3}
+
+Die Ergebnisse der Validierungsphase werden abschließend im \textbf{Validierungsbericht} zusammengeführt. Dieses Dokument dient dem Bauherrn als fundierte Entscheidungsgrundlage: Es weist nach, dass das entwickelte \textit{Basis of Design} die funktionalen Anforderungen und \textit{Conditions of Satisfaction} erfüllt und innerhalb des gesteckten Kostenrahmens realisierbar ist. Auf dieser Basis trifft der Bauherr die formale \textbf{Budgetfreigabe} (\textit{Go / No-Go Decision}). Nur bei einem positiven Nachweis der Machbarkeit erfolgt der Startschuss für die nächste Projektphase, andernfalls wird das Projekt abgebrochen oder neu definiert, um Fehlinvestitionen (\textit{Sunk Costs}) zu vermeiden. \autocite[vgl. S. 15]{ballard_target_2025}\, \autocite[vgl.]{ballard_target_2012}
+
+Mit der Projektfreigabe erfolgt die formale Fixierung der Ziele im \textbf{Target Value Statement}. Ein zentraler Aspekt ist dabei die Festlegung der \textbf{Basiszielkosten} (\textit{Target Cost}). Diese leiten sich aus den validierten Marktkosten (\textit{Estimated Cost}) ab, werden jedoch im TVD-Verfahren typischerweise unterhalb dieser Prognose angesetzt. Diese Differenz dient als bewusster Puffer gegen Unvorhergesehenes und schafft einen Innovationsdruck für das Team, die Kosten durch intelligentes Design weiter zu senken \autocite[vgl. S.~10]{ballard_target_2025}\,\autocite[vgl.]{zimina_target_2012}.
+
+Zur Absicherung dieser Verpflichtung wird mit der Festlegung der Zielkosten auch der kommerzielle \textbf{Pain/Gain-Share-Mechanismus} aktiviert. Unterschreitet das Team durch Optimierungen in der Folgephase die Basiszielkosten, wird die Einsparung zwischen Bauherr und Planungsteam geteilt (\textit{Gain}). Überschreiten die Kosten hingegen den Zielwert, haftet das Team bis zu einer definierten Grenze mit seinem Risikopool (\textit{Pain}). Diese vertragliche Kopplung von Projekterfolg und Unternehmensgewinn stellt sicher, dass die Einhaltung der Zielkosten für alle Beteiligten nicht nur eine vertragliche Pflicht, sondern ein ökonomisches Eigeninteresse darstellt. \autocite[vgl.]{zimina_target_2012}\,\autocite[vgl.]{lci_guide_2016}
 
 
 
-Vertragliche Synchronisation der Interessen
 
-Eine valide Überprüfung des Business Case durch die ausführenden Unternehmen scheitert laut Ballard in der konventionellen Praxis häufig an der antagonistischen Vertragsstruktur und dem daraus resultierenden Misstrauen ('Adversarial Relationship'). Der Auftraggeber befürchtet hierbei opportunistisches Verhalten der Auftragnehmer.\autocite[vgl. S. 15]{ballard_target_2012}
 
-In der Validierungsphase des TVD wird dieses Prinzipal-Agent-Problem durch den Mechanismus des Painsharing aufgelöst. Da eine Überschreitung der Kostenziele direkt die Gewinnmargen der Projektpartner reduziert ('Reduced Profit Margin'), werden die kommerziellen Interessen von Auftraggeber und Auftragnehmern synchronisiert ('Alignment of Interests'). Dies stellt sicher, dass die Validierung des Business Case nicht durch Eigeninteressen verzerrt wird, sondern auf einer realistischen Einschätzung der Machbarkeit basiert.\autocite[vgl. S. 15]{ballard_target_2012}
+
+
+
+% Vertragliche Synchronisation der Interessen
+
+% Eine valide Überprüfung des Business Case durch die ausführenden Unternehmen scheitert laut Ballard in der konventionellen Praxis häufig an der antagonistischen Vertragsstruktur und dem daraus resultierenden Misstrauen ('Adversarial Relationship'). Der Auftraggeber befürchtet hierbei opportunistisches Verhalten der Auftragnehmer.\autocite[vgl. S. 15]{ballard_target_2012}
+
+% In der Validierungsphase des TVD wird dieses Prinzipal-Agent-Problem durch den Mechanismus des Painsharing aufgelöst. Da eine Überschreitung der Kostenziele direkt die Gewinnmargen der Projektpartner reduziert ('Reduced Profit Margin'), werden die kommerziellen Interessen von Auftraggeber und Auftragnehmern synchronisiert ('Alignment of Interests'). Dies stellt sicher, dass die Validierung des Business Case nicht durch Eigeninteressen verzerrt wird, sondern auf einer realistischen Einschätzung der Machbarkeit basiert.\autocite[vgl. S. 15]{ballard_target_2012}
 
 
 
@@ -256,3 +281,4 @@ Das TVD-Modell endet nicht mit der Schlüsselübergabe, sondern mit einer formal
 
 > \textit{Transfer-Hinweis:} In der deutschen VOB-Realität ist Phase 3 oft durch Nachtragsmanagement ("Claims") geprägt. Der TVD-Ansatz, dass der Preis fixiert ist und Nachträge durch die vorherige Integration ausgeschlossen sind, erfordert vertraglich eine völlig andere Risikoverteilung als den klassischen Einheitspreisvertrag. (Diskussion in Kap. 5).
 
+\clearpage
