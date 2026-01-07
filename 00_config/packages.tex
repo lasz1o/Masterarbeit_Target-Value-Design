@@ -36,14 +36,18 @@
 % ===== LITERATURVERZEICHNIS =====
 \usepackage[
     backend=biber,
-    style=authoryear-icomp,  
-    maxbibnames=3,
+    %style=authoryear-icomp,  
+    style=numeric, 
+    maxbibnames=4,
     maxcitenames=2,
     autocite=footnote,
     date=year,
+    giveninits=true,         % Vornamen Abkürzen
     dateuncertain=true,
     eprint=false,
     url=false,
+    doi=false,
+    isbn=false,
     sorting=nyt
 ]{biblatex}
 \addbibresource{08_bibliography/references.bib}

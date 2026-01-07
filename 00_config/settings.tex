@@ -80,13 +80,20 @@
 % ===== CAPTION-STYLING =====
 \captionsetup{
     format=plain,
-    font=small,
+    font=footnotesize,
     labelfont=bf,
     textfont=it,
-    justification=centering,
+    justification=raggedright,
     singlelinecheck=false
 }
 
 % ===== ZUSÄTZLICHE ABSTÄNDE =====
 \setlength{\parindent}{0pt}        % Keine Einrückung bei Absätzen
 \setlength{\parskip}{6pt}          % Abstand zwischen Absätzen
+
+% ===== FUSSNOTENEINSTELLUNGEN =====
+% Fußnoten durchlaufend über Kapitel hinweg nummerieren
+\counterwithout{footnote}{chapter}
+
+% Schriftgröße der Fußnoten anpassen
+\setkomafont{footnote}{\footnotesize}  % oder \scriptsize, \tiny, etc.
