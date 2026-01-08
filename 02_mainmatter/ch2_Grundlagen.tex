@@ -44,27 +44,35 @@ Zielsetzung: Die negativen, systemischen Folgen der beschriebenen Struktur klar 
 
 \clearpage
 
+
+
+
+
+
+
+
+
 \section{Integrierte Projektabwicklungsmodelle als alternativer Ansatz}
 \label{sec: 2.2}
 
-% Ziel: Der Leser soll eine Einführung in die Entstehung und Entwicklung integrierter Projekabwicklung bekommen.
 
-\subsection{Lean als Fundament der integrierten Projektabwicklung (\ac{IPA})}
+\subsection{Lean-Management als Wegbereiter kollaborativer Modelle}
 \label{sec:2.2.1}
 
-% Ziel: Vermittlung der Lean-Pilosophie als Ursprungsgedanke und der Weiterentwicklung über Lean Construction zu kollaborativen Projekabwicklungsmodellen
-Die im vorangegangenen Abschnitt aufgezeigten Schwachstellen konventioneller, sequenzieller Projektabwicklung sind keineswegs ein neues Phänomen oder eine reine Eigenheit der Bauwirtschaft. Vergleichbare Herausforderungen zeigten sich bereits nach dem Zweiten Weltkrieg in der japanischen Automobilindustrie. Die dort vorherrschenden Produktionsmethoden waren von Ineffizienz und Verschwendung geprägt, was angesichts knapper Ressourcen nicht tragbar war. Als Reaktion darauf entwickelte der Ingenieur Taiichi Ohno bei Toyota einen grundlegend neuen Managementansatz, der heute als das Toyota-Produktionssystem bekannt ist und das Fundament der Lean-Philosophie bildet.
+Die im vorangegangenen Abschnitt aufgezeigten Schwachstellen der konventionellen Projektabwicklung – insbesondere die organisatorische Fragmentierung und die daraus resultierenden Effizienzverluste – sind kein isoliertes Problem der deutschen Bauwirtschaft. Historisch betrachtet lassen sich Parallelen zur stationären Industrie ziehen, wo ähnliche Herausforderungen zur Entwicklung der Lean-Philosophie führten.
 
-Ursprung des Ansatzes (Lean Management) Skizzieren
-- Toyota-Produktionssystem\autocite[]{ohno_toyota-produktionssystem_2013} als Ursprung
-- Kernideen und Prinzipien : Wertmaximierung, Verschwendungsreduktion, People First (checken), Kaizen
+Der Ursprung dieses Denkansatzes liegt in der japanischen Automobilindustrie der Nachkriegszeit. Da Japan, anders als die USA, kaum über natürliche Ressourcen verfügte und der Inlandsmarkt klein war, konnte Toyota das amerikanische Modell der Massenproduktion (Fordismus) mit seinen großen Lagerbeständen nicht kopieren. Aus dieser Not heraus entwickelte Taiichi Ohno das Toyota-Produktionssystem (TPS). Sein Kernziel war die radikale Eliminierung jeglicher Verschwendung (\textit{Muda}) durch eine konsequente Fluss-Orientierung der Produktion.\autocite[vgl. S. 33]{ohno_toyota-produktionssystem_2013}
 
-Transfer auf die Baubranche durch Lean Construction
-- Landesweite Aufmerksamkeit in Japan nach der Ölkrise 1973
-- Während sich die 
-- Internationale Aufmerksamkeit durch 
+Lange Zeit galt die Übertragbarkeit dieser Prinzipien auf das Bauwesen als schwierig, da Bauprojekte als Unikate mit stationärer Fertigung verstanden wurden. Dieser theoretische Konflikt wurde 1992 durch Lauri Koskela aufgelöst. In seinem wegweisenden Report \textit{Application of the New Production Philosophy to Construction} legte er dar, dass die Bauproduktion nicht nur als Transformation von Inputs zu Outputs (Material zu Bauwerk) verstanden werden darf. Vielmehr muss sie auch unter den Aspekten des „Flusses“ (Flow) und der „Wertschöpfung“ (Value) betrachtet werden.\autocite[vgl. S. 15]{koskela_application_1992} Während die Transformation in der Bauwirtschaft oft effizient ist, liegen im „Fluss“ – also den Übergängen zwischen Gewerken und Planungsphasen – massive Anteile an nicht-wertschöpfenden Tätigkeiten wie Warten oder Nacharbeiten.\autocite[vgl. S. 16]{haghsheno_lean_2020}
 
-Ursprung und Entwicklung von Projetct Alliancing, IPD und IPA bis heute
+Die Etablierung von \textit{Lean Construction} führte zur Entwicklung diverser Methoden (wie dem Last Planner System), um diesen Prozessfluss zu stabilisieren. In der Praxis zeigte sich jedoch eine systemische Grenze: Die Optimierung des Gesamtprozesses (Flow) steht oft im Widerspruch zu den lokalen Optimierungsinteressen einzelner Akteure, die durch bilaterale Verträge und reine Einheitspreisvergütung motiviert sind.\autocite[vgl. S. 12]{becker_integrierte_2022} Solange Verträge die Trennung fördern, können Lean-Methoden ihre volle Wirkung nicht entfalten.
+
+Die historische Antwort auf dieses Dilemma lieferte nicht die Bauindustrie, sondern der Offshore-Sektor. In den 1990er Jahren stand British Petroleum (BP) vor der Herausforderung, das Ölfeld „Andrew“ in der Nordsee zu erschließen. Mit konventionellen Verträgen waren die Kosten zu hoch, um das Projekt wirtschaftlich durchzuführen. BP initiierte daher einen radikalen Modellwechsel: Anstatt Risiken auf Auftragnehmer abzuwälzen, wurde eine Allianz gebildet, in der alle Partner am finanziellen Erfolg oder Misserfolg (Pain-Share/Gain-Share) beteiligt waren.\autocite[vgl. S. 2]{ross_introduction_2000} Dieses als \textit{Project Alliancing} bekannt gewordene Modell bewies, dass die vertragliche Integration der Schlüssel zur Kostenreduktion ist, und bildet das historische Fundament der heutigen Integrierten Projektabwicklung (\ac{IPA}).
+
+
+
+
+
 
 \subsection{Prinzipien und Merkmale der Integrierten Projektabwicklung}
 \label{sec:2.2.2}
@@ -81,42 +89,15 @@ Eine kollaborative Kultur und gemeinsame Entscheidungsfindung.\\
 \subsection{Internationale Erfolge und Status Quo in Deutschland}
 \label{sec:2.2.3}
 
-\begin{tikzpicture}
-    \begin{axis}[
-        xlabel={Projektphasen},
-        ylabel={Kosten / Aufwand},
-        xmin=0, xmax=10,
-        ymin=0, ymax=10,
-        xticklabels={},
-        yticklabels={},
-        axis lines=left,
-        legend style={at={(0.5,0.95)},anchor=north},
-        ]
-
-        % Cost of change (konventionell)
-        \addplot[
-            thick,
-        ]
-        coordinates {(0,1) (2,1.5) (4,2) (6,4) (8,7) (10,10)};
-        \addlegendentry{Cost of Change}
-
-        % Level of Effort (konventionell)
-        \addplot[
-            thick,
-        ]
-        coordinates {(0,0.5) (2,2) (4,4) (6,3.5) (8,2) (10,1)};
-        \addlegendentry{Design Effort (trad.)}
-
-        % Level of Effort (IPD/BIM)
-        \addplot[
-            thick,
-            dashed
-        ]
-        coordinates {(0,1) (2,4) (4,6) (6,4) (8,2) (10,1)};
-        \addlegendentry{Design Effort (IPD/BIM)}
-
-    \end{axis}
-\end{tikzpicture}
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \includegraphics[width=\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax]{05_figures/MacLeamy-Curve.png}%
+    }
+    
+    \caption[MacLeamy-Kurve]{MacLeamy-Kurve, die den relativen Grad an Kosten und Aufwand über den Lebenszyklus eines Bauwerks zeigt (Quelle: https://education.buildingsmart.org/de/a-new-way-of-working/).}
+    \label{fig:macleamycurve}
+\end{figure}
 
 
 International: Hohe Erfolgsquoten im angelsächsischen Raum (USA, UK, Australien mit "Project Alliancing") bei der Einhaltung von Kosten und Terminen (Quelle z.B. cook2014).\\
