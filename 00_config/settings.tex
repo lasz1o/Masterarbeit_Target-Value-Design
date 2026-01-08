@@ -97,3 +97,23 @@
 
 % Schriftgröße der Fußnoten anpassen
 \setkomafont{footnote}{\footnotesize}  % oder \scriptsize, \tiny, etc.
+
+% ===== LITERATURVERZEICHNIS FORMATIERUNG =====
+% Hängender Einzug für bessere Lesbarkeit
+%\setlength{\bibhang}{1em}           % Einrückung ab 2. Zeile
+\setlength{\bibitemsep}{0.5\baselineskip}  % Mehr Abstand zwischen Einträgen
+
+% % Autor fett hervorheben
+% \renewcommand*{\mkbibnamefamily}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnamegiven}[1]{\textbf{#1}}
+
+% % Jahr gleich nach Autor, fett
+% \DeclareFieldFormat{year}{\mkbibbold{#1}}
+% \renewbibmacro*{date+extrayear}{%
+%   \iffieldundef{labelyear}
+%     {}
+%     {\printtext[parens]{\printlabeldateextra}}}
+
+% Sprache nicht anzeigen
+\AtEveryBibitem{\clearfield{language}}
+\AtEveryBibitem{\clearlist{language}}
