@@ -1,61 +1,134 @@
 \chapter{Grundlagen}
 \label{ch:grundlagen}
 
+Das folgende Kapitel legt das theoretische Fundament für die Untersuchung einer wertorientierten Projektsteuerung im Bauwesen. Um die Funktionsweise und den Mehrwert des \textit{Target Value Designs} (TVD) im weiteren Verlauf der Arbeit bewerten zu können, ist ein dreistufiges Verständnis der theoretischen Zusammenhänge erforderlich. Zunächst werden die konventionellen Strukturen der deutschen Baupraxis analysiert, um die systemimmanenten Defizite aufzuzeigen. Darauf aufbauend werden die \textit{Integrierte Projektabwicklung} (IPA) als organisatorischer Rahmen und schließlich das TVD als methodisches Instrument zur aktiven Steuerung von Kosten und Werten eingeführt.
 
-\section{Konventionelle Projektabwicklung in der deutschen Baupraxis}
-\label{sec: 2.1}
-% Ziel: Der Leser soll die Struktur, die Rollenverteilung und die prozessualen Schwachstellen der traditionellen Projektabwicklung verstehen. Dieses Kapitel etabliert das "Problem", für das die Arbeit eine Lösung präsentiert.
+\section{Konventionelle Projektabwicklung in Deutschland}
+\label{sec:2.1}
 
-% Zielsetzung: Den Leser in das Thema einführen und die prägenden Regelwerke der konventionellen Projektabwicklung in Deutschland benennen.\\
-% - Feststellung: Die deutsche Baupraxis wird maßgeblich durch HOAI und VOB geformt.\\
-% - Grundprinzip herausarbeiten: Strikte Trennung von Planungs- und Ausführungsleistungen.\\
-% - Charakterisierung des Modells: Sequenzieller Ablauf in Phasen.\\
+Die deutsche Bauwirtschaft ist durch tief verwurzelte Traditionen und eine hohe regulatorische Dichte geprägt, die das Bild der Projektabwicklung seit Jahrzehnten bestimmen. Bevor alternative Steuerungsansätze diskutiert werden können, muss dargelegt werden, warum die etablierten Mechanismen bei zunehmender Projektkomplexität an ihre Grenzen stoßen. Der folgende Abschnitt dekonstruiert die konventionelle Praxis, indem er die Rollenbilder der Akteure, die prozessualen Fesseln der Honorar- und Vergabeordnungen sowie die daraus resultierenden ökonomischen Fehlanreize analysiert.
 
-\subsection{Das lineare Prozessmodell der HOAI}
+\subsection{Akteure, Rollenbilder und die Trennung von Planung und Bau}
 \label{sec:2.1.1}
 
-In der deutschen Baupraxis wird der Projektablauf primär durch die Leistungsphasen der Honorarordnung für Architekten und Ingenieure (HOAI) strukturiert. Dieses Modell folgt der Logik der sequenziellen Abwicklung, die im internationalen Kontext als \textit{Design-Bid-Build} (DBB) bezeichnet wird \autocite[vgl.]{Habib2020}. Kennzeichnend für diese Phasenlogik ist die Annahme, dass ein Projekt durch das sukzessive Abarbeiten vordefinierter Meilensteine – von der Grundlagenermittlung bis zur Objektbetreuung – erfolgreich gesteuert werden kann.
+Die konventionelle Projektabwicklung in Deutschland ist historisch durch eine strikte Trennung von Planungs- und Ausführungsleistungen geprägt, ein Modell, das international als \textit{Design-Bid-Build} (DBB) bekannt ist. Diese Struktur basiert auf einem spezifischen Rollenverständnis der beteiligten Akteure, welches tief in den berufsrechtlichen und regulatorischen Rahmenbedingungen (insb. HOAI und AHO) verwurzelt ist.
 
-Diese Linearität führt jedoch zu einer massiven \textbf{prozessualen Fragmentierung}. In der Literatur wird dieses Vorgehen oft als \enquote{Wasserfall-Modell} kritisiert, bei dem Informationen lediglich einseitig von einer Phase in die nächste weitergegeben werden \autocite[siehe]{Habib2020}. Für eine effiziente Kosten- und Wertsteuerung ergeben sich daraus drei zentrale Defizite:
+\minisec{Das Treuhänder-Modell des Planers}
+Zentrales Element der deutschen Planungskultur ist die treuhänderische Stellung des Architekten und der Ingenieure gegenüber dem Bauherrn. Gemäß dem Leitbild der Kammern agiert der Planer als unabhängiger Sachwalter des Auftraggebers, der dessen Interessen gegenüber den bauausführenden Unternehmen vertritt \autocite[vgl.]{Girmscheid2016}. Dieses Rollenmodell impliziert eine strikte Neutralität gegenüber den ausführenden Gewerken, was häufig dazu führt, dass eine frühzeitige Kooperation zwischen Planern und Bauunternehmen unterbleibt. Insbesondere im öffentlichen Vergaberecht wird die Trennung durch das Verbot der \enquote{Vorbefasstheit} zementiert, um Wettbewerbsverzerrungen zu vermeiden \autocite[siehe]{VOB_A}. Die Folge ist jedoch eine prozessuale Isolation der Planungsphase von den Realitäten der Bauausführung.
 
+\minisec{Sequenzialität und die \enquote{V-Struktur} der Kommunikation}
+Die organisatorische Struktur konventioneller Projekte folgt einer bilateralen Logik, die in der Literatur oft als \enquote{V-Struktur} bezeichnet wird. Der Bauherr schließt isolierte Einzelverträge mit den Planungsbeteiligten (LPH 1–4/5) und erst zu einem deutlich späteren Zeitpunkt mit den bauausführenden Unternehmen (LPH 6–9). Zwischen den beiden Gruppen – den Trägern des \enquote{Entwurfswissens} und den Trägern des \enquote{Fertigungswissens} – existiert keine vertragliche oder prozessuale Verbindung \autocite[vgl.]{Sommer2016}. 
+
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \includegraphics[width=\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax, height=0.5\textwidth]{05_figures/V_Struktur_Silos.jpg}
+    }
+    \caption[V-Struktur der Kommunikation]{Bilaterale Vertrags- und Kommunikationsstrukturen (V-Struktur) in der konventionellen Projektabwicklung (Quelle: Eigene Darstellung in Anlehnung an Habib 2020).}
+    \label{fig:v_struktur}
+\end{figure}
+
+Diese Fragmentierung führt zu einer sequenziellen Informationsweitergabe, bei der die Planung oft ohne Berücksichtigung spezifischer Bauverfahren, Logistikketten oder aktueller Marktkapazitäten der Unternehmen abgeschlossen wird. Habib beschreibt dieses Phänomen treffend als einen Paradigmenverlust des Wissens, da das Know-how derer, die das Projekt realisieren, in der Phase der größten Beeinflussbarkeit der Kosten (Entwurfsphase) faktisch ausgeschlossen ist \autocite[in Anlehnung an]{Habib2020}.
+
+\minisec{Informationsasymmetrie und die \enquote{Knowledge Gap}}
+Ein wesentliches Defizit dieser Rollentrennung ist die entstehende Informationsasymmetrie. Während der Planer die funktionale und gestalterische Qualität definiert, verfügt erst der Bauunternehmer über die detaillierte Kenntnis der realen Kostenstrukturen und Bauprozesse. In der konventionellen Abwicklung kollidieren diese Welten erst nach der Vergabe. Erweist sich die Planung als nicht baubar oder ökonomisch ineffizient, sind aufwendige Umplanungen (\textit{Rework}) die Folge, welche wiederum die Zeitpläne und Budgets belasten \autocite[vgl.]{Ballard2025}. Die MacLeamy-Kurve illustriert hierbei eindrücklich, dass die Fähigkeit zur Kostenbeeinflussung mit fortschreitender Projektdauer rapide sinkt, während die Kosten für Änderungen exponentiell ansteigen \autocite{MacLeamy2004}.
+
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \includegraphics[width=\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax, height=0.5\textwidth]{05_figures/Knowledge_Gap.jpg}
+    }
+    \caption[Knowledge Gap]{Die Wissenslücke (\textit{Knowledge Gap}) zwischen Planungs- und Ausführungsexpertise im konventionellen Prozess (Quelle: Eigene Darstellung).}
+    \label{fig:knowledge_gap}
+\end{figure}
+
+\minisec{Haftungssilos und Misstrauenskultur}
+Die Fragmentierung wird durch das deutsche Haftungsrecht verstärkt. Da jeder Akteur primär für seinen abgegrenzten Leistungsbereich haftet, entsteht ein System von \enquote{Haftungssilos}. Anstatt Probleme interdisziplinär an den Schnittstellen zu lösen, konzentrieren sich die Akteure auf die eigene Risikoabsicherung und Exkulpanz \autocite[vgl.]{Kyrein2002}. In der Praxis manifestiert sich dies in einer Flut von Behinderungsanzeigen und Bedenkenanmeldungen nach VOB/B, die eher der Dokumentation des gegenseitigen Versagens als dem Projekterfolg dienen. Dieses feindselige Klima (\textit{Adversarial Relationship}) verhindert die für moderne Steuerungskonzepte wie das Target Value Design notwendige Radikale Transparenz und das gegenseitige Vertrauen.
+
+Zusammenfassend lässt sich festhalten, dass die traditionellen Rollenbilder in Deutschland eine organisatorische Barriere bilden, die den Fluss von Informationen und Werten unterbricht. Diese systemische Trennung von Geist und Hand ist die primäre Ursache für die mangelnde Steuerbarkeit komplexer Bauvorhaben.
+
+\subsection{ Die regulatorische Rahmenbedingungen HOAI und VOB}
+\label{sec:2.1.2}
+
+Während die Rollenbilder der Akteure das soziale Gefüge definieren, bilden die Honorarordnung für Architekten und Ingenieure (HOAI) sowie die Vergabe- und Vertragsordnung für Bauleistungen (VOB) das regulatorische Gerüst der konventionellen Projektabwicklung. Diese Regelwerke begünstigen eine sequenzielle Prozesslogik, die iterativen Optimierungsprozessen strukturell entgegensteht.
+
+\minisec{Die HOAI als Prozessstandard}
+Trotz der Novellierung im Jahr 2021, durch welche die verbindlichen Mindest- und Höchstsätze infolge der Rechtsprechung des Europäischen Gerichtshofes entfielen, bleibt die HOAI als \enquote{empfohlene} Honorarstruktur das maßgebliche Prozessmodell der deutschen Baupraxis. Die Unterteilung in neun Leistungsphasen (LPH) schafft eine starre zeitliche Abfolge, die in der Literatur häufig als Wasserfall-Modell charakterisiert wird \autocite[vgl.]{Girmscheid2016}.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=\textwidth]{Abbildung_HOAI_Phasen.pdf}
+    \caption{Sequenzielle Abfolge der HOAI-Leistungsphasen (Eigene Darstellung)}
+    \label{fig:hoai_phasen}
+\end{figure}
+
+Die Phasen lassen sich grob in drei Blöcke unterteilen:
 \begin{itemize}
-    \item \textbf{Das Wissens-Paradoxon (Knowledge Gap):} Die HOAI sieht vor, dass die Planung (LPH 1–4) weitestgehend abgeschlossen sein muss, bevor die ausführenden Unternehmen in den Leistungsphasen 6 und 7 (Vorbereitung und Mitwirkung bei der Vergabe) eingebunden werden \autocite[vgl.]{Habib2020}. Zu diesem Zeitpunkt sind Schätzungen zufolge bereits ca. 80\,\% der Lebenszykluskosten eines Gebäudes durch Entwurfsentscheidungen fixiert \autocite[siehe]{Ballard2025}. Das spezifische Fertigungs- und Marktwissen derer, die das Gebäude letztlich realisieren, bleibt somit in der Phase der größten Beeinflussbarkeit ungenutzt.
-    
-    \item \textbf{Reaktive statt proaktive Steuerung:} Die Kostenermittlungen erfolgen im konventionellen Modell oft \enquote{post-mortem}. Eine Kostenberechnung am Ende der Entwurfsplanung (LPH 3) dient häufig nur der Dokumentation des Status Quo, statt als aktives Design-Werkzeug zu fungieren. Weichen die Kosten vom Budget ab, führt dies in der linearen Logik unweigerlich zu aufwendigen und teuren Umplanungen (\textit{Rework}), da der Prozess nicht auf iterative Feedbackschleifen ausgelegt ist \autocite[vgl.]{Ballard2025}.
-    
-    \item \textbf{Schnittstellenverluste und mangelnde Baubarkeit:} Da die Planer in der Entwurfsphase keine Kenntnis über die spezifischen Bauverfahren oder Subunternehmerketten der späteren Auftragnehmer haben, entstehen abstrakte Planungen. Diese müssen in der Ausführungsphase häufig korrigiert werden, was zu Zeitverlusten und Kostensteigerungen führt \autocite[vgl.]{Habib2020}.
+    \item \textbf{Planungsphase (LPH 1--4):} Von der Grundlagenermittlung bis zur Genehmigungsplanung wird das Projekt primär abstrakt und theoretisch definiert.
+    \item \textbf{Vorbereitungsphase (LPH 5--7):} Die Ausführungsplanung sowie die Vorbereitung und Mitwirkung bei der Vergabe bilden die Schnittstelle zum Markt.
+    \item \textbf{Realisierungsphase (LPH 8--9):} Die Objektüberwachung und Dokumentation begleiten die physische Errichtung.
 \end{itemize}
 
-Zusammenfassend lässt sich festhalten, dass die Phasenlogik der HOAI ein \textbf{Steuerungsdefizit} zementiert: Sie erzwingt weitreichende Entscheidungen zu einem Zeitpunkt, an dem das Wissen über deren Konsequenzen minimal ist, und verhindert Korrekturen zu einem Zeitpunkt, an dem sie noch kostengünstig möglich wären \autocite[Hier ggf. weitere Quelle zu Projektmanagement-Grundlagen einfügen]{...}. Dieses strukturelle Problem bildet die wesentliche Motivation für den Einsatz integrativer Ansätze wie dem Target Value Design, um die Trennung von Planung und Bau zu überwinden.
+Diese Phasentrennung führt dazu, dass Planungsergebnisse zu starren Meilensteinen \enquote{eingefroren} werden müssen, um die darauf basierenden Honoraransprüche und Genehmigungsschritte zu sichern. Nachträgliche Anpassungen oder die Rückkehr zu bereits abgeschlossenen Phasen für Optimierungszwecke werden systemisch als \enquote{Störung} oder kostenpflichtige \enquote{Umplanung} gewertet, anstatt als integraler Teil der Wertschöpfung begriffen zu werden \autocite[siehe]{HOAI_Text}.
 
-\subsection{Das Prozessmodell - HOAI Leistungsphasen}
-\label{sec: 2.1.1}
-Zielsetzung: Das abstrakte "Phasenmodell" mit dem konkreten Ablauf der HOAI-Leistungsphasen füllen und dessen starre, lineare Struktur verdeutlichen.\\
-- Prozessstruktur: Wird durch die neun Leistungsphasen der HOAI definiert.\\
-- Darstellung des Ablaufs: Inhärent linear und sequenziell (LPH 1 -> LPH 9).\\
-- Kritischen Punkt identifizieren: Wesentliche Kosten- und Qualitätsentscheidungen fallen in den frühen Planungsphasen (insb. LPH 2-3).\\
-- Problem benennen: Zu diesem frühen Zeitpunkt fehlt die vertraglich gebundene Expertise der Ausführung.\\
-- Empfehlung: Visualisierung des linearen Ablaufs durch ein einfaches Diagramm.\\
+\begin{figure}[htbp]
+    \centering
+     \fcolorbox{gray!50}{white}{%
+    \includegraphics[width=\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax, height=0.5\textwidth]{05_figures/HOAI vs. TVD Phasen Vergleich .jpg}%
+    }
+    
+    \caption[Vergleich HOAI und TVD]{Vergleich der HOAI-Leistungsphasen mit dem idealtypischen TVD-Phasenmodell (Quelle: Eigene Darstellung).}
+    \label{fig:phasenvergleich}
+\end{figure}
 
-\subsection{Die Organisationsstruktur - getrennte Silos}
-\label{sec: 2.1.2}
-Zielsetzung: Die prozessuale Trennung auf die organisatorische Ebene übertragen und das Problem der isolierten Akteure (Silos) einführen.\\
-- Organisationsstruktur beschreiben: Klassische Dreieckskonstellation (Bauherr, Planer, Ausführender) mit bilateralen Verträgen.\\
-- Problem der "Silos" formulieren: Jeder Akteur ist primär auf die Erfüllung des eigenen Vertrags fokussiert.\\
-- Kommunikationswege: Oft nur indirekt über den Bauherrn, nicht disziplinübergreifend.\\
+\minisec{Starrheit der Kostensteuerung nach DIN 276}
+Die konventionelle Kostenermittlung orientiert sich an der DIN 276, welche Kosten nach Kostengruppen (Bauteilen) strukturiert (z.B. KG 300 Bauwerk - Baukonstruktion). Diese bauteilorientierte Sichtweise erschwert eine interdisziplinäre Funktionsoptimierung. In der konventionellen Praxis dient die DIN 276 primär als Instrument zur ex-post-Dokumentation. Da die Kostenverantwortung innerhalb der gewerkspezifischen Planungs-Silos verbleibt, können Budgetüberschreitungen oft erst dann festgestellt werden, wenn der Planungsgrad bereits so weit fortgeschritten ist, dass korrigierende Eingriffe hohe Änderungskosten verursachen \autocite[vgl.]{Becker2022}.
 
-\subsection{Die Konsequenzen - strukturelle Schwachstellen}
-\label{sec: 2.1.3}
-Zielsetzung: Die negativen, systemischen Folgen der beschriebenen Struktur klar benennen und mit Belegen untermauern. Dies ist der Kern der Problemanalyse.\\
-- Schwachstellen auflisten und erläutern:\\
-- Späte Einbindung von ausführendem Know-how.\\
-- Informationsverluste an den Schnittstellen.\\
-- Entstehung eines adversialen Projektklimas (Fokus auf Nachtragsmanagement).\\
-- Direkte Verbindung zu Kosten- und Terminüberschreitungen herstellen\\
+\minisec{Vertragsarten und das Risiko des Bau-Solls}
+Das vertragliche Fundament bildet in der Regel die VOB/B, welche die Geschäftsbedingungen für die Ausführung regelt. Hierbei dominieren zwei Vertragsarten, die jeweils unterschiedliche Risikoprofile aufweisen:
 
-- Zusammenfassen: Das konventionelle Modell bietet zwar einen klaren rechtlichen Rahmen, weist jedoch inhärente Schwächen auf, die Effizienz und Kooperation behindern.
-- Schlussfolgerung: Angesichts aktueller Herausforderungen ist das Modell zunehmend reformbedürftig.\\
-- Überleitung formulieren: Hinweis auf die Entwicklung alternativer, international etablierter Projektabwicklungsmodelle als Reaktion auf diese Defizite.
+\begin{itemize}
+    \item \textbf{Einheitspreisvertrag (EPV):} Die Vergütung erfolgt auf Basis tatsächlich erbrachter Massen und festgelegter Einheitspreise aus einem Leistungsverzeichnis (LV). Hier trägt der Bauherr das Mengenrisiko. Bei lückenhafter Planung bietet dieser Vertragstyp für Auftragnehmer Anreize zur Mengenmaximierung und zum Nachtragsmanagement \autocite[vgl.]{VOB_B}.
+    \item \textbf{Pauschalpreisvertrag (PPV):} Das Honorar wird für eine vorab definierte Gesamtleistung fixiert. Während dies dem Bauherrn vermeintliche Preissicherheit bietet, verlagert es das Risiko unvorhergesehener Massenänderungen auf den Auftragnehmer. Dies führt in der Praxis häufig zu hohen Risikoaufschlägen in der Kalkulation und einer aggressiven Abwehrhaltung gegenüber jeglichen Änderungen im Projektverlauf.
+\end{itemize}
+
+Beide Vertragsformen basieren auf der Fiktion eines zum Zeitpunkt der Vergabe abschließend definierten \enquote{Bau-Solls}. Diese Annahme zwingt die Beteiligten dazu, den Entwurf frühzeitig festzuschreiben, was Flexibilität unterbindet und die Basis für die in der Bauwirtschaft weit verbreitete Konfliktkultur legt.
+
+\minisec{Vergaberechtliche Restriktionen}
+Ergänzt wird dieses Korsett durch das Vergaberecht (insb. GWB und VgV), welches insbesondere öffentliche Auftraggeber zur Losvergabe und zum Preiswettbewerb zwingt. Diese regulatorischen Vorgaben erschweren die frühzeitige Einbindung von Ausführungswissen (\textit{Early Contractor Involvement}), da eine Zusammenarbeit vor der formalen Vergabe oft als wettbewerbsverzerrende \enquote{Vorbefasstheit} gewertet wird \autocite[vgl.]{Reformkommission2015}. Damit wird das in 2.1.1 beschriebene Wissens-Vakuum in der Entwurfsphase rechtlich institutionalisiert.
+
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \includegraphics[width=\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax, height=0.5\textwidth]{05_figures/Claim_Circle_Teufelskreis.jpg}
+    }
+    \caption[Teufelskreis des Nachtragsmanagements]{Ökonomische Fehlanreize und der Teufelskreis des konventionellen Claim-Managements (Quelle: Eigene Darstellung in Anlehnung an Girmscheid 2016).}
+    \label{fig:claim_circle}
+\end{figure}
+
+Zusammenfassend lässt sich festhalten, dass HOAI und VOB ein starres System schaffen, das auf Misstrauen und exakter Abgrenzung von Leistungen basiert. Eine proaktive, wertorientierte Steuerung, die Flexibilität und Kooperation voraussetzt, ist innerhalb dieser regulatorischen Leitplanken kaum realisierbar.
+
+\subsection{Die Konsequenzen: Fragmentierung und ökonomische Fehlanreize}
+\label{sec:2.1.3}
+
+Die in den vorangegangenen Abschnitten beschriebene Trennung der Akteure (\cref{sec:2.1.1}) sowie die starre prozessuale Einbindung durch HOAI und VOB (\cref{sec:2.1.2}) führen in der Summe zu einer systemischen Dysfunktionalität. Diese manifestiert sich sowohl in ökonomischen Kennzahlen als auch in einer spezifischen, oft projektkritischen Kommunikationskultur. In der Literatur wird dieser Zustand häufig als Krise der Bauwirtschaft charakterisiert, die einen grundlegenden Paradigmenwechsel erforderlich macht \autocite[vgl.]{Habib2020}.
+
+\minisec{Ökonomie der Nachträge und Claim-Management}
+Ein zentrales Merkmal konventioneller Abwicklungsmuster ist die Verschiebung des unternehmerischen Fokus weg von der reinen Bauleistung hin zur Identifikation von Planungs- und Ausschreibungsmängeln. In einem Marktumfeld, das durch das Billigstbieterprinzip und geringe Margen geprägt ist, wird das sogenannte \textbf{Claim-Management} für viele Bauunternehmen zu einer existenziellen Notwendigkeit \autocite[vgl.]{Girmscheid2016}.
+
+Da das vertragliche \enquote{Bau-Soll} aufgrund der sequenziellen Planung (LPH 1--5) zum Zeitpunkt der Vergabe selten fehlerfrei definiert ist, entstehen zwangsläufig Abweichungen während der Ausführung. In der konventionellen Logik werden diese Abweichungen nicht als gemeinsame Chance zur Optimierung begriffen, sondern als Grundlage für Nachtragsforderungen genutzt. Dieser Mechanismus bindet erhebliche Ressourcen auf Seiten aller Beteiligten für die Prüfung, Abwehr und Verhandlung von Mehrkosten, anstatt diese Kapazitäten in die wertschöpfende Planung oder Ausführung zu investieren.
+
+\minisec{Die Stagnation der Produktivität und die Komplexitätsfalle}
+Die organisatorische Fragmentierung verhindert zudem den Aufbau nachhaltiger Lernkurven und den Transfer von Prozesswissen über Projektgrenzen hinweg. Während andere Industriezweige durch Standardisierung und integrierte Wertschöpfungsketten signifikante Produktivitätssteigerungen erzielen konnten, stagniert die Wertschöpfung pro Erwerbstätigenstunde im deutschen Baugewerbe seit Jahrzehnten. \autocite[vgl.]{McKinsey2017}\,\autocite[vgl.]{Reformkommission2015}
+
+Dieser Rückstand wird durch die massiv gestiegene technologische Komplexität moderner Bauwerke verschärft. Ein Gebäude der Gegenwart ist nicht mehr mit der Baustruktur der 1970er-Jahre vergleichbar; insbesondere die technische Gebäudeausrüstung (TGA) hat eine \enquote{Explosion} der Kosten- und Schnittstellenanteile erfahren. Während die Technik in den 1960er- und 1970er-Jahren oft nur 10\,\% bis 15\,\% der Gesamtkosten ausmachte, liegt die TGA-Quote (Kostengruppe 400 nach DIN 276) bei komplexen Hochbauten wie Kliniken oder modernen Bürogebäuden heute häufig zwischen 40\,\% und 50\,\% \autocite[siehe]{Sommer2016}\, \autocite[vgl.]{BKI2024}. Das konventionelle Modell versucht jedoch, diese hochgradig vernetzte Technik mit denselben sequenziellen und gewerkeorientierten Methoden zu steuern, die für den vergleichsweise simplen Mauerwerksbau des letzten Jahrhunderts konzipiert wurden. Da die Planung der TGA oft isoliert erfolgt, verpuffen potenzielle Effizienzgewinne aus Innovationen wie dem \textit{Building Information Modeling} (BIM) an den starren vertraglichen Schnittstellen der Leistungsphasen \autocite[vgl.]{Becker2022}.
+
+\minisec{Kulturelle Folgen: Die \enquote{Adversarial Culture}}
+Die vielleicht schwerwiegendste Konsequenz ist die Entstehung einer tief verwurzelten Misstrauenskultur, die international als \textit{Adversarial Culture} bezeichnet wird. Die konventionelle Struktur basiert auf der Annahme gegensätzlicher Interessen: Der Gewinn des einen Akteurs wird häufig als der Verlust des anderen wahrgenommen (Nullsummenspiel).
+
+Die \textit{Reformkommission Bau von Großprojekten} stellte bereits 2015 fest, dass diese Atmosphäre der Konfrontation zu einer massiven Risikoaversion führt. Anstatt Risiken gemeinsam proaktiv zu steuern, steht der Versuch im Vordergrund, Risiken vertraglich auf andere Parteien abzuwälzen. Tritt ein Schadensfall ein, steht nicht die Problemlösung, sondern die Entschuldung im Vordergrund. Diese Defensivhaltung untergräbt die für eine wertorientierte Projektsteuerung notwendige Transparenz und verhindert die offene Kommunikation über Fehler und Verbesserungspotenziale. \autocite[vgl.]{Habib2020}\,\autocite[vgl.]{Reformkommission2015}
+
+Zusammenfassend lässt sich feststellen, dass die konventionelle Projektabwicklung in Deutschland in einer strukturellen Sackgasse verharrt. Die Trennung von Planung und Bau, die Starrheit der Regelwerke und die daraus resultierenden ökonomischen Fehlanreize schaffen ein Umfeld, in dem eine zielgerichtete Steuerung von Kosten und Werten systematisch erschwert wird. Diese Analyse bildet die Grundlage für die Forderung nach alternativen, kollaborativen Abwicklungsmodellen, wie sie im folgenden \cref{sec: 2.2} vorgestellt werden.
 
 \clearpage
 
@@ -70,68 +143,112 @@ Zielsetzung: Die negativen, systemischen Folgen der beschriebenen Struktur klar 
 \section{Integrierte Projektabwicklungsmodelle als alternativer Ansatz}
 \label{sec: 2.2}
 
-Die im vorangegangenen Abschnitt aufgezeigten Schwachstellen der konventionellen Projektabwicklung – insbesondere die organisatorische Fragmentierung und die daraus resultierenden Effizienzverluste – sind kein isoliertes Problem der deutschen Bauwirtschaft. Historisch betrachtet lassen sich Parallelen zur stationären Industrie ziehen, wo ähnliche Herausforderungen zur Entwicklung der Lean-Philosophie führten.
+Die im vorangegangenen Abschnitt aufgezeigten Schwachstellen der konventionellen Projektabwicklung, insbesondere die organisatorische Fragmentierung und die daraus resultierenden Effizienzverluste, sind kein einzigartiges Problem der deutschen Bauwirtschaft. Historisch betrachtet lassen sich Parallelen zur stationären Industrie ziehen, wo ähnliche Herausforderungen zur Entwicklung der Lean-Philosophie führten.
 
 \subsection{Lean-Management als Wegbereiter kollaborativer Modelle}
 \label{sec:2.2.1}
 
-Der Ursprung dieses Denkansatzes liegt in der japanischen Automobilindustrie der Nachkriegszeit. Da Japan, anders als die USA, kaum über natürliche Ressourcen verfügte und der Inlandsmarkt klein war, konnte Toyota das amerikanische Modell der Massenproduktion (Fordismus) mit seinen großen Lagerbeständen nicht kopieren. Aus dieser Not heraus entwickelte Taiichi Ohno das Toyota-Produktionssystem (TPS). Sein Kernziel war die radikale Eliminierung jeglicher Verschwendung (\textit{Muda}) durch eine konsequente Fluss-Orientierung der Produktion.\autocite[vgl. S. 33]{ohno_toyota-produktionssystem_2013}
+Der Ursprung dieses Denkansatzes liegt in der japanischen Automobilindustrie der Nachkriegszeit. Da Toyota das amerikanische Modell der Massenproduktion aufgrund begrenzter Ressourcen nicht adaptieren konnte, entwickelte Taiichi Ohno das Toyota-Produktionssystem (TPS). Dessen Kernziel war die radikale Eliminierung jeglicher Verschwendung (\textit{Muda}) durch eine konsequente Fluss-Orientierung der Produktion \autocite[vgl. S. 33]{ohno_toyota-produktionssystem_2013}.
 
-Lange Zeit galt die Übertragbarkeit dieser Prinzipien auf das Bauwesen als schwierig, da Bauprojekte als Unikate mit stationärer Fertigung verstanden wurden. Dieser theoretische Konflikt wurde 1992 durch Lauri Koskela aufgelöst. In seinem wegweisenden Report \textit{Application of the New Production Philosophy to Construction} legte er dar, dass die Bauproduktion nicht nur als Transformation von Inputs zu Outputs (Material zu Bauwerk) verstanden werden darf. Vielmehr muss sie auch unter den Aspekten des „Flusses“ (Flow) und der „Wertschöpfung“ (Value) betrachtet werden.\autocite[vgl. S. 15]{koskela_application_1992} Während die Transformation in der Bauwirtschaft oft effizient ist, liegen im „Fluss“ – also den Übergängen zwischen Gewerken und Planungsphasen – massive Anteile an nicht-wertschöpfenden Tätigkeiten wie Warten oder Nacharbeiten.\autocite[vgl. S. 16]{haghsheno_lean_2019}
+Die Übertragung dieser Prinzipien auf das Bauwesen wurde 1992 durch Lauri Koskela wissenschaftlich fundiert. In seinem wegweisenden Report \textit{Application of the New Production Philosophy to Construction} etablierte er die sogenannte \textbf{TFV-Theorie} (Transformation, Flow, Value). Er legte dar, dass Bauproduktion nicht nur als Transformation von Material zu Bauwerk verstanden werden darf, sondern vor allem unter den Aspekten des \enquote{Flusses} (\textit{Flow}) und der \enquote{Wertschöpfung} (\textit{Value}) gesteuert werden muss \autocite[vgl. S. 15]{koskela_application_1992}. Während die Transformation oft lokal effizient ist, liegen in den komplexen Übergängen zwischen Gewerken und Phasen massive Anteile an nicht-wertschöpfenden Tätigkeiten wie Warten oder Nacharbeiten \autocite[vgl. S. 16]{haghsheno_lean_2019}.
 
-Die Etablierung von \textit{Lean Construction} führte zur Entwicklung diverser Methoden (wie dem Last Planner System), um diesen Prozessfluss zu stabilisieren. In der Praxis zeigte sich jedoch eine systemische Grenze: Die Optimierung des Gesamtprozesses (Flow) steht oft im Widerspruch zu den lokalen Optimierungsinteressen einzelner Akteure, die durch bilaterale Verträge und reine Einheitspreisvergütung motiviert sind.\autocite[vgl. S. 12]{becker_integrierte_2022} Solange Verträge die Trennung fördern, können Lean-Methoden ihre volle Wirkung nicht entfalten.
+Die Etablierung von \textit{Lean Construction} führte zur Entwicklung operativer Methoden (wie dem \textit{Last Planner System}), um diesen Prozessfluss zu stabilisieren. In der Praxis zeigte sich jedoch eine systemische Grenze: Die Optimierung des Gesamtflusses steht oft im Widerspruch zu den lokalen Gewinninteressen der Einzelakteure, die durch konventionelle, bilaterale Verträge motiviert sind \autocite[vgl. S. 12]{becker_integrierte_2022}. Solange Verträge auf der Abwälzung von Risiken basieren, können Lean-Methoden ihre volle Wirkung nicht entfalten.
 
-Die historische Antwort auf dieses Dilemma lieferte nicht die Bauindustrie, sondern der Offshore-Sektor. In den 1990er Jahren stand British Petroleum (BP) vor der Herausforderung, das Ölfeld „Andrew“ in der Nordsee zu erschließen. Mit konventionellen Verträgen waren die Kosten zu hoch, um das Projekt wirtschaftlich durchzuführen. BP initiierte daher einen radikalen Modellwechsel: Anstatt Risiken auf Auftragnehmer abzuwälzen, wurde eine Allianz gebildet, in der alle Partner am finanziellen Erfolg oder Misserfolg (Pain-Share/Gain-Share) beteiligt waren.\autocite[vgl. S. 2]{ross_introduction_2000} Dieses als \textit{Project Alliancing} bekannt gewordene Modell bewies, dass die vertragliche Integration der Schlüssel zur Kostenreduktion ist.
-
-Der Erfolg des Andrew-Projekts blieb nicht unbeachtet. Insbesondere in Australien etablierte sich das Modell unter dem Begriff \textit{Project Alliancing} (PA) schnell als Standard für komplexe öffentliche Infrastrukturprojekte.\autocite[vgl. S. 1]{ross_introduction_2000} Inspiriert durch die australischen Erfahrungen adaptierte die US-amerikanische Bauwirtschaft, getrieben durch private Bauherren im Gesundheitswesen wie Sutter Health, diese Prinzipien für den Hochbau. Dort prägte das American Institute of Architects (AIA) im Jahr 2007 den Begriff \textit{Integrated Project Delivery} (IPD) und definierte ihn erstmals vertraglich.\autocite[vgl.]{becker_integrierte_2022}\, \autocite[vgl.]{AIA_2007__integrated}
-
-Im deutschsprachigen Raum hat sich für diesen Ansatz der Begriff \textbf{Integrierte Projektabwicklung (IPA)} etabliert. Hierbei handelt es sich um die direkte Entsprechung des angloamerikanischen IPD-Modells. IPA ist folglich keine Neuentwicklung, sondern beschreibt die Anwendung derselben kollaborativen Prinzipien und Vertragsstrukturen im Kontext der deutschen Bauwirtschaft.\autocite[vgl. S. 28]{haghsheno_lean_2019}
+Die historische Antwort auf dieses Dilemma lieferte der Offshore-Sektor: Beim \textit{BP Andrew Project} in den 1990er-Jahren wurde erstmals eine Allianz gebildet, bei der alle Partner am finanziellen Gesamterfolg beteiligt waren (\textit{Pain-Share/Gain-Share}), anstatt Risiken bilateral abzuwälzen \autocite[vgl. S. 2]{ross_introduction_2000}. Dieses als \textit{Project Alliancing} bekannt gewordene Modell bewies, dass die vertragliche Integration der Schlüssel zur massiven Kostenreduktion ist. In der Folge etablierte sich das Modell schnell in Australien und Finnland – hier insbesondere durch die erfolgreiche Anwendung im öffentlichen Infrastrukturbau \autocite[vgl.]{lahdenpera_making_2012}. Inspiriert durch diese Erfolge prägte das American Institute of Architects (AIA) 2007 den Begriff \textit{Integrated Project Delivery} (IPD) für den Hochbau \autocite[vgl.]{AIA_2007__integrated}. Im deutschsprachigen Raum hat sich hierfür die Bezeichnung \textbf{Integrierte Projektabwicklung (IPA)} etabliert, die die Anwendung dieser kollaborativen Prinzipien und Vertragsstrukturen im Kontext der deutschen Bauwirtschaft beschreibt \autocite[vgl. S. 28]{haghsheno_lean_2019}.
 
 \clearpage
 
+% \subsection{Prinzipien und Merkmale der Integrierten Projektabwicklung}
+% \label{sec:2.2.2}
 
+% Da der Begriff der Integrierten Projektabwicklung in Deutschland – anders als die klassischen Modelle der VOB – nicht gesetzlich definiert ist, erfordert die wissenschaftliche Einordnung eine präzise Abgrenzung anhand von branchenweit akzeptierten Merkmalen. Das \ac{GLCI} definiert IPA hierbei als ein ganzheitliches Projektabwicklungsmodell, das vertragliche, kulturelle und ökonomische Aspekte in einem kohärenten System integriert \autocite[vgl. S. 28]{haghsheno_lean_2019}.
 
+% Zur Veranschaulichung dieser Systematik hat sich in der deutschsprachigen Literatur das Bild des \enquote{Hauses der IPA} etabliert. Dieses Modell visualisiert das Zusammenspiel der verschiedenen Ebenen: Das \textbf{Fundament} bildet der Mehrparteienvertrag, der alle Schlüsselakteure rechtlich bindet. Die \textbf{Säulen} bestehen aus dem gemeinsamen Risikomanagement (ökonomische Anreize) und der kooperativen Zusammenarbeit (Kultur und Methoden). Das \textbf{Dach} symbolisiert schließlich die gemeinsamen Projektziele (\enquote{Best for Project}), die über den individuellen Einzelinteressen stehen \autocite[vgl. S. 29]{haghsheno_lean_2019}.
 
+% Um die Beliebigkeit des Begriffs einzuschränken und eine klare Abgrenzung zu unverbindlichen Partnering-Modellen zu schaffen, hat das IPA-Zentrum im Jahr 2022 eine präzisere Definition erarbeitet. Diese unterscheidet zwischen wesensgebenden Charakteristika (wie einer kooperativen Grundhaltung) und harten \textbf{konstitutiven Modellbestandteilen}. Entscheidend für die wissenschaftliche Einordnung ist, dass ein Projekt erst dann dem IPA-Standard entspricht, wenn alle konstitutiven Bestandteile kumulativ vorliegen \autocite[vgl. S. 3]{ipa_zentrum_integrierte_2022}.
+
+% Für das Verständnis des späteren \textit{Target Value Designs} (TVD) sind insbesondere folgende konstitutive Elemente hervorzuheben \autocite[vgl. S. 4--9]{ipa_zentrum_integrierte_2022}:
+
+% \begin{description}
+%     \item[Mehrparteienvertrag:] Mindestens der Bauherr, die maßgeblichen Planungsbeteiligten und die schlüsselfertigen Ausführungsunternehmen schließen einen einzigen, gemeinsamen Vertrag. Dies löst die bilaterale \enquote{V-Struktur} der konventionellen Abwicklung auf und schafft eine gemeinsame Rechtsgrundlage.
+    
+%     \item[Vergütungsmodell und Risikopool:] Die Vergütung erfolgt über ein Drei-Säulen-Modell: (1) Erstattung der tatsächlichen Selbstkosten, (2) ein fixer Gemeinkostenzuschlag und (3) ein variabler Gewinnanteil. Letzterer fließt in einen gemeinsamen Risikopool. Bei Kostenüberschreitungen wird dieser Pool zur Deckung genutzt (\textit{Pain-Share}), während Unterschreitungen als Bonus an alle Partner ausgeschüttet werden (\textit{Gain-Share}) \autocite[vgl. S. 19]{becker_integrierte_2022}.
+    
+%     \item[Open Book Accounting:] Diese radikale finanzielle Transparenz ist die conditio sine qua non der IPA. Alle Kostenstrukturen müssen offengelegt werden, da ohne diese Datenbasis eine gemeinsame Kostensteuerung im TVD-Prozess methodisch nicht operabel wäre.
+    
+%     \item[Einstimmigkeitsprinzip:] Entscheidungen im integrierten Führungsgremium (\textit{Senior Management Team}) müssen konsensual getroffen werden. Dies zwingt die Parteien zur sachlichen Argumentation und verhindert die im konventionellen System übliche Dominanz einzelner Akteure.
+    
+%     \item[Haftungsbeschränkung (\textit{No-Blame-Culture}):] Die Partner verzichten weitgehend auf gegenseitige Haftungsansprüche bei Fehlern (ausgenommen Vorsatz und grobe Fahrlässigkeit). Dies fördert eine offene Fehlerkultur, in der die Behebung von Defiziten Vorrang vor der Schuldzuweisung hat.
+% \end{description}
+
+% Haghsheno et al. ordnen diese vielfältigen Elemente in einem wissenschaftlichen Strukturierungsansatz drei logischen Ebenen zu, die sich gegenseitig bedingen \autocite[vgl. S. 80]{haghsheno_strukturierungsansatz_2022}:
+% \begin{enumerate}
+%     \item \textbf{Kommerzielle und rechtliche Rahmenbedingungen:} Der Mehrparteienvertrag und das Anreizsystem bilden das unverzichtbare Gerüst.
+%     \item \textbf{Organisation und Kultur:} Die integrierte Teamstruktur und das verhaltensbezogene Mindset (\enquote{Best for Project}).
+%     \item \textbf{Prozesse und Methoden:} Die operative Ebene, auf der konkrete Werkzeuge zum Einsatz kommen.
+% \end{enumerate}
+
+% Diese Systematik ist zentral für den weiteren Verlauf dieser Arbeit: Während IPA den rechtlichen und kulturellen Rahmen (Ebene 1 und 2) spannt, ist das \textbf{Target Value Design} als die entscheidende Methode auf der Prozessebene (Ebene 3) zu verorten, um die Projektziele innerhalb dieses Rahmens aktiv zu steuern.
 
 \subsection{Prinzipien und Merkmale der Integrierten Projektabwicklung}
 \label{sec:2.2.2}
 
-Da der Begriff der Integrierten Projektabwicklung in Deutschland – anders als die VOB-basierten Modelle – nicht gesetzlich definiert ist, erfordert die wissenschaftliche Einordnung eine klare Abgrenzung anhand von branchenweit akzeptierten Merkmalen. Das \ac{GLCI} definiert IPA hierbei nicht nur als Vertragsart, sondern als ein ganzheitliches Projektabwicklungsmodell, das vertragliche, kulturelle und ökonomische Aspekte in einem einzigen System integriert.\autocite[vgl. S. 28]{haghsheno_lean_2019}
+Die Integrierte Projektabwicklung (IPA) stellt weit mehr dar als eine bloße vertragliche Modifikation; sie ist ein ganzheitliches \textit{Project Delivery Model}, das eine radikale Abkehr von der fragmentierten Logik des konventionellen Bauwesens vollzieht. Da IPA im deutschen Rechtsraum nicht durch ein einzelnes Gesetz kodifiziert ist, erfolgt die wissenschaftliche Definition über die kumulative Präsenz spezifischer Strukturmerkmale. Das Ziel ist die Schaffung einer \enquote{Schicksalsgemeinschaft}, in der der Erfolg des Einzelnen untrennbar mit dem Erfolg des Gesamtsystems verknüpft ist \autocite[vgl.]{haghsheno_lean_2019}.
 
-Zur Veranschaulichung dieser Systematik hat sich in der deutschsprachigen Literatur das Bild des „Hauses der IPA“ etabliert. Dieses Modell visualisiert das Zusammenspiel der verschiedenen Ebenen:\autocite[vgl. S. 29]{haghsheno_lean_2019}
+\subsubsection{Das Fundament: Das Haus der IPA}
+Zur Systematisierung dieses komplexen Gefüges hat sich in der deutschsprachigen Fachliteratur das Modell des \enquote{Hauses der IPA} etabliert. Dieses dient als visuelle und funktionale Landkarte für die Einordnung der verschiedenen Ebenen des Modells.
+
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \includegraphics[width=\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax, height=0.5\textwidth]{05_figures/Haus_der_IPA.jpg}%
+    }
+    \caption[Das Haus der IPA]{Das Haus der IPA zur Darstellung der systemischen Abhängigkeiten (Quelle: Eigene Darstellung in Anlehnung an Haghsheno 2019).}
+    \label{fig:haus_der_ipa}
+\end{figure}
+
+Das \textbf{Fundament} dieses Hauses bildet der \textbf{Mehrparteienvertrag}, welcher die rechtliche Basis für alle weiteren Interaktionen darstellt. Ohne diese formale Klammer blieben kooperative Ansätze unverbindlich. Die \textbf{Säulen} bestehen aus der \textbf{Organisation und Kultur} (integrierte Teams, No-Blame) sowie dem \textbf{kommerziellen Rahmen} (ökonomische Anreizsysteme). Diese stützen das \textbf{Dach}, welches die gemeinsamen \textbf{Projektziele} symbolisiert. Die zentrale Erkenntnis dieses Modells ist die Interdependenz: Versagt eine Säule, etwa durch den Rückfall in opportunistisches Verhalten aufgrund falscher ökonomischer Anreize, verliert das gesamte System seine Stabilität \autocite[vgl.]{haghsheno_lean_2019}.
+
+\subsubsection{Die acht Charakteristika der IPA}
+Bevor die harten vertraglichen Bestandteile analysiert werden, müssen die acht wesensgebenden Charakteristika definiert werden, die den kulturellen und prozessualen Rahmen spannen. Diese dienen als \enquote{Leitplanken} für das Projektverhalten \autocite[vgl.]{ipa_zentrum_integrierte_2022}:
+
 \begin{itemize}
-    \item Das \textbf{Fundament} bildet der Mehrparteienvertrag, der alle Schlüsselakteure rechtlich bindet.
-    \item Die \textbf{Säulen} bestehen aus dem gemeinsamen Risikomanagement (ökonomische Anreize) und der kooperativen Zusammenarbeit (Kultur und Methoden).
-    \item Das \textbf{Dach} symbolisiert die gemeinsamen Projektziele („Best for Project“), die über den Einzelinteressen stehen.
+    \item \textbf{Projektziele vor Einzelzielen:} Jede Entscheidung wird unter der Prämisse \enquote{Best for Project} getroffen.
+    \item \textbf{Frühzeitige Einbindung:} Planungs- und Ausführungsexpertise verschmelzen bereits in der Konzeptphase (ECI).
+    \item \textbf{Gemeinsame Entscheidungsfindung:} Abkehr von der hierarchischen Bauherren-Dominanz hin zum Konsensprinzip.
+    \item \textbf{Integrierte Teamstruktur:} Auflösung von Firmenidentitäten zugunsten einer gemeinsamen Projektidentität.
+    \item \textbf{Gemeinsames Risiko und Gewinn:} Ökonomische Synchronisation der Partner.
+    \item \textbf{Haftungsbeschränkung:} Etablierung einer angstfreien Fehlerkultur (\textit{No-Blame}).
+    \item \textbf{Finanzielle Transparenz:} Offenlegung aller Kostenstrukturen (\textit{Open Book}).
+    \item \textbf{Kollaborative Werkzeuge:} Nutzung von BIM und Lean-Methoden als gemeinsame Arbeitsebene.
 \end{itemize}
 
-Um dieses Modell in der Praxis greifbar und abgrenzbar zu machen – insbesondere gegenüber reinen „Partnering“-Modellen, die oft unverbindlich bleiben –, hat das IPA-Zentrum im Jahr 2022 eine präzisere Definition erarbeitet. Diese unterscheidet zwischen den wesensgebenden \textit{Charakteristika} (z.\,B. Ausrichtung auf den Projekterfolg, kooperative Kultur) und den harten \textit{konstitutiven Modellbestandteilen}. Entscheidend ist hierbei, dass ein Projekt nur dann als IPA-Projekt gilt, wenn alle konstitutiven Modellbestandteile gleichzeitig vorliegen.\autocite[vgl. S. 3]{ipa_zentrum_integrierte_2022}
+\subsubsection{Konstitutive Modellbestandteile und vertragliche Vertiefung}
+Um die Beliebigkeit des Begriffs IPA zu vermeiden, definiert das IPA-Zentrum (2022) konstitutive Bestandteile, die zwingend vorhanden sein müssen. Für das Target Value Design sind insbesondere die folgenden Elemente von substanzieller Bedeutung.
 
-Um die Beliebigkeit des Begriffs einzuschränken, definiert das IPA-Zentrum eine Liste von konstitutiven Modellbestandteilen. Für die vorliegende Arbeit und das Verständnis von Target Value Design sind insbesondere folgende Elemente hervorzuheben:\autocite[vgl. S. 4--9]{ipa_zentrum_integrierte_2022}
+\paragraph{Der Mehrparteienvertrag und der deutsche Mustervertrag}
+Das Herzstück der IPA ist der Mehrparteienvertrag (MPV). Im Gegensatz zur konventionellen Welt, in der der Bauherr Dutzende bilaterale Verträge schließt, unterzeichnen hier alle Schlüsselakteure (Bauherr, Architekt, Fachplaner, Hauptunternehmer) ein einziges Dokument. In Deutschland wurde hierfür durch das \textit{IPA-Zentrum} ein \textbf{IPA-Muster-Mehrparteienvertrag} veröffentlicht, der als Standard für die rechtliche Umsetzung gilt. 
 
-\begin{description}
-    \item[Mehrparteienvertrag]
-    Mindestens der Bauherr, die wichtigsten Planer und die schlüsselfertigen Ausführungsunternehmen schließen einen einzigen, gemeinsamen Vertrag. Dies verhindert die vertraglichen Schnittstellenprobleme der konventionellen Abwicklung.
+Dieser Vertrag ist als Projektvertrag \textit{sui generis} zu verstehen, der oft gesellschaftsrechtliche Elemente (GbR-Strukturen) nutzt, um die gesamthändische Bindung der Partner zu erzwingen. Er regelt die \textbf{Integrierte Projektorganisation (IPO)}, die sich meist in ein \textit{Senior Management Team} (SMT) für strategische Entscheidungen und ein \textit{Project Management Team} (PMT) für die operative Steuerung gliedert. Diese vertragliche Fusion verhindert, dass Informationen an Schnittstellen verloren gehen, da es keine rechtlichen \enquote{Mauern} zwischen Planung und Bau mehr gibt \autocite[vgl.]{ipa_zentrum_integrierte_2022}.
 
-    \item[Vergütungsmodell und Risikopool]
-    Die Vergütung erfolgt in drei Bausteinen: (1) Die Erstattung der direkten Selbstkosten, (2) ein Gemeinkostenzuschlag und (3) der Gewinn. Der Gewinnanteil ist jedoch nicht garantiert, sondern fließt in einen gemeinsamen Risikopool. Bei Kostenüberschreitungen wird dieser Pool genutzt, um Verluste zu decken („Pain-Share“); bei Unterschreitungen wird der Überschuss an alle ausgezahlt („Gain-Share“).\autocite[vgl. S. 19]{becker_integrierte_2022}
-
-    \item[Open Book Accounting]
-    Transparenz ist zwingend: Alle Kosten müssen offengelegt werden. Ohne diese „gläserne Baustelle“ ist eine gemeinsame Kostensteuerung (TVD) methodisch nicht durchführbar.
-
-    \item[Einstimmigkeitsprinzip]
-    Entscheidungen im Führungsgremium (Senior Management Team) müssen einstimmig getroffen werden. Dies zwingt die Parteien zur Lösungsfindung und verhindert Machtdemonstrationen des Bauherrn.
-
-    \item[Haftungsverzicht]
-    Die Parteien verzichten weitgehend auf gegenseitige Haftungsansprüche bei Fehlern (ausgenommen Vorsatz). Dies fördert eine offene Fehlerkultur, in der Probleme sofort gemeldet statt vertuscht werden.
-\end{description}
-
-Haghsheno et al. ordnen diese vielfältigen Elemente in einem wissenschaftlichen Strukturierungsansatz drei logischen Ebenen zu, die sich gegenseitig bedingen:\autocite[vgl. S. 80]{haghsheno_strukturierungsansatz_2022}
+\paragraph{Das Drei-Säulen-Vergütungsmodell und der Risikopool}
+Die ökonomische Logik der IPA bricht mit dem klassischen Preiswettbewerb. Die Vergütung der Partner basiert auf drei Säulen \autocite[vgl.]{becker_integrierte_2022}:
 \begin{enumerate}
-    \item \textbf{Kommerzielle und rechtliche Rahmenbedingungen:} Hierzu zählen der Mehrparteienvertrag und das Anreizsystem (Pain/Gain). Sie bilden das unverzichtbare Gerüst.
-    \item \textbf{Organisation und Kultur:} Dies umfasst die integrierte Teamstruktur und das verhaltensbezogene Mindset („Best for Project“).
-    \item \textbf{Prozesse und Methoden:} Auf dieser operativen Ebene kommen konkrete Werkzeuge zum Einsatz, um die Ziele zu erreichen.
+    \item \textbf{Selbstkostenerstattung:} Alle tatsächlich angefallenen, projektbezogenen Kosten werden dem Partner eins zu eins erstattet. Dies minimiert das existenzielle Risiko für die Unternehmen.
+    \item \textbf{Fixe Gemeinkosten:} Ein vorab vereinbarter Zuschlag deckt die allgemeinen Verwaltungskosten der Partner.
+    \item \textbf{Risiko-Gewinn-Pool:} Der kalkulierte Gewinn der Partner wird in einen gemeinsamen Pool eingebracht. Dieser Pool ist \textit{ring-fenced}, er gehört dem Projekt. Entstehen Kostenüberschreitungen, werden diese primär aus dem Pool gedeckt (\textit{Pain-Share}). Werden die Zielkosten unterschritten, wird der Überschuss nach einem vereinbarten Schlüssel an alle Partner ausgezahlt (\textit{Gain-Share}). 
 \end{enumerate}
+Dieser Mechanismus ist der direkte \textbf{ökonomische Enabler für TVD}: Da der eigene Gewinn nur durch die Optimierung des Gesamtprojekts gesichert werden kann, verschwindet der Anreiz für Nachträge und Claims vollständig.
+
+\paragraph{Open Book Accounting und finanzielle Transparenz}
+Eng verknüpft mit der Selbstkostenerstattung ist das Prinzip des \textit{Open Book Accounting}. Jeder Partner gewährt dem Bauherrn und dem Team vollen Einblick in seine Kalkulationen, Lohnabrechnungen und Nachunternehmerverträge. Diese \enquote{gläserne Baustelle} ist für das Target Value Design unverzichtbar, da Zielkostensteuerungen nur auf Basis von Realwerten und nicht auf Basis von spekulativen Marktpreisen funktionieren können. Das Open Book schafft das notwendige Vertrauen, um Kostenverschiebungen zwischen den Gewerken (\enquote{Geld fließt dorthin, wo es den größten Nutzen bringt}) ohne Widerstände zu ermöglichen.
+
+\paragraph{Einstimmigkeitsprinzip und Governance}
+Entscheidungen im SMT müssen einstimmig getroffen werden. Dies mag in der Theorie nach Stillstand klingen, wirkt in der IPA jedoch als Beschleuniger. Da alle Partner durch den Gewinnpool finanziell am zügigen Projektfortschritt interessiert sind, erzwingt das Einstimmigkeitsprinzip eine hohe Qualität der Argumentation und eine schnelle Konsensfindung. Es beendet die konventionelle Praxis, bei der der Bauherr Entscheidungen einseitig trifft, deren Konsequenzen dann oft zeitverzögert als Claims auf ihn zurückfallen.
+
+\paragraph{Haftungsbeschränkung und No-Blame-Kultur}
+Ein konstitutiver Pfeiler ist der weitgehende Verzicht auf gegenseitige Haftungsansprüche (\textit{Liability Waiver}). Nach deutschem Recht (insb. § 276 BGB) kann die Haftung für Vorsatz nicht ausgeschlossen werden. Der IPA-Mustervertrag sieht jedoch vor, dass die Partner für einfache Fahrlässigkeit innerhalb des Teams nicht haften. Dies ist die Geburtsstunde einer echten \textbf{No-Blame-Kultur}. Wenn ein Planungs- oder Ausführungsfehler auftritt, liegt der Fokus sofort auf der Behebung (\enquote{What went wrong, not who is to blame}). Diese angstfreie Umgebung ist die psychologische Voraussetzung für die iterativen Optimierungsprozesse des TVD, da Fehler als Lernchancen begriffen werden, anstatt sie aus Regressangst zu verschleiern \autocite[vgl.]{ipa_zentrum_integrierte_2022}.
+
 
 Diese Einordnung ist zentral für den weiteren Verlauf dieser Arbeit: Während IPA den vertraglichen und kulturellen Rahmen (Ebene 1 und 2) spannt, ist \textbf{Target Value Design} die entscheidende Methode auf der Prozessebene (Ebene 3), um die Kostenziele innerhalb dieses Rahmens aktiv zu steuern.
 
