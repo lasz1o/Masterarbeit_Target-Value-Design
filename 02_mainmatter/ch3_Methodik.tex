@@ -1,32 +1,20 @@
 \chapter{Forschungsdesign und methodisches Vorgehen}
-\label{ch:methodik}
+\label{ch:3}
 
-% Ziel: Das Vorgehen der Arbeit transparent und wissenschaftlich nachvollziehbar darlegen.
-% Es wird der "Plan" für die Forschung beschrieben.
-\section{Forschungsdesign und methodische Verortung}
-\label{sec: 3.1}
-\subsection{Herleitung des Forschungsbedarfs}
-\label{sec: 3.1.1}
+\section{Methodischer Ansatz}
+\label{sec:methodik_ansatz}
 
-Wie in \cref{ch:einleitung} dargelegt, erfordert die Bewältigung der aktuellen Herausforderungen im Bauwesen neue Ansätze und Methoden. Die aktuell noch überwiegend praktizierte, konventionelle  Art der Projektabwicklung, welche vor allem von einer ausgeprägten Streitkultur charakterisiert wird, ist diesen großen Aufgaben offensichtlich nicht gewachsen, wie sich aus den aktuellen Zahlen und Entwicklung der Bauwirtschaft ableiten lässt.\\
-Als Reaktion darauf rücken derzeit alternative, partnerschaftliche Projektabwicklungsmodelle wie \ac{IPA} und deren zentrale Methode zur Kosten- und Wertsteuerung, das Target Value Design (\ac{TVD}) in den Fokus. Zwar fasst IPA in Deutschland zunehmend in Pilotprojekten mehr und mehr Fuß und wird auch in der Forschung zunehmend behandelt, so wird jedoch TVD als zentraler Prozessbaustein in der aktuellen Debatte nur unzureichend betrachtet \autocite{haghsheno_ipa-report_2025}.\\
-Auf internationaler Ebene, haben Ballard und Kollegen bereits einiges zur Forschung und Entwicklung von \ac{TVD} beigetragen, eine strukturierte Darstellung und Aufbereitung für die Anwendung im Kontext der deutschen Baupraxis fehlt jedoch bisher, woraus sich die Forschungsfrage dieser Arbeit ableitet:
+Da für die Anwendung von Target Value Design (TVD) in der deutschen Baupraxis noch keine standardisierten Verfahren existieren, verfolgt die vorliegende Arbeit einen literaturbasierten, konzeptionell-analytischen Forschungsansatz. Ziel ist die Entwicklung eines adaptierten Prozessmodells. Hierfür wird nicht auf quantitative Daten zurückgegriffen, sondern bestehendes Expertenwissen aus der Literatur systematisch neu geordnet und auf den deutschen Kontext übertragen.
 
-\endquote{Wie lässt sich der Target Value Design-Prozess strukturiert in Einzelschritte zerlegen, nachvollziehbar darstellen und für die Anwendung in der deutschen Baupraxis übersetzen, um den strukturellen Defiziten der traditionellen Projektabwicklung entgegenzuwirken?}
+Das Vorgehen folgt dabei einem iterativen Prozess, der sich in vier Phasen gliedert:
+\begin{enumerate}
+    \item \textbf{Identifikation:} Bestimmung und Analyse maßgeblicher Leitquellen (Best Practice).
+    \item \textbf{Synthese:} Konstruktion eines idealtypischen Soll-Modells.
+    \item \textbf{Detaillierung:} Gezielte Ergänzungsrecherche zur Schließung von Prozesslücken.
+    \item \textbf{Transfer:} Abgleich mit den Restriktionen der deutschen Baupraxis (Fit-Gap).
+\end{enumerate}
 
-Die Beantwortung dieser Frage erfordert ein mehrstufiges, konzeptionell-analytisches Vorgehen. So impliziert die geforderte \glqq Zerlegung in Einzelschritte\grqq die Notwendigkeit einer systematischen Identifikation der TVD-Prozessbausteine aus der internationalen Fachliteratur. Die nachvollziehbare Darstellung verlangt deren anschließende Synthese zu einem idealtypischen Prozessmodell. Schließlich bedingt die "Übersetzung für die deutsche Baupraxis" einen systematischen Abgleich dieses Modells mit den hierzulande vorherrschenden rechtlichen und kulturellen Rahmenbedingungen.
-
-Während die internationale Forschung die Grundlagen und Erfolgsfaktoren von TVD bereits umfassend beleuchtet hat \autocite{z.B. Ballard}, fehlt bislang eine systematische, prozessorientierte Aufbereitung, die den TVD-Prozess explizit für die Anwendung im deutschen Kontext adaptiert. Diese Forschungslücke begründet die Notwendigkeit der vorliegenden Arbeit und legitimiert das im Folgenden detailliert beschriebene methodische Vorgehen.
-
-\subsection{Einordnung in das Forschungsparadigma}
-\label{sec: 3.1.2}
-
-Die vorliegende Arbeit folgt einem qualitativen Forschungsansatz, da der Fokus auf der Analyse und Interpretation von Inhalten wie Texten, Konzepten und Modellen liegt, nicht auf der statistischen Auswertung numerischer Daten. Darüber hinaus ist der gewählte Ansatz als konstruktiv einzuordnen. Das primäre Ziel ist nicht die rein deskriptive Beschreibung des bestehenden Forschungsstandes, sondern die aktive Konstruktion eines neuen Ergebnisses, des idealtypischen TVD-Modells. Dieses Vorgehen orientiert sich am Paradigma des Design Science Research (DSR), welches explizit darauf abzielt, durch die Entwicklung und Gestaltung von Artefakten einen Beitrag zur Lösung praxisrelevanter Probleme zu leisten \autocite[Vgl.][S.4]{benner-wickner_leitfaden_2020}.
-
-
-\subsection{Visualisierung des Forschungsprozesses}
-\label{sec: 3.1.3}
-Zur Veranschaulichung des methodischen Aufbaus und Verlauf dieser Arbeit visualisiert \cref{fig:forschungsprozess_tikz} den Forschungsprozess in seinen verschiedenen Phasen.
+Dieser methodische Ablauf und die Zuordnung der einzelnen Arbeitsschritte zu den Kapiteln der vorliegenden Arbeit sind in \cref{fig:forschungsprozess_tikz} schematisch visualisiert.
 
 \tikzset{
   phase/.style={rectangle, rounded corners, draw=black, fill=gray!10,
@@ -43,24 +31,28 @@ Zur Veranschaulichung des methodischen Aufbaus und Verlauf dieser Arbeit visuali
         pfeil/.style={-latex, thick}
       }
 
+      % PHASE 1: Design
       \node[phase] (phase1) {
-        \textbf{Phase 1: Forschungsdesign (Kap. 3.1)}\\
-        \small Problemstellung, Methodische Verortung, Konzeptionell-analytischer Ansatz
+        \textbf{Phase 1: Forschungsdesign (Kap. 1 \& 3.1)}\\
+        \small Problemdefinition, Zielsetzung, Methodische Verortung
       };
 
+      % PHASE 2: Datengrundlage (angepasst auf deine neuen Kap 3.2/3.3)
       \node[phase, below=0.8cm of phase1] (phase2) {
-        \textbf{Phase 2: Literaturanalyse (Kap. 3.2)}\\
-        \small Systematische Recherche, Qualitative Inhaltsanalyse, Identifikation von Bausteinen
+        \textbf{Phase 2: Datenerhebung \& Analyse (Kap. 3.2 \& 3.3)}\\
+        \small Identifikation von Leitquellen, Strukturierende Inhaltsanalyse
       };
 
+      % PHASE 3: Modell (Das ist das Ergebnis in Kap 4)
       \node[phase, below=0.8cm of phase2] (phase3) {
-        \textbf{Phase 3: Modellkonstruktion (Kap. 3.3)}\\
-        \small Synthese der Bausteine, Modellierung des idealtypischen TVD-Prozesses
+        \textbf{Phase 3: Modellsynthese (Kap. 4)}\\
+        \small Entwicklung des idealtypischen TVD-Prozesses (Phasen 0--3)
       };
 
+      % PHASE 4: Transfer (Das ist die Diskussion in Kap 5)
       \node[phase, below=0.8cm of phase3] (phase4) {
-        \textbf{Phase 4: Kontextanalyse \& Transfer (Kap. 3.4)}\\
-        \small Fit-Gap-Analyse (Vergleich mit HOAI/VOB), Ableitung des Transferleitfadens
+        \textbf{Phase 4: Kontextanalyse \& Transfer (Kap. 5)}\\
+        \small Fit-Gap-Analyse (VOB/HOAI), Diskussion der Dilemmata
       };
 
       \draw[pfeil] (phase1) -- (phase2);
@@ -72,253 +64,208 @@ Zur Veranschaulichung des methodischen Aufbaus und Verlauf dieser Arbeit visuali
   \caption{Schematische Darstellung des vierphasigen Forschungsprozesses}
   \label{fig:forschungsprozess_tikz}
 \end{figure}
-
 \FloatBarrier
 
-\section{Systematische Literaturrecherche und -analyse}
-\label{sec: 3.2}
+\section{Datengrundlage und Recherchestrategie}
+\label{sec:datengrundlage}
 
-Der Auswahlprozess relevanter Literatur stützt sich auf das international anerkannte Protokoll \acsf{PRISMA}. Dieses bildet als Richtlinie für Literatur-Reviews, den gesamten Prozess der von der Suche, über die Auswahl bis hin zur Präsentation von Studien ab und gewährleistet Transparenz (Reproduzierbarkeit), Vollständigkeit und Vergleichbarkeit für die Forschungsergebnisse \autocite{page_2021_prisma}. Der im \ac{PRISMA}-Protokoll definierte, mehrstufigen Filter- und Auswahlprozess dient hier als methodische Grundlage für die systematische Literaturrecherche und  in (\cref{fig:prisma_flowchart}) nachfolgend dargestellt.
+Die Datengrundlage der Arbeit wurde in einem zweistufigen Verfahren ermittelt, das sich an der Logik des \textit{Purposive Sampling} (gezielte Auswahl) orientiert.
+Die Wahl dieses selektiven Ansatzes ist der Heterogenität des Forschungsfeldes geschuldet: Selbst bei einer auf das Bauwesen eingegrenzten Suche liefert der Begriff \enquote{Target Value Design} in einschlägigen Datenbanken eine enorme Anzahl an Treffern. Häufig wird TVD in der Literatur lediglich schlagwortartig aufgegriffen oder in Kontexten verortet, die für eine systematische Prozessmodellierung im deutschen Bauwesen nur bedingt aussagekräftig sind.
+
+Um in dieser Fülle an Informationen nicht den Fokus zu verlieren und stattdessen ein methodisch fundiertes Prozessmodell entwickeln zu können, wurde der Priorität auf die Identifikation autoritativer Quellen gelegt. Anstatt einer quantitativen Breitenanalyse erfolgte daher zunächst die Extraktion der theoretischen und methodischen Kernelemente anhand etablierter Standardwerke.
+
+\subsection{Stufe 1: Identifikation von Leitquellen (Basis-Recherche)}
+Im ersten Schritt wurden gezielt \enquote{Seminal Works} (Schlüsselpublikationen) identifiziert, die den internationalen und nationalen Diskurs maßgeblich prägen. Diese bilden das theoretische Rückgrat für die Grobstruktur des Prozessmodells:
+\begin{itemize}
+    \item \textbf{Theorie:} Die Grundlagenwerke von \textit{Glenn Ballard} und \textit{Greg Howell}, die die Ursprünge und Prinzipien des TVD definieren.
+    \item \textbf{Methodik (International):} Die Prozessbeschreibungen und Leitfäden des \textit{Lean Construction Institute (LCI)}, die den aktuellen \enquote{State of the Art} in den USA abbilden.
+    \item \textbf{Transfer (National):} Veröffentlichungen des \textit{German Lean Construction Institute (GLCI)} und des \textit{Kompetenzzentrums IPA}, die erste Adaptionsansätze für Deutschland beschreiben.
+\end{itemize}
+
+\subsection{Stufe 2: Problemzentrierte Ergänzungsrecherche}
+Während der Modellierung zeigte sich, dass die Leitquellen oft auf einer abstrakten Ebene verbleiben oder sich auf anglo-amerikanische Rechtsräume beziehen. Eine rein generische Suche nach Begriffen wie \enquote{Target Value Design Germany} führte in den einschlägigen Datenbanken (\textit{Scopus}, \textit{Web of Science}, \textit{Google Scholar}) jedoch zu einer unüberschaubaren Menge an Treffern (\enquote{Information Overload}), die häufig nur oberflächliche Nennungen der Methode enthielten, ohne technische Details zu klären.
+
+Um spezifische Lücken im Verständnis oder bei der Übertragung auf deutsche Normen (z.\,B. \enquote{Wie verhält sich das Target Costing zur DIN 276?}) präzise zu schließen, wurde daher eine blockbasierte Suchstrategie angewandt.
+
+\minisec{Auswahl der Datenbanken}
+
+Um ein ganzheitliches Bild zu gewährleisten, das sowohl den internationalen wissenschaftlichen Standard als auch die spezifischen deutschen Praxisanforderungen abdeckt, erfolgte die Recherche in drei kategorisierten Quellenarten:
+
+\begin{itemize}
+    \item \textbf{Wissenschaftliche Metadatenbanken (Scopus \& Web of Science):}
+    Diese Datenbanken wurden primär genutzt, um qualitätsgesicherte, peer-reviewte Publikationen zum methodischen Kern von TVD zu identifizieren. Durch ihre breite Abdeckung ingenieurwissenschaftlicher Journals stellten sie sicher, dass der internationale \enquote{State of the Art} vollständig erfasst wurde.
+
+    \item \textbf{Erweiterte wissenschaftliche Suchdienste (Google Scholar):}
+    Ergänzend wurde Google Scholar herangezogen. Dies war insbesondere für den deutschen Kontext essenziell, da hierüber auch juristische Kommentare, Dissertationen und Tagungsbände (z.\,B. der \textit{IGLC}-Konferenzen) auffindbar sind, die in den klassischen englischsprachigen Datenbanken oft unterrepräsentiert sind.
+
+    \item \textbf{Fachinstitutionen und Graue Literatur:}
+    Da die praktische Umsetzung von TVD in Deutschland oft schneller voranschreitet als die akademische Aufarbeitung, wurden gezielt Publikationsserver relevanter Fachverbände durchsucht. Hierzu zählten insbesondere die Veröffentlichungen des \textit{Lean Construction Institute (LCI)}, des \textit{German Lean Construction Institute (GLCI)} sowie Berichte des \textit{Kompetenzzentrums IPA}. Diese Quellen lieferten wertvolle Einblicke in die aktuelle Anwendungspraxis und vertragliche Modellierungen.
+\end{itemize}
+
+\subsubsection*{Suchlogik und Kombinatorik}
+Anstatt breiter Schlagworte wurden spezifische Suchstrings konstruiert, die das Kernthema (TVD) mit dem spezifischen Kontext (Deutschland/Recht) und dem Detailproblem verknüpfen. Die Suchbegriffe wurden mittels Boolescher Operatoren (\texttt{AND}, \texttt{OR}) nach folgendem Schema kombiniert:
+
+\begin{equation*}
+    \text{Suche} = \text{\textbf{Methode}} \quad \texttt{AND} \quad \text{\textbf{Kontext}} \quad \texttt{AND} \quad \text{\textbf{Detailproblem}}
+\end{equation*}
+
+Die verwendeten Schlagworte für diese Blöcke sind exemplarisch in \cref{fig:suchlogik_grafik} dargestellt.
 
 \begin{figure}[hbt!]
-  \centering
-  \begin{tikzpicture}[
-    node distance=0.5cm and 1cm, % Vertikaler und horizontaler Abstand
-    % Stil für die Haupt-Boxen im Prozess
-    mainbox/.style={
-      rectangle, 
-      draw=black, 
-      fill=gray!10, 
-      text width=0.50\textwidth, 
-      minimum height=1.5cm, 
-      text centered
+\centering
+\begin{tikzpicture}[
+    node distance=0.5cm,
+    % Stil für die Boxen
+    block/.style={
+        rectangle, 
+        draw=black, 
+        fill=gray!10, 
+        text width=0.25\textwidth,  % schmaler: von 0.28 auf 0.25
+        minimum height=4cm,
+        align=center,
+        rounded corners
     },
-    % Stil für die Boxen mit den Ausschlussgründen
-    sidebox/.style={
-      rectangle, 
-      draw=black, 
-      fill=gray!10, 
-      text width=0.35\textwidth, 
-      minimum height=1.5cm, 
-      align=left
+    % Stil für die Überschriften in den Boxen
+    title/.style={
+        font=\bfseries,
+        anchor=north,
+        yshift=-0.3cm
     },
-    % Stil für die seitlichen Beschriftungen (Identifizierung, etc.)
-    labelbox/.style={
-      rotate=90, 
-      font=\bfseries
+    % Stil für den Inhalt
+    content/.style={
+        font=\footnotesize,
+        anchor=center,
+        text width=0.22\textwidth,  % angepasst
+        align=center
     }
-  ]
+]
 
-  % --- DEFINITION DER KNOTEN (BOXEN) ---
-  
-  % Stufe 1: Identifizierung
-  \node[mainbox] (ident) {
-    \textbf{Identifizierte Datensätze aus Datenbanken} \\ (Anzahl N = ...)
-  };
-  \node[labelbox, left=0.5cm of ident.west, anchor=center] {Identifizierung};
+% Hintergrund-Box (grauer Rahmen) - Textbreite
+\node[
+    draw=gray!60,
+    thick,
+    fill=white,
+    inner sep=0.4cm,
+    minimum width=\textwidth,
+    minimum height=7cm
+] (background) at (0,0) {};
 
-  % Stufe 2: Screening
-  \node[mainbox, below=1.5cm of ident] (screen1) {
-    \textbf{Datensätze nach Entfernung von Duplikaten} \\ (Anzahl N = ...)
-  };
-  \node[mainbox, below=1cm of screen1] (screen2) {
-    \textbf{Geprüfte Datensätze (Titel/Abstract)} \\ (Anzahl N = ...)
-  };
-  \node[labelbox, left=0.5cm of screen1.west, anchor=east] {Screening};
-  
-  % Stufe 3: Eignung
-  \node[mainbox, below=1.5cm of screen2] (elig) {
-    \textbf{Gelesene Volltext-Artikel} \\ (Anzahl N = ...)
-  };
-  \node[labelbox, left=0.5cm of elig.west, anchor=center] {Eignung};
+% --- Block A ---
+\node[block] (A) at (-0.35\textwidth, 0.3cm) {};
+\node[title] at (A.north) {Block A: Methode};
+\node[content] at (A.center) {
+    \enquote{Target Value Design}\\
+    \enquote{TVD}\\
+    \enquote{Target Costing}\\
+    \enquote{Zielkosten}
+};
 
-  % Stufe 4: Einschluss
-  \node[mainbox, below=1.5cm of elig] (incl) {
-    \textbf{In die Synthese eingeschlossene Studien} \\ (Anzahl N = ...)
-  };
-  \node[labelbox, left=0.5cm of incl.west, anchor=center] {Einschluss};
+% --- Block B ---
+\node[block] (B) at (0, 0.3cm) {};
+\node[title] at (B.north) {Block B: Kontext};
+\node[content] at (B.center) {
+    \enquote{Germany} / \enquote{Deutschland}\\
+    \enquote{VOB} / \enquote{HOAI}\\
+    \enquote{Public Sector}\\
+    \enquote{Öffentliche Hand}
+};
 
-  % Ausschluss-Boxen
-  \node[sidebox, right=of screen2] (excl1) {
-    \textbf{Ausgeschlossene Datensätze:} \\ (Anzahl N = ...) \\
-    \textit{Gründe: Falsches Fachgebiet, keine wiss. Quelle, etc.}
-  };
-  \node[sidebox, right=of elig] (excl2) {
-    \textbf{Ausgeschlossene Volltext-Artikel:} \\ (Anzahl N = ...) \\
-    \textit{Gründe: Methodische Schwächen, kein relevanter Fokus, etc.}
-  };
+% --- Block C ---
+\node[block] (C) at (0.35\textwidth, 0.3cm) {};
+\node[title] at (C.north) {Block C: Detail};
+\node[content] at (C.center) {
+    \enquote{Leistungsphasen}\\
+    \enquote{Vergabe} / \enquote{Procurement}\\
+    \enquote{Incentivierung}\\
+    \enquote{Zuschlagskriterien}
+};
 
-  % --- ZEICHNEN DER PFEILE ---
-  \draw[-latex, thick] (ident) -- (screen1);
-  \draw[-latex, thick] (screen1) -- (screen2);
-  \draw[-latex, thick] (screen2) -- (elig);
-  \draw[-latex, thick] (elig) -- (incl);
-  
-  % Pfeile zu den Ausschluss-Boxen
-  \draw[-latex, thick] (screen2) -- (excl1);
-  \draw[-latex, thick] (elig) -- (excl2);
+% --- Operatoren ---
+\node[font=\bfseries\small ] at ($(A.east)!0.5!(B.west)$) {AND};
+\node[font=\bfseries\small ] at ($(B.east)!0.5!(C.west)$) {AND};
 
-  \end{tikzpicture}
-  % --- ENDE DES TIKZ-CODES ---
+% --- Ergebnis-Pfeil ---
+\node[below=0.8cm of B, font=\bfseries] (result) {= Spezifischer Suchstring};
+\draw[-latex, thick] (B.south) -- (result.north);
+\draw[-latex, thick] (A.south) |- ++(0,-0.25) -| (result.north);
+\draw[-latex, thick] (C.south) |- ++(0,-0.25) -| (result.north);
 
-  \caption{PRISMA-Flussdiagramm des systematischen Literaturrechercheprozesses}
-  \label{fig:prisma_flowchart}
+\end{tikzpicture}
+\caption{Kombinatorik der Suchbausteine für die Detailrecherche}
+\label{fig:suchlogik_grafik}
 \end{figure}
 
-\clearpage
-
-\subsection*{Schritt 1: Identifizierung}
-Im ersten Schritt der Literaturrecherche wurden zunächst relevante zunächst relevante Datenbanken identifiziert. Dabei wurden die Quellen in drei Arten untergliedert:
-
-1. Größe - International \& Interdisziplinär
-\begin{itemize}[leftmargin=2em]
-    \item \textbf{Scopus}: Bietet eine extrem breite Abdeckung von ingenieurwissenschaftlichen und technischen Publikationen.
-    \item \textbf{Web of Science}: Ist ähnlich umfassend wie Scopus und eine Standarddatenbank in der Wissenschaft.
-    \item \textbf{Google Scholar}:
-    \item \textbf{Researchgate}:
-    
-\end{itemize}
-2. Fachspezifische Datenbanken mit Relevanz für Bauingenieurwesen bzw. Baubetrieb
-\begin{itemize}[leftmargin=2em]
-    \item \textbf{Beispiel}: 
-    \item \textbf{Beispiel 2}: 
-\end{itemize}
-3. Graue Literatur - Der Blick in die Praxis
-\begin{itemize}[leftmargin=2em]
-    \item \textbf{Beispiel 3}: 
-    \item \textbf{Beispiel 4}: 
-\end{itemize}
-
-Diese initiale Sammlung stellt eine erste Grundlage für den nachfolgenden Auswahlprozess dar. Inwieweit diese Auswahl erschöpfende Ergebnisse liefert, wird, unter Berücksichtigung sowohl der inhaltlichen Divergenz der Datenbanken, als auch des zusätzlichen Erkenntnisgewinns durch neu hinzukommende Quellen, im Laufe des Filterprozesses überprüft.\\
-Für die gewählten Datenbanken galt es im Folgenden, eine systematische und reproduzierbare Suchstrategie zu entwickeln. Um die Komplexität einer Vielzahl von Einzelabfragen zu reduzieren, wurde ein umfassender "Master-Suchstring"  für die jeweilige Sprache (Deutsch und Englisch) konzipiert. Dieser Ansatz kombiniert die zuvor definierten Schlüsselwörter mithilfe boolescher Operatoren zu einer einzigen, umfassenden Suchanfrage pro Datenbank.
-Die zugrundeliegenden Suchkonzepte, die dazugehörigen Schlüsselbegriffe sowie die verwendeten Operatoren sind in \cref{tab:suchstrategie} systematisch gegliedert.
-
-\begin{table}[hbt!]
-  \centering
-  \caption{Systematische Gliederung der Suchbegriffe und -operatoren}
-  \label{tab:suchstrategie}
-  \begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X l}
-    \toprule
-    \textbf{Such-Konzept} & \textbf{Englische Schlagwörter} & \textbf{Deutsche Schlagwörter} & \textbf{Operatoren} \\
-    \midrule
-    Kernthema & "Target Value Design", "TVD", "Target Costing" & "Target Value Design", "TVD", "Zielkostenmanagement" & \texttt{OR} \\
-    \addlinespace
-    Kontext & "construction", "building industry", "AEC" & "Bauwesen", "Bauwirtschaft", "Bauprojekte" & \texttt{OR} \\
-    \addlinespace
-    Spez. Kontext & "Germany", "German construction" & "deutsche Baupraxis", "Deutschland", "HOAI", "VOB" & \texttt{OR} \\
-    \addlinespace
-    Ziel (Prozess) & "process*", "method*", "framework", "implementation" & "Prozess*", "Methode*", "Anwendung", "Vorgehensmodell" & \texttt{OR}, \texttt{*} \\
-    \bottomrule
-  \end{tabularx}
-\end{table}
-
-\FloatBarrier
-
-Aus der Kombination der in \cref{tab:suchstrategie} gezeigten Konzepte mittels \texttt{AND}-Verknüpfungen ergeben sich die folgenden finalen Suchstrings für die Anwendung in den Datenbanken:
-
-\textbf{Englischer Master-Suchstring:}
-\begin{verbatim}
-( "Target Value Design" OR "TVD" OR "Target Costing" )
-AND
-( "construction" OR "building industry" OR "AEC" )
-AND
-( "process*" OR "method*" OR "framework" OR "implementation" )
-\end{verbatim}
-
-\textbf{Deutscher Master-Suchstring:}
-\begin{verbatim}
-( "Target Value Design" OR "TVD" OR "Zielkostenmanagement" )
-AND
-( "Bauwesen" OR "Bauwirtschaft" OR "Bauprojekte" )
-AND
-( "Prozess*" OR "Methode*" OR "Anwendung" OR "Vorgehensmodell" )
-\end{verbatim}
-
-Diese Vorgehensweise stellt sicher, dass in jeder durchgeführten Suche alle relevanten Aspekte der Forschungsfrage abgedeckt sind und die Ergebnisse über die verschiedenen Datenbanken hinweg vergleichbar bleiben.
-
-\FloatBarrier
-
-\subsection*{Schritt 2: Screening}
-Die im folgenden aufgeführten Einschränkungen sollen die Ergebnisse aus der initialen Suchanfrage filtern:
-
-\textbf{Sprache:} \\
-\textbf{Deutsch}: Zur Erfassung deutschsprachiger bzw. bereits im deutschen Kontext oder Blickwinkel entstandene Quellen.\\
-\textbf{Englisch}: Essentiell für internationale Publikationen. Vor dem Hintergrund, dass der Ursprung und die wesentliche Entwicklung von \ac{TVD} und allen verwandten Themenfelder im anglo-amerikanischen Raum stattgefunden hat bzw. stattfindet \autocite{Quelle bzw. Verweis erforderlich?}, wird englisch in diesem Kontext als einzige wesentlich relevante Fremdsprache erachtet.\\
-
-%     - Recherchestrategie: Genutzte Datenbanken (Scopus, etc.), Fachinstitutionen (GLCI, etc.).
-%     - Suchbegriffe: Beispiele für Keyword-Kombinationen (DE/EN).
-%     - Auswahlkriterien: Inklusions-/Exklusionskriterien (Relevanz, Aktualität, Qualität).
-%     - Analysemethode: Qualitative Inhaltsanalyse zur Identifikation von Prozessbausteinen, Rollen, Werkzeugen.
-
-\FloatBarrier
-\clearpage
-
-\section{Prozessbeschreibung und Modellierung}
-\label{sec: 3.3}
-
-%   - Ziel: Erklären, wie aus den Literatur-Fragmenten das idealtypische TVD-Modell konstruiert wird.
-%   - Inhalt:
-%     - Synthese: Zusammenführung der identifizierten Bausteine aus diversen Quellen.
-%     - Modellierungsansatz: Begründung für die Wahl eines Prozessmodells (z.B. Flussdiagramm, Swimlane).
-%     - Validierung: Logische Prüfung des Modells auf Konsistenz und Vollständigkeit basierend auf der Literatur.
-
-Die Auswertung der im Rahmen der in \cref{sec: 3.2} beschriebenen Literaturrecherche identifizierten Quellen erfolgt mittels einer qualitativen Inhaltsanalyse.
-
-\subsection{Analytische Phase: Identifikation der Prozessbausteine}
-\label{sec: 3.3.1}
-
-\subsection{Synthetische Phase: Modellierung des idealtypischen Prozesses}
+\minisec{Anwendungsbeispiel}
+Für die Klärung der vergaberechtlichen Zusammenhängen und \acl{TVD} wurde beispielsweise folgender Suchstring in den zuvor beschriebenen Datenbanken angewendet:
 
 
-\FloatBarrier
-\clearpage
 
-\section{Kontextanalyse und Ableitung des Transferleitfadens}
-\label{sec: 3.4}
+\begin{center}
+\textbf{Exemplarischer Suchstring (Detailrecherche VOB):}\\[1.5em]
 
-Nachdem im vorangegangenen Schritt das idealtypische Prozessmodell des Target Value Design konstruiert wurde, erfolgt nun dessen systematischer Abgleich mit den spezifischen Rahmenbedingungen der deutschen Baupraxis, um die Grundlage für den Transferleitfaden zu schaffen.
+\begin{BVerbatim}
+        ( "Target Value Design" OR "TVD" )
+                        AND 
+  ( "Vergaberecht" OR "VOB/A" OR "Öffentliche Hand" )
+                        AND 
+  ( "Eignung" OR "Zuschlag" OR "Wertungskriterien" )
+\end{BVerbatim}
+\end{center}
 
-Ziel: Bewertung der Übertragbarkeit des in \cref{sec: 3.3} entwickelten idealtypischen \ac{TVD}-Prozesses auf die deutsche Baupraxis
+Durch dieses iterative, problemzentrierte Vorgehen konnte die relevante Fachliteratur (z.\,B. juristische Kommentare oder spezifische Konferenzbeiträge der \textit{IGLC}) effizient identifiziert werden, ohne durch irrelevante Treffer verfälscht zu werden. Die so gewonnenen Erkenntnisse flossen direkt in die Detaillierung des Prozessmodells (Kapitel 4) ein.
 
-Prozess: Dazu sollen in einer Gegenüberstellung beider Prozesse, die Übereinstimmungen (Fit) und Abweichungen (Gap) zwischen \ac{TVD} und den Rahmenbedingungen der deutschen Baupraxis herausgearbeitet werden.
+\section{Datenauswertung: Strukturierende Inhaltsanalyse}
+\label{sec:inhaltsanalyse}
 
-Ergebnis: Die aus den identifizierten Reibungspunkten abgeleiteten, notwendigen Anpassungen werden in Form eines Transferleitfadens zusammengeführt um so eine Empfehlung für die Anwendung von \ac{TVD} in Deutschland zu liefern.
+Die Auswertung der identifizierten Quellen erfolgte methodisch in Anlehnung an die Qualitative Inhaltsanalyse nach Mayring. 
+Konkret wurde die strukturierenden Inhaltsanalyse verwendet. Ziel war es, bestimmte Aspekte aus dem Material herauszufiltern und systematisch zu ordnen.\autocite{mayring_qualitative_2022}
 
-\subsection{Methodischer Ansatz: Framework Analysis}
-\label{sec: 3.4.1}
+Hierfür wurde ein deduktives Kategoriensystem gebildet.\autocite[vgl. S.68]{mayring_qualitative_2022} Das bedeutet, die Quellen wurden gezielt nach vorab definierten Strukturmerkmalen durchsucht, die für das zu entwickelnde Prozessmodell essenziell sind. Die zentralen Analysekategorien waren:
 
-Für die Fit-Gap Analyse wurde sich an der Framework Analysis orientiert, da diese eine strukturierte qualitative Gegenüberstellung vorhandener Konzepte und Rahmenbedingungen ermöglicht. \hl{Initial wurde die Framework Analysis Methode von Ritchie \& Spencer (1994) für den Breich der angewandten Policy-Foschung entwickelt\autocite[Vgl.][S.2]{gale_using_2013} und in den folgenden Jahren durch Ritchie et. al (2014) und Gale et. al (2013) weiter verfeinert und modernisiert.}\\
-Für die Anwendung der Framework Analysis wurde das Vorgehen in Anlehnung an Gale et al. (2013) adaptiert.
-Da keine empirischen Daten, sondern bestehende Dokumente (Prozessmodelle, Regelwerke, Fachliteratur) untersucht werden, entfallen die transkriptions- und kodierbasierten Schritte der Originalmethode.
-Die Analyse folgt daher einer reduzierten, konzeptionellen Form des Verfahrens, bestehend aus fünf aufeinander aufbauenden Phasen:
 \begin{enumerate}
-    \item Familiarisierung mit dem Material
-    \item Entwicklung des thematischen Frameworks
-    \item Indexierung
-    \item tabellarische Gegenüberstellung (Charting) und
-    \item Interpretation im Sinne einer Fit-Gap-Analyse.
+    \item \textbf{Prozessphasen:} Welche zeitlichen Abschnitte und Meilensteine (z.\,B. \textit{Design Freeze}) werden definiert?
+    \item \textbf{Rollen und Akteure:} Wer ist beteiligt und welche Verantwortung tragen diese Rollen (z.\,B. \textit{Cluster Leader}, \textit{Cost Manager})?
+    \item \textbf{Methoden und Werkzeuge:} Welche operativen Instrumente kommen zum Einsatz (z.\,B. \textit{Set-Based Design}, \textit{Over-the-Shoulder Look})?
+    \item \textbf{Steuerungslogik:} Wie werden Kosten und Werte definiert und überwacht?
 \end{enumerate}
-%
-% Parkinson, S., Eatough, V., Holmes, J., Stapley, E., & Midgley, N. (2016). Framework analysis: A worked example of a study exploring young people’s experiences of depression. Qualitative Research in Psychology, 13(2), 109–129.
-%
-% Ward, D. J., Furber, C., Tierney, S., & Swallow, V. (2013). Using Framework Analysis in nursing research: A worked example. Journal of Advanced Nursing, 69(11), 2423–2431.
-%  
-% Beide zeigen, dass Framework Analysis auch dokument- oder theoriebasiert angewandt werden kann – nicht nur auf Interviewdaten.
-%
-\subsection{Durchführung der Analyse}
-\label{sec: 3.4.2}
 
-Die Ausführung der Framework Analyse folgt dem im vorherigen Abschnitt skizzierten Ablauf.
-Vergleichsgrundlage bilden hier die in \cref{sec: 3.3} identifizierten Merkmale des idealtypischen  \ac{TVD}-Prozesses sowie die Regelwerke welche die deutsche Baupraxis im wesentlichen prägen (\acs{HOAI},\acs{VOB},\acs{AHO}, \cref{sec: 2.1})
+Durch diese Kategorisierung konnten die relevanten Bausteine aus den unterschiedlichen Quellen extrahiert und vergleichbar gemacht werden.
 
-Schritte:\\
-1. Zuordnung relevanter Prozessmerkmale zu den drei Analyse-Dimensionen (z.B. rechtlich, prozessual, kulturell).\\
-2. Übertragung in eine Framework-Matrix (z. B. Vertragsstruktur, Kostensteuerung, Rollenverständnis).\\
-3. Bewertung der Übereinstimmung (Fit) bzw. Abweichung (Gap).\\
-Ergebnis: eine systematische Fit-Gap-Analyse als Grundlage des Transferleitfadens.
+\section{Modellsynthese und Transfer}
+\label{sec:synthese_transfer}
 
-\subsection{Ableitung des Transferleitfadens}
-\label{sec: 3.4.3}
+Auf Basis der kategorisierten Ergebnisse erfolgte die \textit{Modellsynthese} (\cref{ch:4}).
+Die extrahierten Bausteine (Rollen, Phasen, Methoden) wurden logisch rekomponiert und in die Struktur der deutschen Leistungsphasen (HOAI) sowie der Projektstufen 0 bis 3 übersetzt. Es entstand ein \enquote{idealtypisches Prozessmodell}, das den methodisch optimalen Ablauf abbildet.
+
+Abschließend wurde dieses Modell einer **qualitativen Fit-Gap-Analyse** unterzogen. Dabei wurde das entwickelte Soll-Modell systematisch mit den regulatorischen Vorgaben der VOB und des öffentlichen Haushaltsrechts abgeglichen, um strukturelle Passungen (\textit{Fits}) und Widersprüche (\textit{Gaps}) zu identifizieren. Diese Widersprüche bilden die Grundlage für die Diskussion der Dilemmata in Kapitel 5.
 
 
-\clearpage
+
+
+
+\FloatBarrier
+
+
+
+% Aus der Kombination der in \cref{tab:suchstrategie} gezeigten Konzepte mittels \texttt{AND}-Verknüpfungen ergeben sich die folgenden finalen Suchstrings für die Anwendung in den Datenbanken:
+
+% \textbf{Englischer Master-Suchstring:}
+% \begin{verbatim}
+% ( "Target Value Design" OR "TVD" OR "Target Costing" )
+% AND
+% ( "construction" OR "building industry" OR "AEC" )
+% AND
+% ( "process*" OR "method*" OR "framework" OR "implementation" )
+% \end{verbatim}
+
+% \textbf{Deutscher Master-Suchstring:}
+% \begin{verbatim}
+% ( "Target Value Design" OR "TVD" OR "Zielkostenmanagement" )
+% AND
+% ( "Bauwesen" OR "Bauwirtschaft" OR "Bauprojekte" )
+% AND
+% ( "Prozess*" OR "Methode*" OR "Anwendung" OR "Vorgehensmodell" )
+% \end{verbatim}
+
+% Diese Vorgehensweise stellt sicher, dass in jeder durchgeführten Suche alle relevanten Aspekte der Forschungsfrage abgedeckt sind und die Ergebnisse über die verschiedenen Datenbanken hinweg vergleichbar bleiben.
+
