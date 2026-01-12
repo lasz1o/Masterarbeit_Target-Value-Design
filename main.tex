@@ -14,13 +14,11 @@ ngerman,
 
 \pagenumbering{gobble}  % Schaltet Seitenzahlen komplett aus
 \input{01_frontmatter/00_titlepage}
-%\input{01_frontmatter/03_expose}
-\input{01_frontmatter/01_abstract}
+
 
 
 % === VORSPANN (römische Seitenzahlen) ===
 \frontmatter
-\input{01_frontmatter/02_acknowledgements}
 \tableofcontents
 \listoffigures
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
@@ -56,24 +54,7 @@ ngerman,
 \printbibliography[title=Literaturverzeichnis]
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 
-% === ANHANG ===
-\appendix
-\chapter{Anhang}
-\label{ch:anhang}
-% Anhänge als PDFs einfügen
-% Beispiel für einzelne Seiten:
-% \includepdf[pages=1, pagecommand={\section{Interviewleitfaden}}]{04_appendices/interview.pdf}
-% \includepdf[pages=2-, pagecommand={}]{04_appendices/interview.pdf}
 
-% Beispiel für komplette PDFs mit mehreren Seiten:
-% \section{Fragebogen}
-% \includepdf[pages=-, pagecommand={}]{04_appendices/fragebogen.pdf}
-
-% \section{Zusätzliche Tabellen}
-% \includepdf[pages=-, pagecommand={}]{04_appendices/tabellen.pdf}
-
-% === EIDESSTATTLICHE ERKLÄRUNG ===
-% Keine Chapter-Überschrift, nur ins Inhaltsverzeichnis aufnehmen
 
 \cleardoublepage
 
