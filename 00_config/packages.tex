@@ -45,12 +45,15 @@
     giveninits=true,         % Vornamen Abkürzen
     dateuncertain=true,
     eprint=false,
-    url=true,
+    url=false,
     doi=false,
     isbn=false,
     sorting=nyt
 ]{biblatex}
 \addbibresource{08_bibliography/references.bib}
+\setcounter{biburlnumpenalty}{9000}
+\setcounter{biburlucpenalty}{9000}
+\setcounter{biburllcpenalty}{9000}
 
 % ===== VERWEISE UND LINKS =====
 \usepackage[hidelinks]{hyperref}   % Anklickbare Links (unsichtbar gedruckt)
