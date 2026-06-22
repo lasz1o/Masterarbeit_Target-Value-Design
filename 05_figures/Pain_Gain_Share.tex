@@ -1,0 +1,112 @@
+% ============================================================
+% Pain/Gain-Share Vergütungsmodell — TikZ-Grafik
+% ============================================================
+% EINBINDUNG: \input{05_figures/Pain_Gain_Share.tex}
+% Nutzt ausschließlich tu-green aus settings.tex + xcolor-Shades.
+% ============================================================
+
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \centering
+            \vspace{0.5cm}
+            \begin{tikzpicture}[
+                every node/.style={font=\sffamily},
+                seglabel/.style={font=\sffamily\itshape\scriptsize, align=center},
+                collabel/.style={font=\sffamily\footnotesize\bfseries, align=center}
+            ]
+
+            % ===== Konfiguration =====
+            \def\barW{2.8}       % Balkenbreite
+            \def\gap{1.0}        % Lücke zwischen Balken
+
+            % X-Positionen (linke Kante jedes Balkens)
+            \def\xA{0}
+            \pgfmathsetmacro{\xB}{\barW + \gap}
+            \pgfmathsetmacro{\xC}{2*(\barW + \gap)}
+            \pgfmathsetmacro{\xD}{3*(\barW + \gap)}
+
+            % ===== Höhen (in cm) =====
+            % Fall 1: DK=5.0  GK=1.2  G=0.8  Total=7.0
+            % Fall 2: DK=5.8  GK=0.7  G=0.5  Total=7.0
+            % Fall 3: DK=3.6  GK=1.2  G=0.8  B1=0.7  B2=0.7  Total=7.0
+            % Fall 4: DK=8.5
+
+            % ============================================
+            % FALL 1: Basis-Zielkosten
+            % ============================================
+            \fill[tu-green]       (\xA, 0)   rectangle +(\barW, 5.0);
+            \fill[tu-green!65]    (\xA, 5.0) rectangle +(\barW, 1.2);
+            \fill[tu-green!50]    (\xA, 6.2) rectangle +(\barW, 0.8);
+
+            \node[seglabel, white]   at (\xA+\barW/2, 2.5)  {Direkte\\Kosten};
+            \node[seglabel, white]   at (\xA+\barW/2, 5.6)  {GK-Zuschlag};
+            \node[seglabel]          at (\xA+\barW/2, 6.6)  {Gewinn};
+
+            \node[collabel] at (\xA+\barW/2, -0.7) {Fall 1:\\Basis-Zielkosten};
+
+            % ============================================
+            % FALL 2: Mehrkosten (Pain)
+            % ============================================
+            \fill[tu-green]       (\xB, 0)   rectangle +(\barW, 5.8);
+            \fill[tu-green!65]    (\xB, 5.8) rectangle +(\barW, 0.7);
+            \fill[tu-green!50]    (\xB, 6.5) rectangle +(\barW, 0.5);
+
+            \node[seglabel, white]   at (\xB+\barW/2, 2.9)  {Direkte\\Kosten};
+            \node[seglabel, white]   at (\xB+\barW/2, 6.15) {GK-Zuschlag};
+            \node[seglabel]          at (\xB+\barW/2, 6.75) {Gewinn};
+
+            \node[collabel] at (\xB+\barW/2, -0.7) {Fall 2:\\Mehrkosten};
+
+            % ============================================
+            % FALL 3: Kosteneinsparung (Gain)
+            % ============================================
+            \fill[tu-green]       (\xC, 0)   rectangle +(\barW, 3.6);
+            \fill[tu-green!65]    (\xC, 3.6) rectangle +(\barW, 1.2);
+            \fill[tu-green!50]    (\xC, 4.8) rectangle +(\barW, 0.8);
+            \fill[tu-green!25]    (\xC, 5.6) rectangle +(\barW, 0.7);
+            \fill[tu-green!25]    (\xC, 6.3) rectangle +(\barW, 0.7);
+
+            \node[seglabel, white]   at (\xC+\barW/2, 1.8)  {Direkte\\Kosten};
+            \node[seglabel, white]   at (\xC+\barW/2, 4.2)  {GK-Zuschlag};
+            \node[seglabel]          at (\xC+\barW/2, 5.2)  {Gewinn};
+            \node[seglabel]          at (\xC+\barW/2, 5.95) {Bonusteilung};
+            \node[seglabel]          at (\xC+\barW/2, 6.65) {Bonusteilung};
+
+            \node[collabel] at (\xC+\barW/2, -0.7) {Fall 3:\\Kosteneinsparung};
+
+            % ============================================
+            % FALL 4: Tatsächliche Kosten
+            % ============================================
+            \fill[tu-green]       (\xD, 0)   rectangle +(\barW, 8.5);
+
+            \node[seglabel, white]   at (\xD+\barW/2, 4.25) {Direkte\\Kosten};
+
+            \node[collabel] at (\xD+\barW/2, -0.7) {Fall 4:\\Tatsächliche Kosten};
+
+            % ============================================
+            % LINIE 1: Oberkante Direkte Kosten (durchgehend)
+            % ============================================
+            \draw[black!65, dashed, line width=0.7pt]
+                (\xA, 5.0) -- (\xA+\barW, 5.0) --
+                (\xB, 5.8) -- (\xB+\barW, 5.8) --
+                (\xC, 3.6) -- (\xC+\barW, 3.6) --
+                (\xD, 8.5) -- (\xD+\barW, 8.5);
+
+            % ============================================
+            % LINIE 2: Oberkante Gewinn (F1–F3) → DK top F4
+            % ============================================
+            \draw[black!65, dashed, line width=0.7pt]
+                (\xA, 7.0) -- (\xA+\barW, 7.0) --
+                (\xB, 7.0) -- (\xB+\barW, 7.0) --
+                (\xC, 5.6) -- (\xC+\barW, 5.6) --
+                (\xD, 8.5) -- (\xD+\barW, 8.5);
+
+            \end{tikzpicture}
+            \vspace{0.4cm}
+        \end{minipage}%
+    }
+    \caption[Vergütungsstufen in der IPA]{Vergütungsstufen und Pain/Gain-Share-Mechanismus in der IPA (Quelle: Eigene Darstellung in Anlehnung an \textcite{becker_integrierte_2022}).}
+    \label{fig:pain_gain_share}
+\end{figure}

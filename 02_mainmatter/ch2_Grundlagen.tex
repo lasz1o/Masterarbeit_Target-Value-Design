@@ -193,78 +193,9 @@ Das Herzstück der \ac{IPA} ist das Inzentivierungsmodell, das die ökonomischen
     \item \textbf{Limb 3 -- Risiko-Gewinn-Pool:} Der entscheidende Hebel ist die dritte Säule. Der kalkulierte Gewinn (\textit{Fee}) aller Partner wird nicht garantiert ausgezahlt, sondern fließt zunächst in einen virtuellen Risikotopf, den sogenannten \textit{Risk Pool}. Dieser Pool dient als Puffer für das Projektrisiko.
 \end{enumerate}
 
-% \definecolor{tu-green-dark}{RGB}{79,134,38}
+\input{05_figures/Pain_Gain_Share.tex}
 
-% \begin{tikzpicture}[
-%     box/.style={
-%         rectangle,
-%         minimum width=2cm,
-%         text width=1.8cm,
-%         align=center,
-%         font=\footnotesize
-%     },
-%     small box/.style={
-%         box,
-%         minimum height=0.8cm,
-%         fill=tu-green-dark,
-%         text=white
-%     },
-%     large box/.style={
-%         box,
-%         minimum height=4cm,
-%         fill=tu-green,
-%         text=white
-%     },
-%     dashed arrow/.style={
-%         ->,
-%         dashed,
-%         thick,
-%         black!60
-%     }
-% ]
-
-% % Fall 1: Basis-Zielkosten
-% \node[small box] (fall1-top) at (0,0) {Gewinn\\CRP};
-% \node[large box, below=0cm of fall1-top] (fall1-bottom) {Direkte\\Kosten};
-% \node[below=0.2cm of fall1-bottom, font=\footnotesize\bfseries] (fall1-label) {Fall 1: Basis-\\Zielkosten};
-
-% % Fall 2: Mehrkosten
-% \node[small box, right=0.8cm of fall1-top] (fall2-top) {Gewinn\\CRP};
-% \node[large box, below=0cm of fall2-top] (fall2-bottom) {Direkte\\Kosten};
-% \node[below=0.2cm of fall2-bottom, font=\footnotesize\bfseries] (fall2-label) {Fall 2: Mehrkosten};
-
-% % Fall 3: Kosteneinsparung
-% \node[small box, right=0.8cm of fall2-top] (fall3-top1) {Bonusteilung};
-% \node[small box, below=0cm of fall3-top1] (fall3-top2) {Bonusteilung};
-% \node[small box, below=0cm of fall3-top2] (fall3-top3) {Gewinn\\CRP};
-% \node[large box, below=0cm of fall3-top3] (fall3-bottom) {Direkte\\Kosten};
-% \node[below=0.2cm of fall3-bottom, font=\footnotesize\bfseries] (fall3-label) {Fall 3: Kosteneinsparung};
-
-% % Fall 4: Tatsächliche Kosten
-% \node[large box, minimum height=6.4cm, right=0.8cm of fall3-top1] (fall4) {Direkte\\Kosten};
-% \node[below=0.2cm of fall4, font=\footnotesize\bfseries] (fall4-label) {Fall 4: Tatsächliche\\Kosten};
-
-% % Pfeile
-% \draw[dashed arrow] (fall1-top.east) -- (fall2-top.west);
-% \draw[dashed arrow] (fall2-top.east) -- (fall3-top3.west);
-% \draw[dashed arrow] (fall3-top1.east) -- (fall4.north west);
-
-% % Grauer Rahmen um alles (vergrößert)
-% \begin{scope}[on background layer]
-%     \draw[gray!50, thick, rounded corners=3pt] 
-%         ([shift={(-0.5,0.8)}]fall1-top.north west) rectangle 
-%         ([shift={(0.5,-0.5)}]fall4-label.south east);
-% \end{scope}
-
-% % Beschriftung unten mit Label
-% \node[below=0.5cm of fall2-label, font=\footnotesize] (caption) {
-%     \textbf{Abb. 3.5} \quad Vergütungsstufen in der IPA, Vgl. Becker, 2022, S.22
-% };
-
-% % Label für Referenzierung
-% \label{fig:ipa_verguetung}
-
-% \end{tikzpicture}
+\FloatBarrier
 
 Dementssprechend ist die finale Auszahlung dieses Pools an die Einhaltung der Zielkosten (\textit{Target Cost}) gekoppelt. Dabei greift der Pain-Share/Gain-Share-Mechanismus:
 \begin{itemize}
