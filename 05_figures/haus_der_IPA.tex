@@ -1,0 +1,114 @@
+% ============================================================
+% Haus der IPA — TikZ-Grafik
+% ============================================================
+% EINBINDUNG: In ch2_Grundlagen.tex den bestehenden figure-Block
+%   für Haus_der_IPA.jpg ersetzen durch:
+%   \input{05_figures/Haus_der_IPA.tex}
+%
+% Nutzt ausschließlich tu-green aus settings.tex + xcolor-Shades.
+% Keine zusätzlichen \definecolor nötig.
+% ============================================================
+
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \centering
+            \vspace{0.4cm}
+            \begin{tikzpicture}[
+                every node/.style={font=\sffamily},
+                pillar/.style={
+                    rectangle,
+                    draw=tu-green,
+                    fill=tu-green!8,
+                    line width=0.8pt,
+                    rounded corners=1pt,
+                    minimum width=3.2cm,
+                    minimum height=5.2cm,
+                    anchor=south west
+                }
+            ]
+
+            % ===== Koordinaten =====
+            \def\totalW{14}
+            \def\pillarW{3.2}
+            \def\gap{0.35}
+            \def\fundY{0}
+            \def\fundH{1.3}
+            \def\mvertY{1.45}
+            \def\pillarY{2.9}
+            \def\roofY{8.25}
+            \def\roofTop{10.2}
+
+            % Horizontale Positionen (zentriert)
+            \pgfmathsetmacro{\startX}{(\totalW - 4*\pillarW - 3*\gap) / 2}
+            \pgfmathsetmacro{\pA}{\startX}
+            \pgfmathsetmacro{\pB}{\startX + \pillarW + \gap}
+            \pgfmathsetmacro{\pC}{\startX + 2*(\pillarW + \gap)}
+            \pgfmathsetmacro{\pD}{\startX + 3*(\pillarW + \gap)}
+
+            % ===== FUNDAMENT UNTEN: Werte (breiter) =====
+            \fill[tu-green!55!black, rounded corners=1pt]
+                (-0.3, \fundY) rectangle (\totalW+0.3, \fundY+\fundH);
+            \node[white, font=\sffamily\bfseries\normalsize]
+                at (\totalW/2, \fundY+0.75) {Werte};
+            \node[white, font=\sffamily\itshape\scriptsize, opacity=0.85]
+                at (\totalW/2, \fundY+0.35) {Grundsätze und Prinzipien der Zusammenarbeit};
+
+            % ===== FUNDAMENT OBEN: Mehrparteienvertrag =====
+            \fill[tu-green!35!black, rounded corners=1pt]
+                (0, \mvertY) rectangle (\totalW, \mvertY+\fundH);
+            \node[white, font=\sffamily\bfseries\normalsize]
+                at (\totalW/2, \mvertY+0.75) {Mehrparteienvertrag};
+            \node[white, font=\sffamily\itshape\scriptsize, opacity=0.85]
+                at (\totalW/2, \mvertY+0.35) {Rechtlicher Rahmen mit gemeinsamen Regeln};
+
+            % ===== SÄULE 1: Kultur =====
+            \node[pillar] (s1) at (\pA, \pillarY) {};
+            \node[font=\sffamily\bfseries, anchor=north, text=black]
+                at ([yshift=-0.3cm]s1.north) {Kultur};
+            \draw[tu-green!30, line width=0.6pt]
+                ([yshift=-1.0cm, xshift=0.4cm]s1.north west) -- ([yshift=-1.0cm, xshift=-0.4cm]s1.north east);
+            \node[font=\sffamily\itshape\scriptsize, text=black!65, text width=2.6cm, align=center, anchor=north]
+                at ([yshift=-1.3cm]s1.north) {Ansätze zur\\Etablierung der\\gemeinsamen\\Werte};
+
+            % ===== SÄULE 2: Organisation =====
+            \node[pillar] (s2) at (\pB, \pillarY) {};
+            \node[font=\sffamily\bfseries, anchor=north, text=black]
+                at ([yshift=-0.3cm]s2.north) {Organisation};
+            \draw[tu-green!30, line width=0.6pt]
+                ([yshift=-1.0cm, xshift=0.4cm]s2.north west) -- ([yshift=-1.0cm, xshift=-0.4cm]s2.north east);
+            \node[font=\sffamily\itshape\scriptsize, text=black!65, text width=2.6cm, align=center, anchor=north]
+                at ([yshift=-1.3cm]s2.north) {Integrierte\\Strukturen für\\Kommunikation\\und Entscheidungs-\\findung};
+
+            % ===== SÄULE 3: Ökonomie =====
+            \node[pillar] (s3) at (\pC, \pillarY) {};
+            \node[font=\sffamily\bfseries, anchor=north, text=black]
+                at ([yshift=-0.3cm]s3.north) {Ökonomie};
+            \draw[tu-green!30, line width=0.6pt]
+                ([yshift=-1.0cm, xshift=0.4cm]s3.north west) -- ([yshift=-1.0cm, xshift=-0.4cm]s3.north east);
+            \node[font=\sffamily\itshape\scriptsize, text=black!65, text width=2.6cm, align=center, anchor=north]
+                at ([yshift=-1.3cm]s3.north) {Wertschöpfungs-\\basierte finanzielle\\Anreize und\\Risikoteilung};
+
+            % ===== SÄULE 4: Methoden =====
+            \node[pillar] (s4) at (\pD, \pillarY) {};
+            \node[font=\sffamily\bfseries, anchor=north, text=black]
+                at ([yshift=-0.3cm]s4.north) {Methoden};
+            \draw[tu-green!30, line width=0.6pt]
+                ([yshift=-1.0cm, xshift=0.4cm]s4.north west) -- ([yshift=-1.0cm, xshift=-0.4cm]s4.north east);
+            \node[font=\sffamily\itshape\scriptsize, text=black!65, text width=2.6cm, align=center, anchor=north]
+                at ([yshift=-1.3cm]s4.north) {Integrierte\\Prozesse zur\\Förderung von\\Transparenz,\\Kollaboration\\und Effizienz};
+
+            % ===== DACH =====
+            \fill[tu-green]
+                (0, \roofY) -- (\totalW, \roofY) -- (\totalW/2, \roofTop) -- cycle;
+            \node[white, font=\sffamily\bfseries\large]
+                at (\totalW/2, \roofY+0.45) {Integrierte Projektabwicklung (IPA)};
+
+            \end{tikzpicture}
+            \vspace{0.3cm}
+        \end{minipage}%
+    }
+    \caption[Das Haus der IPA]{Das Haus der IPA zur Darstellung der systemischen Abhängigkeiten (Quelle: Eigene Darstellung in Anlehnung an \textcite{haghsheno_strukturierungsansatz_2022}).}
+    \label{fig:haus_der_ipa}
+\end{figure}
