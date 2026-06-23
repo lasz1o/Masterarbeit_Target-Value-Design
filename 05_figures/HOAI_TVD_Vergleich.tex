@@ -1,0 +1,124 @@
+% ============================================================
+% HOAI vs. TVD Phasenvergleich — TikZ-Grafik
+% ============================================================
+% EINBINDUNG: \input{05_figures/HOAI_TVD_Vergleich.tex}
+% Nutzt ausschließlich tu-green + xcolor-Shades.
+% ============================================================
+
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \centering
+            \vspace{0.4cm}
+            \begin{tikzpicture}[
+                every node/.style={font=\sffamily},
+                lph/.style={
+                    rectangle, rounded corners=1pt,
+                    minimum width=5.4cm, minimum height=1.05cm,
+                    anchor=north west, align=center
+                },
+                tvd/.style={
+                    rectangle, rounded corners=1pt,
+                    minimum width=5.4cm,
+                    anchor=north west, align=center
+                }
+            ]
+
+            % ===== Konfiguration =====
+            \def\blockH{1.05}    % Blockhöhe
+            \def\gap{0.08}       % Lücke zwischen Blöcken
+            \def\step{1.13}      % blockH + gap
+            \def\leftX{0}        % Linke Spalte X
+            \def\rightX{8.4}     % Rechte Spalte X
+            \def\totalW{13.8}    % Gesamtbreite (leftX + 2*blockW + Abstand)
+
+            % Y-Positionen (von oben nach unten, oberer Rand = 0)
+            % LPH 0: 0
+            % LPH 1: -1.13
+            % LPH 2: -2.26  ... LPH 5: -5.65
+            % LPH 6: -6.78  ... LPH 9: -10.17
+            % Unterkante: -11.22
+
+            % ===== ÜBERSCHRIFTEN =====
+            \node[font=\sffamily\bfseries\small, anchor=south] at (2.7, 0.35) {HOAI-Leistungsphasen};
+            \node[font=\sffamily\bfseries\small, anchor=south] at (11.1, 0.35) {Idealtypisches Arbeitsmodell};
+
+            % ===== OBERE LINIE =====
+            \draw[gray!50, line width=0.8pt] (0, 0.02) -- (\totalW, 0.02);
+
+            % ===== LPH 0 — Phase 0 (tu-green!25) =====
+            \node[lph, fill=tu-green!25] at (\leftX, 0) {%
+                \textbf{\footnotesize LPH 0}\\[-1pt]
+                {\scriptsize Projektentwicklung}};
+            \node[tvd, fill=tu-green!25, minimum height=\blockH cm] at (\rightX, 0) {%
+                \textbf{\footnotesize Phase 0}\\[-1pt]
+                {\scriptsize Projektinitiierung}};
+
+            % Linie Phase 0 → 1
+            \draw[gray!50, line width=0.8pt] (0, {-\step+\gap/2}) -- (\totalW, {-\step+\gap/2});
+
+            % ===== LPH 1 — Phase 1 (tu-green!50) =====
+            \node[lph, fill=tu-green!50] at (\leftX, {-1*\step}) {%
+                \textbf{\footnotesize LPH 1}\\[-1pt]
+                {\scriptsize Grundlagenermittlung}};
+            \node[tvd, fill=tu-green!50, minimum height=\blockH cm] at (\rightX, {-1*\step}) {%
+                \textbf{\footnotesize Phase 1}\\[-1pt]
+                {\scriptsize Validierung und Zielsetzung}};
+
+            % Linie Phase 1 → 2
+            \draw[gray!50, line width=0.8pt] (0, {-2*\step+\gap/2}) -- (\totalW, {-2*\step+\gap/2});
+
+            % ===== LPH 2–5 — Phase 2 (tu-green!65) =====
+            \node[lph, fill=tu-green!65] at (\leftX, {-2*\step}) {%
+                \textbf{\footnotesize\textcolor{white}{LPH 2}}\\[-1pt]
+                {\scriptsize\textcolor{white}{Vorplanung}}};
+            \node[lph, fill=tu-green!65] at (\leftX, {-3*\step}) {%
+                \textbf{\footnotesize\textcolor{white}{LPH 3}}\\[-1pt]
+                {\scriptsize\textcolor{white}{Entwurfsplanung}}};
+            \node[lph, fill=tu-green!65] at (\leftX, {-4*\step}) {%
+                \textbf{\footnotesize\textcolor{white}{LPH 4}}\\[-1pt]
+                {\scriptsize\textcolor{white}{Genehmigungsplanung}}};
+            \node[lph, fill=tu-green!65] at (\leftX, {-5*\step}) {%
+                \textbf{\footnotesize\textcolor{white}{LPH 5}}\\[-1pt]
+                {\scriptsize\textcolor{white}{Ausführungsplanung}}};
+
+            % Phase 2 Block (4× Höhe + 3× Lücke)
+            \pgfmathsetmacro{\phaseTwoH}{4*\blockH + 3*\gap}
+            \node[tvd, fill=tu-green!65, minimum height=\phaseTwoH cm] at (\rightX, {-2*\step}) {%
+                \textbf{\normalsize\textcolor{white}{Phase 2}}\\[2pt]
+                {\footnotesize\textcolor{white}{Wertorientierte Planung}}};
+
+            % Linie Phase 2 → 3
+            \draw[gray!50, line width=0.8pt] (0, {-6*\step+\gap/2}) -- (\totalW, {-6*\step+\gap/2});
+
+            % ===== LPH 6–9 — Phase 3 (tu-green) =====
+            \node[lph, fill=tu-green] at (\leftX, {-6*\step}) {%
+                \textbf{\footnotesize\textcolor{white}{LPH 6}}\\[-1pt]
+                {\scriptsize\textcolor{white}{Vorbereitung der Vergabe}}};
+            \node[lph, fill=tu-green] at (\leftX, {-7*\step}) {%
+                \textbf{\footnotesize\textcolor{white}{LPH 7}}\\[-1pt]
+                {\scriptsize\textcolor{white}{Mitwirkung bei der Vergabe}}};
+            \node[lph, fill=tu-green] at (\leftX, {-8*\step}) {%
+                \textbf{\footnotesize\textcolor{white}{LPH 8}}\\[-1pt]
+                {\scriptsize\textcolor{white}{Objektüberwachung}}};
+            \node[lph, fill=tu-green] at (\leftX, {-9*\step}) {%
+                \textbf{\footnotesize\textcolor{white}{LPH 9}}\\[-1pt]
+                {\scriptsize\textcolor{white}{Objektbetreuung}}};
+
+            % Phase 3 Block
+            \pgfmathsetmacro{\phaseThreeH}{4*\blockH + 3*\gap}
+            \node[tvd, fill=tu-green, minimum height=\phaseThreeH cm] at (\rightX, {-6*\step}) {%
+                \textbf{\normalsize\textcolor{white}{Phase 3}}\\[2pt]
+                {\footnotesize\textcolor{white}{Realisierung und Abschluss}}};
+
+            % ===== UNTERE LINIE =====
+            \draw[gray!50, line width=0.8pt] (0, {-10*\step+\gap/2+\gap}) -- (\totalW, {-10*\step+\gap/2+\gap});
+
+            \end{tikzpicture}
+            \vspace{0.3cm}
+        \end{minipage}%
+    }
+    \caption[Vergleich HOAI und TVD]{Vergleich der HOAI-Leistungsphasen mit dem idealtypischen TVD-Phasenmodell (Quelle: Eigene Darstellung).}
+    \label{fig:phasenvergleich}
+\end{figure}
