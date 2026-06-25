@@ -1,0 +1,136 @@
+% ============================================================
+% Phase 1: Validierung und Zielkostenbestimmung — TikZ Swimlane
+% EINBINDUNG: \input{05_figures/Phase_1.tex}
+% Benötigt: \usepackage{graphicx} und
+%   \usetikzlibrary{shapes.geometric, arrows.meta, calc, positioning}
+% ============================================================
+
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \centering
+            \vspace{0.3cm}
+            \resizebox{\linewidth}{!}{%
+            \begin{tikzpicture}[x=1cm,y=1cm,
+                font=\sffamily,
+                task/.style={rectangle, rounded corners=3pt, draw=black!55, line width=1pt,
+                    fill=black!4, minimum width=3.0cm, minimum height=1.1cm,
+                    align=center, text=black!85, font=\sffamily\small},
+                startev/.style={circle, draw=black!55, line width=1pt, fill=white,
+                    minimum size=0.55cm, inner sep=0pt},
+                gw/.style={diamond, draw=black!55, line width=1pt, fill=black!4,
+                    aspect=1.5, inner sep=1pt, align=center, font=\sffamily\footnotesize},
+                phasebox/.style={rectangle, rounded corners=3pt, draw=black!55, line width=1pt,
+                    fill=tu-green!22, minimum width=2.4cm, minimum height=0.85cm,
+                    align=center, font=\sffamily\small\bfseries},
+                flow/.style={-{Latex[length=2.2mm]}, line width=1pt, black!55},
+                msg/.style={-{Latex[length=2.2mm]}, line width=0.9pt, black!55, dashed},
+                lanelabel/.style={font=\sffamily\bfseries, text=white}
+            ]
+
+            \def\laneW{5.0}        % Lane-Breite (3x = volle Breite)
+            \def\totalH{16.5}
+            \def\headerH{0.95}
+
+            % Lane-Hintergründe
+            \fill[tu-green!8]  (0,0) rectangle (\laneW, -\totalH);
+            \fill[tu-green!14] (\laneW,0) rectangle (2*\laneW, -\totalH);
+            \fill[tu-green!8]  (2*\laneW,0) rectangle (3*\laneW, -\totalH);
+
+            % Header
+            \fill[tu-green] (0,0) rectangle (3*\laneW, -\headerH);
+            \node[lanelabel] at (0.5*\laneW, -0.5*\headerH) {Bauherr};
+            \node[lanelabel] at (1.5*\laneW, -0.5*\headerH) {Kernteam};
+            \node[lanelabel] at (2.5*\laneW, -0.5*\headerH) {Nutzer};
+
+            \draw[white, line width=1.5pt] (\laneW,-\headerH) -- (\laneW,-\totalH);
+            \draw[white, line width=1.5pt] (2*\laneW,-\headerH) -- (2*\laneW,-\totalH);
+
+            \def\colA{2.5}
+            \def\colB{7.5}
+            \def\colC{12.5}
+
+            % ===== BAUHERR =====
+            \node[startev] (start) at (\colA,-1.7) {};
+            \node[anchor=west, font=\sffamily\footnotesize\bfseries, text=black!75]
+                at ([xshift=0.4cm]start.east) {Start};
+
+            \node[task, text width=3.6cm] (bestaet) at (\colA,-3.7)
+                {Bestätigung der Projekt-\\ziele \& des\\Wertverständnisses};
+
+            \node[gw] (freigabe) at (\colA,-11.8)
+                {Freigabe\\\textbf{TC}?};
+
+            \node[phasebox] (phase2) at (\colA,-15.4) {Phase 2};
+
+            % ===== KERNTEAM =====
+            \node[task] (kernteam) at (\colB,-2.0)
+                {Kernteam- \&\\Clusterbildung};
+
+            \node[task] (workshop) at (\colB,-3.7)
+                {Validation\\Workshop};
+
+            \node[task] (cos) at (\colB,-5.7)
+                {Übersetzung in\\\textbf{CoS}};
+
+            \node[task] (bod) at (\colB,-7.7)
+                {Basis of Design\\(iterativ)};
+
+            \node[task] (kosten) at (\colB,-9.7)
+                {Kostenschätzung\\\& Validierung};
+
+            \node[task] (tc) at (\colB,-11.8)
+                {Target Cost \textbf{TC}\\ableiten};
+
+            \node[task] (pgs) at (\colB,-14.0)
+                {Pain/Gain-Share\\aktivieren};
+
+            % ===== NUTZER =====
+            \node[task] (anford) at (\colC,-3.7)
+                {Konkretisierung\\funktionaler \&\\qual. Anforder.};
+
+            % ===== FLÜSSE Kernteam =====
+            \draw[flow] (kernteam) -- (workshop);
+            \draw[flow] (workshop) -- (cos);
+            \draw[flow] (cos) -- (bod);
+            \draw[flow] (bod) -- (kosten);
+            \draw[flow] (kosten) -- (tc);
+            \draw[flow] (tc) -- (pgs);
+
+            % ===== BAUHERR Flüsse =====
+            \draw[flow] (start) -- (bestaet);
+            \draw[flow] (bestaet.south) -- (freigabe.north);
+            % (Go handled via gosplit below)
+
+            % ===== MESSAGE FLOWS =====
+            \draw[msg] (bestaet.east) -- (workshop.west);
+            \draw[msg] (anford.west) -- (workshop.east);
+            \draw[msg] (tc.west) -- (freigabe.east);
+
+            % Go + No-Go: beide aus Gateway unten, Splitpunkt darunter
+            \coordinate (gosplit) at ($(freigabe.south)+(0,-0.6)$);
+            \draw[line width=1pt, black!55] (freigabe.south) -- (gosplit);
+            % Go: weiter runter zu Phase 2
+            \draw[flow] (gosplit) -- (phase2)
+                node[pos=0.4, left=2pt, font=\sffamily\footnotesize\bfseries, text=black!80] {Go};
+            % No-Go: gestrichelt, exakt orthogonal via Hilfskoordinaten
+            \coordinate (rightmark) at (4.4, 0);
+            \coordinate (nogoA) at (rightmark |- gosplit);
+            \coordinate (nogoB) at (rightmark |- bod.west);
+            \draw[msg] (gosplit) -- (nogoA) -- (nogoB) -- (bod.west);
+            % No-Go Label: unter dem waagerechten Strich unten
+            \node[font=\sffamily\footnotesize\bfseries, text=black!80, anchor=north]
+                at ($(gosplit)!0.5!(nogoA)+(0,-0.05)$) {No-Go};
+            % Rework/Iteration Label: oben an der Ecke wo Linie nach rechts abbiegt
+            \node[font=\sffamily\footnotesize, text=black!75, align=center, anchor=south east]
+                at (5, -7.6) {Rework /\\Iteration};
+
+            \end{tikzpicture}%
+            }
+            \vspace{0.3cm}
+        \end{minipage}%
+    }
+    \caption[Phase 1 - Validierung]{Phase 1: Validierung und Zielkostenbestimmung (Quelle: Eigene Darstellung).}
+    \label{fig:phase1}
+\end{figure}
