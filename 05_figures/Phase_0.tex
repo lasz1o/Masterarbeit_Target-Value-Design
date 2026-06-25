@@ -1,0 +1,154 @@
+% ============================================================
+% Phase 0: Projektdefinition — TikZ Swimlane-Diagramm
+% ============================================================
+% EINBINDUNG: \input{05_figures/Phase_0.tex}
+% Nutzt tu-green + xcolor-Shades. Keine neuen Farben nötig.
+% Benötigte Libraries (in packages.tex, sind teils schon da):
+%   \usetikzlibrary{shapes.geometric, arrows.meta, calc, positioning}
+% ============================================================
+
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \centering
+            \vspace{0.3cm}
+            \resizebox{\linewidth}{!}{%
+            \begin{tikzpicture}[x=1cm,y=1cm,
+                font=\sffamily,
+                task/.style={
+                    rectangle, rounded corners=3pt,
+                    draw=black!55, line width=1pt,
+                    fill=black!4,
+                    minimum width=3.6cm, minimum height=1.15cm,
+                    align=center, text=black!85,
+                    font=\sffamily\small
+                },
+                startev/.style={
+                    circle, draw=black!55, line width=1pt,
+                    fill=white, minimum size=0.55cm, inner sep=0pt
+                },
+                endev/.style={
+                    circle, draw=black!55, line width=2.2pt,
+                    fill=white, minimum size=0.55cm, inner sep=0pt
+                },
+                gw/.style={
+                    diamond, draw=black!55, line width=1pt,
+                    fill=black!4, aspect=1.3,
+                    inner sep=1pt, align=center,
+                    font=\sffamily\footnotesize
+                },
+                phasebox/.style={
+                    rectangle, rounded corners=3pt,
+                    draw=black!55, line width=1pt,
+                    fill=tu-green!22,
+                    minimum width=2.6cm, minimum height=0.85cm,
+                    align=center, font=\sffamily\small\bfseries
+                },
+                flow/.style={-{Latex[length=2.2mm]}, line width=1pt, black!55},
+                msg/.style={-{Latex[length=2.2mm]}, line width=0.9pt, black!55, dashed},
+                lanelabel/.style={font=\sffamily\bfseries, text=white}
+            ]
+
+            % ===== Lane-Geometrie =====
+            \def\laneW{7.0}        % Lane-Breite
+            \def\totalH{15.4}      % Gesamthöhe
+            \def\headerH{0.95}     % Header-Höhe
+
+            % Lane-Hintergründe
+            \fill[tu-green!8]  (0,0) rectangle (\laneW, -\totalH);
+            \fill[tu-green!14] (\laneW,0) rectangle (2*\laneW, -\totalH);
+
+            % Header
+            \fill[tu-green] (0,0) rectangle (\laneW, -\headerH);
+            \fill[tu-green] (\laneW,0) rectangle (2*\laneW, -\headerH);
+            \node[lanelabel] at (0.5*\laneW, -0.5*\headerH) {Bauherr};
+            \node[lanelabel] at (1.5*\laneW, -0.5*\headerH) {Berater / Analysten};
+
+            % Trennlinie zwischen Lanes
+            \draw[white, line width=1.5pt] (\laneW,0) -- (\laneW,-\totalH);
+
+            % ===== Spalten-Mittelachsen =====
+            \def\colA{4.3}      % Bauherr Mitte
+            \def\colB{10.5}     % Berater Mitte
+
+            % ===== BAUHERR-SPALTE =====
+            % Start-Event
+            \node[startev] (start) at (\colA, -1.7) {};
+            \node[anchor=west, font=\sffamily\footnotesize\bfseries, text=black!75]
+                at ([xshift=0.1cm]start.east) {Projektstart};
+
+            % Task 1: Ziele
+            \node[task] (ziele) at (\colA, -3.3)
+                {Projektbedarf \&\\strategische Ziele\\definieren};
+
+            % Task 2: Allowable Cost
+            \node[task] (ac) at (\colA, -6.0)
+                {Allowable Cost (AC)\\festlegen\\[-1pt]{\footnotesize\itshape(Budget-Obergrenze)}};
+
+            % Gateway: Gap-Analyse
+            \node[gw] (gap) at (\colA, -10.3)
+                {Gap-Analyse\\$\Delta = EC - AC$\\\textbf{Go / No-Go?}};
+
+
+            % Phase 1
+            \node[phasebox] (phase1) at (\colA, -13.8) {Phase 1};
+
+            % ===== BERATER-SPALTE =====
+            % Task: CoS
+            \node[task] (cos) at (\colB, -3.3)
+                {Funktionale Anforde-\\rungen \& CoS\\ableiten};
+
+            % Task: Business Case
+            \node[task] (bc) at (\colB, -6.0)
+                {Business Case \&\\Wirtschaftlichkeit\\erstellen};
+
+            % Task: Estimated Cost
+            \node[task] (ec) at (\colB, -8.7)
+                {Estimated Cost (EC)\\ermitteln\\[-1pt]{\footnotesize\itshape(Marktprognose)}};
+
+            % ===== FLÜSSE: Bauherr =====
+            \draw[flow] (start) -- (ziele);
+            \draw[flow] (ziele) -- (ac);
+            \draw[flow] (ac) -- (gap);
+
+            % Go → Phase 1
+            \draw[flow] (gap) -- (phase1)
+                node[midway, right=3pt, font=\sffamily\footnotesize\bfseries, text=black!80] {Go};
+
+            % No-Go: Abzweigpunkt (ohne Pfeilspitze — geht in die zwei Äste über)
+            \coordinate (nogosplit) at ($(gap.west)+(-1.5,0)$);
+            \draw[line width=1pt, black!55] (gap.west) -- (nogosplit)
+                node[midway, above, font=\sffamily\footnotesize\bfseries, text=black!80] {No-Go};
+
+            % Durchgehender vertikaler No-Go-Strang am Abzweigpunkt
+            % (Revision hoch + Abbruch runter teilen sich dieselbe Achse)
+            \draw[flow] (nogosplit) |- (ziele.west);
+            % Label oben am senkrechten Strang, auf Höhe der Ziele-Box
+            \node[font=\sffamily\footnotesize, text=black!75, align=center, anchor=south]
+                at ($(nogosplit |- ziele.west)+(0.2,0.2)$) {Revision /\\Iteration};
+
+            % Abbruch: runter zum End-Event (gleiche Achse wie nogosplit)
+            \node[endev] (abbruch) at ($(nogosplit)+(0,-2.6)$) {};
+            \node[anchor=north, font=\sffamily\footnotesize, text=black!70, align=center]
+                at ([yshift=-0.12cm]abbruch.south) {Projekt-\\abbruch};
+            \draw[flow] (nogosplit) -- (abbruch);
+
+            % ===== FLÜSSE: Berater =====
+            \draw[flow] (cos) -- (bc);
+            \draw[flow] (bc) -- (ec);
+
+            % ===== MESSAGE FLOWS (cross-lane) =====
+            % Ziele → CoS
+            \draw[msg] (ziele.east) -- (cos.west);
+            % EC → Gap (über rechten Knick)
+            \draw[msg] (ec.south) |- (gap.east);
+
+            \end{tikzpicture}%
+            }
+            \vspace{0.3cm}
+        \end{minipage}%
+    }
+    \caption[Phase 0 - Projektinitiierung]{Phase 0: Projektdefinition und Wertbestimmung (Quelle: Eigene Darstellung).}
+    \label{fig:phase0}
+\end{figure}
