@@ -1,0 +1,136 @@
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \centering
+            \vspace{0.3cm}
+            \resizebox{\linewidth}{!}{%
+            \begin{tikzpicture}[x=1cm,y=1cm,
+                font=\sffamily,
+                task/.style={rectangle, rounded corners=3pt, draw=black!55, line width=1pt,
+                    fill=black!4, minimum width=3.2cm, minimum height=1.15cm,
+                    align=center, text=black!85, font=\sffamily\small},
+                startev/.style={circle, draw=black!55, line width=1pt, fill=white,
+                    minimum size=0.55cm, inner sep=0pt},
+                endev/.style={circle, draw=black!55, line width=2.2pt, fill=white,
+                    minimum size=0.55cm, inner sep=0pt},
+                phasebox/.style={rectangle, rounded corners=3pt, draw=black!55, line width=1pt,
+                    fill=tu-green!22, minimum width=2.6cm, minimum height=0.85cm,
+                    align=center, font=\sffamily\small\bfseries},
+                flow/.style={-{Latex[length=2.2mm]}, line width=1pt, black!55},
+                msg/.style={-{Latex[length=2.2mm]}, line width=0.9pt, black!55, dashed},
+                lanelabel/.style={font=\sffamily\bfseries, text=white}
+            ]
+
+            \def\laneW{5.0}
+            \def\totalH{16.5}
+            \def\headerH{0.95}
+
+            \fill[tu-green!8]  (0,0) rectangle (\laneW, -\totalH);
+            \fill[tu-green!14] (\laneW,0) rectangle (2*\laneW, -\totalH);
+            \fill[tu-green!8]  (2*\laneW,0) rectangle (3*\laneW, -\totalH);
+
+            \fill[tu-green] (0,0) rectangle (3*\laneW, -\headerH);
+            \node[lanelabel] at (0.5*\laneW, -0.5*\headerH) {Bauherr};
+            \node[lanelabel] at (1.5*\laneW, -0.5*\headerH) {Kernteam};
+            \node[lanelabel] at (2.5*\laneW, -0.5*\headerH) {Cluster-Teams};
+
+            \draw[white, line width=1.5pt] (\laneW,-\headerH) -- (\laneW,-\totalH);
+            \draw[white, line width=1.5pt] (2*\laneW,-\headerH) -- (2*\laneW,-\totalH);
+
+            \def\colA{2.5}
+            \def\colB{7.5}
+            \def\colC{12.5}
+
+            % ===== START (Kernteam) =====
+            \node[startev] (start) at (\colB,-2.0) {};
+            \node[anchor=south, font=\sffamily\footnotesize\bfseries, text=black!75]
+                at ([yshift=0.08cm]start.north) {Release for Construction};
+
+            % ===== ZEILE 2: Bauausführung (Cluster) =====
+            \node[task] (bau) at (\colC,-3.5)
+                {Bauausführung};
+
+            % ===== ZEILE 3: Cost Monitoring + Gewinnsicherung (gleiche Höhe) =====
+            \node[task] (monitor) at (\colB,-5.8)
+                {Cost Monitoring\\(Soll-Ist-Vergleich\\gegen TC)};
+
+            \node[task] (lean) at (\colC,-5.8)
+                {Gewinnsicherung\\(Lean /\\Taktplanung)};
+
+            % ===== ZEILE 4: Abnahme + Endkostenabgleich + Fertigstellung (gleiche Höhe) =====
+            \node[task] (abnahme) at (\colA,-8.8)
+                {Abnahme};
+
+            \node[task] (endkosten) at (\colB,-8.8)
+                {Endkosten-\\abgleich\\TC vs. Ist-Kosten};
+
+            \node[task] (fertig) at (\colC,-8.8)
+                {Fertigstellung\\Bauwerk};
+
+            % ===== ZEILE 5: Pain/Gain (Bauherr) =====
+            \node[task] (paingain) at (\colA,-11.3)
+                {Pain/Gain-Share\\Abrechnung};
+
+            % ===== ZEILE 6: Lessons + Phase 0 Feedback =====
+            \node[task] (lessons) at (\colA,-13.5)
+                {Lessons Learned\\\& Benchmarks};
+
+            \node[phasebox] (feedback) at (\colB,-13.5)
+                {Phase 0\\(Benchmarks)};
+
+            % ===== PROJEKTENDE =====
+            \node[endev] (ende) at (\colA,-15.5) {};
+            \node[anchor=north, font=\sffamily\footnotesize\bfseries, text=black!75]
+                at ([yshift=-0.08cm]ende.south) {Projektende};
+
+            % ===== FLÜSSE =====
+            % Start → Bau
+            \draw[msg] (start.east) -| (bau.north);
+
+            % Start → Monitor (Kernteam vertikal)
+            \draw[flow] (start) -- (monitor);
+
+            % Bau → Monitor: links bis Lücke, dann runter bis Verschmelzung mit Lean→Monitor
+            \coordinate (bauleft) at (10.2, -3.5);
+            \coordinate (baudown) at (10.2, -5.8);
+            \draw[line width=0.9pt, black!55, dashed] (bau.west) -- (bauleft) -- (baudown);
+
+            % Bau → Lean (Cluster vertikal)
+            \draw[flow] (bau) -- (lean);
+
+            % Lean → Monitor (gemeinsamer Input, horizontal gleiche Höhe)
+            \draw[msg] (lean.west) -- (monitor.east);
+
+            % Lean → Fertig (Cluster vertikal)
+            \draw[flow] (lean) -- (fertig);
+
+            % Monitor → Endkosten (Kernteam vertikal)
+            \draw[flow] (monitor) -- (endkosten);
+
+            % Fertig → Endkosten (horizontal)
+            \draw[msg] (fertig.west) -- (endkosten.east);
+
+            % Endkosten → Abnahme (horizontal)
+            \draw[msg] (endkosten.west) -- (abnahme.east);
+
+            % Abnahme → Pain/Gain (Bauherr vertikal)
+            \draw[flow] (abnahme) -- (paingain);
+
+            % Pain/Gain → Lessons (Bauherr vertikal)
+            \draw[flow] (paingain) -- (lessons);
+
+            % Lessons → Phase 0 Feedback (horizontal)
+            \draw[msg] (lessons.east) -- (feedback.west);
+
+            % Lessons → Ende (Bauherr vertikal)
+            \draw[flow] (lessons) -- (ende);
+
+            \end{tikzpicture}%
+            }
+            \vspace{0.3cm}
+        \end{minipage}%
+    }
+    \caption[Phase 3 - Realisierung]{Phase 3: Realisierung und Abschluss -- Project Delivery (Quelle: Eigene Darstellung).}
+    \label{fig:phase3}
+\end{figure}
