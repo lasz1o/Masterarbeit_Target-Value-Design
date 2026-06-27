@@ -1,0 +1,130 @@
+% ============================================================
+% Phase 2: Wertorientierte Planung (Design to Targets) — TikZ Swimlane
+% EINBINDUNG: \input{05_figures/Phase_2_v3.tex}
+% Benötigt: \usepackage{graphicx} und
+%   \usetikzlibrary{shapes.geometric, arrows.meta, calc, positioning}
+% Nutzt ausschließlich tu-green aus settings.tex + xcolor-Shades.
+% ============================================================
+
+\begin{figure}[htbp]
+    \centering
+    \fcolorbox{gray!50}{white}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \centering
+            \vspace{0.3cm}
+            \resizebox{\linewidth}{!}{%
+            \begin{tikzpicture}[x=1cm,y=1cm,
+                font=\sffamily,
+                task/.style={rectangle, rounded corners=3pt, draw=black!55, line width=1pt,
+                    fill=black!4, minimum width=3.2cm, minimum height=1.15cm,
+                    align=center, text=black!85, font=\sffamily\small},
+                startev/.style={circle, draw=black!55, line width=1pt, fill=white,
+                    minimum size=0.55cm, inner sep=0pt},
+                gw/.style={diamond, draw=black!55, line width=1pt, fill=black!4,
+                    aspect=1.5, inner sep=1pt, align=center, font=\sffamily\footnotesize},
+                phasebox/.style={rectangle, rounded corners=3pt, draw=black!55, line width=1pt,
+                    fill=tu-green!22, minimum width=2.4cm, minimum height=0.85cm,
+                    align=center, font=\sffamily\small\bfseries},
+                flow/.style={-{Latex[length=2.2mm]}, line width=1pt, black!55},
+                msg/.style={-{Latex[length=2.2mm]}, line width=0.9pt, black!55, dashed},
+                lanelabel/.style={font=\sffamily\bfseries, text=white}
+            ]
+
+            \def\laneW{5.0}
+            \def\totalH{17.8}
+            \def\headerH{0.95}
+
+            % ===== Lane-Hintergründe =====
+            \fill[tu-green!8]  (0,0) rectangle (\laneW, -\totalH);
+            \fill[tu-green!14] (\laneW,0) rectangle (2*\laneW, -\totalH);
+            \fill[tu-green!8]  (2*\laneW,0) rectangle (3*\laneW, -\totalH);
+
+            % ===== Header =====
+            \fill[tu-green] (0,0) rectangle (3*\laneW, -\headerH);
+            \node[lanelabel] at (0.5*\laneW, -0.5*\headerH) {Bauherr};
+            \node[lanelabel] at (1.5*\laneW, -0.5*\headerH) {Kernteam};
+            \node[lanelabel] at (2.5*\laneW, -0.5*\headerH) {Cluster-Teams};
+
+            \draw[white, line width=1.5pt] (\laneW,-\headerH) -- (\laneW,-\totalH);
+            \draw[white, line width=1.5pt] (2*\laneW,-\headerH) -- (2*\laneW,-\totalH);
+
+            \def\colA{2.5}
+            \def\colB{7.5}
+            \def\colC{12.5}
+
+            % ===== START (Kernteam) =====
+            \node[startev] (start) at (\colB,-1.9) {};
+            \node[anchor=south, font=\sffamily\footnotesize\bfseries, text=black!75]
+                at ([yshift=0.08cm]start.north) {Target Cost fixiert};
+
+            % ===== ZEILE 1: parallel (gleiche Höhe) =====
+            \node[task] (conting) at (\colA,-4.3)
+                {Contingency\\Management\\(Risikopuffer)};
+
+            \node[task] (alloc) at (\colB,-4.3)
+                {Target Cost Allocation\\(Top-Down /\\Bottom-Up)};
+
+            \node[task] (sbd) at (\colC,-4.3)
+                {Set-Based Design\\(parallele Varianten,\\CBA)};
+
+            % ===== ZEILE 2: Pricing (Cluster) =====
+            \node[task] (pricing) at (\colC,-7.0)
+                {Pricing /\\Continuous\\Estimating};
+
+            % ===== ZEILE 3: Big-Room-Gate (Kernteam) =====
+            \node[gw] (bigroom) at (\colB,-9.9)
+                {Big-Room-Gate:\\Budget\\eingehalten?};
+
+            % ===== ZEILE 4: Definitive Design (Kernteam) =====
+            \node[task] (defdesign) at (\colB,-13.0)
+                {Definitive Design\\(Production Ready)};
+
+            % ===== ZEILE 5: Release-Gate (Bauherr) =====
+            \node[gw] (release) at (\colA,-14.7)
+                {Release for\\Construction?};
+
+            \node[phasebox] (phase3) at (\colA,-17.0) {Phase 3};
+
+            % ===== FLÜSSE =====
+            % Start -> Allocation (innerhalb Kernteam)
+            \draw[flow] (start) -- (alloc);
+
+            % Allocation als Verteil-Hub: links Contingency (Bauherr), rechts SBD (Cluster)
+            \draw[msg] (alloc.west) -- (conting.east);
+            \draw[msg] (alloc.east) -- (sbd.west);
+
+            % Sprint-Loop: SBD -> Pricing (innerhalb Cluster)
+            \draw[flow] (sbd) -- (pricing);
+
+            % Pricing -> Big-Room-Gate (cross-lane, orthogonal: links, dann runter)
+            \draw[msg] (pricing.west) -- (\colB,-7.0) -- (bigroom.north);
+
+            % Big-Room-Gate Ja -> Definitive Design (innerhalb Kernteam)
+            \draw[flow] (bigroom) -- (defdesign)
+                node[pos=0.45, right=3pt, font=\sffamily\footnotesize\bfseries, text=black!80] {Ja};
+
+            % ===== NEIN-LOOP: Big-Room-Gate -> zurück zu SBD =====
+            \coordinate (rightmark) at (14.3, 0);
+            \coordinate (neinA) at (rightmark |- bigroom);
+            \coordinate (neinB) at (rightmark |- sbd);
+            \draw[msg] (bigroom.east) -- (neinA) -- (neinB) -- (sbd.east);
+            \node[font=\sffamily\footnotesize\bfseries, text=black!80, anchor=south, align=center]
+                at ($(bigroom.east)!0.5!(neinA)+(0,0.06)$) {Nein};
+            \node[font=\sffamily\footnotesize, text=black!75, align=center, anchor=east]
+                at (14.15,-8.7) {Rework /\\Iteration};
+
+            % Definitive Design -> Release (cross-lane Kernteam -> Bauherr)
+            \draw[msg] (defdesign.south) -- (\colB,-14.7) -- (release.east);
+
+            % Release Go -> Phase 3 (innerhalb Bauherr)
+            \draw[flow] (release) -- (phase3)
+                node[pos=0.5, left=3pt, font=\sffamily\footnotesize\bfseries, text=black!80] {Go};
+
+            \end{tikzpicture}%
+            }
+            \vspace{0.3cm}
+        \end{minipage}%
+    }
+    \caption[Phase 2 - Wertorientierte Planung]{Phase 2: Wertorientierte Planung -- Design to Targets (Quelle: Eigene Darstellung).}
+    \label{fig:phase2}
+\end{figure}
