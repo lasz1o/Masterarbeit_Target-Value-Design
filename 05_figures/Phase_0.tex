@@ -1,18 +1,13 @@
 % ============================================================
 % Phase 0: Projektdefinition — TikZ Swimlane-Diagramm
 % ============================================================
-% EINBINDUNG: \input{05_figures/Phase_0.tex}
-% Nutzt tu-green + xcolor-Shades. Keine neuen Farben nötig.
-% Benötigte Libraries (in packages.tex, sind teils schon da):
-%   \usetikzlibrary{shapes.geometric, arrows.meta, calc, positioning}
-% ============================================================
 
 \begin{figure}[htbp]
     \centering
     \fcolorbox{gray!50}{white}{%
         \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
             \centering
-            \vspace{0.3cm}
+            \vspace{0cm}
             \resizebox{\linewidth}{!}{%
             \begin{tikzpicture}[x=1cm,y=1cm,
                 font=\sffamily,
@@ -52,7 +47,7 @@
 
             % ===== Lane-Geometrie =====
             \def\laneW{7.0}        % Lane-Breite
-            \def\totalH{15.4}      % Gesamthöhe
+            \def\totalH{15}      % Gesamthöhe
             \def\headerH{0.95}     % Header-Höhe
 
             % Lane-Hintergründe
@@ -146,7 +141,7 @@
 
             \end{tikzpicture}%
             }
-            \vspace{0.3cm}
+            \vspace{-0.5cm}
         \end{minipage}%
     }
     \caption[Phase 0 - Projektinitiierung]{Phase 0: Projektdefinition und Wertbestimmung (Quelle: Eigene Darstellung).}

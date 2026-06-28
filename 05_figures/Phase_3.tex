@@ -3,7 +3,7 @@
     \fcolorbox{gray!50}{white}{%
         \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
             \centering
-            \vspace{0.3cm}
+            \vspace{0cm}
             \resizebox{\linewidth}{!}{%
             \begin{tikzpicture}[x=1cm,y=1cm,
                 font=\sffamily,
@@ -23,7 +23,7 @@
             ]
 
             \def\laneW{5.0}
-            \def\totalH{16.5}
+            \def\totalH{15.7}
             \def\headerH{0.95}
 
             \fill[tu-green!8]  (0,0) rectangle (\laneW, -\totalH);
@@ -59,28 +59,28 @@
                 {Gewinnsicherung\\(Lean /\\Taktplanung)};
 
             % ===== ZEILE 4: Abnahme + Endkostenabgleich + Fertigstellung (gleiche Höhe) =====
-            \node[task] (abnahme) at (\colA,-8.8)
+            \node[task] (abnahme) at (\colA,-8.2)
                 {Abnahme};
 
-            \node[task] (endkosten) at (\colB,-8.8)
+            \node[task] (endkosten) at (\colB,-8.2)
                 {Endkosten-\\abgleich\\TC vs. Ist-Kosten};
 
-            \node[task] (fertig) at (\colC,-8.8)
+            \node[task] (fertig) at (\colC,-8.2)
                 {Fertigstellung\\Bauwerk};
 
             % ===== ZEILE 5: Pain/Gain (Bauherr) =====
-            \node[task] (paingain) at (\colA,-11.3)
+            \node[task] (paingain) at (\colA,-10.4)
                 {Pain/Gain-Share\\Abrechnung};
 
             % ===== ZEILE 6: Lessons + Phase 0 Feedback =====
-            \node[task] (lessons) at (\colA,-13.5)
+            \node[task] (lessons) at (\colA,-12.6)
                 {Lessons Learned\\\& Benchmarks};
 
-            \node[phasebox] (feedback) at (\colB,-13.5)
+            \node[phasebox] (feedback) at (\colB,-12.6)
                 {Phase 0\\(Benchmarks)};
 
             % ===== PROJEKTENDE =====
-            \node[endev] (ende) at (\colA,-15.5) {};
+            \node[endev] (ende) at (\colA,-14.5) {};
             \node[anchor=north, font=\sffamily\footnotesize\bfseries, text=black!75]
                 at ([yshift=-0.08cm]ende.south) {Projektende};
 
@@ -128,7 +128,7 @@
 
             \end{tikzpicture}%
             }
-            \vspace{0.3cm}
+            \vspace{-0.5cm}
         \end{minipage}%
     }
     \caption[Phase 3 - Realisierung]{Phase 3: Realisierung und Abschluss -- Project Delivery (Quelle: Eigene Darstellung).}

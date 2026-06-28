@@ -76,7 +76,7 @@ Der Abschluss der Phase 0 bildet das erste entscheidende \enquote{Gate} im TVD-P
 Es ist hervorzuheben,Ídass eine moderate Lücke (Szenario B) im TVD nicht als Planungsfehler, sondern als strategischer Treiber verstanden wird. Diese Differenz fungiert als \enquote{Stretch Goal} (ehrgeiziges Ziel). Sie erzeugt einen konstruktiven Innovationsdruck, der das spätere Planungsteam dazu zwingt, verlassene Pfade des \enquote{Business as Usual} zu verlassen und proaktiv nach effizienteren Lösungen zu suchen. Ohne dieses Spannungsfeld tendieren Projekte dazu, lediglich bestehende Standards zu reproduzieren.\autocite[Vgl.][S. 108 f]{ballard_target_2025}
 Zudem bildet dieses \enquote{Gap} die ökonomische Basis für das in Phase 1 und 2 folgende Inzentivierungsmodell (\textit{Pain/Gain-Share}). Nur wenn eine Lücke existiert, die durch Optimierung geschlossen und unterboten werden kann, entsteht der finanzielle Spielraum (\enquote{Pot}), aus dem spätere Boni für das Planungsteam ausgeschüttet werden können.\footnote{Vgl.  \ref{sec:2.2.2}.siehe Pain/Gain-Share Mechanismus}
 
-Erst wenn diese prinzipielle Machbarkeit bestätigt ist, wird das Projekt freigegeben und die Rekrutierung des integrierten Teams eingeleitet.
+Erst wenn diese prinzipielle Machbarkeit bestätigt ist, wird das Projekt freigegeben und die Rekrutierung des integrierten Teams eingeleitet. Der idealtypische Ablauf der Phase 0 ist in \cref{fig:phase0} zusammenfassend dargestellt.
 
 \input{05_figures/Phase_0.tex}
 
@@ -138,6 +138,8 @@ Den Abschluss dieses Initialisierungsprozesses bildet die Überführung der subj
 
 Auf Basis der definierten Wertziele entwickeln die Cluster das sogenannte \textbf{Basis of Design} (BoD). Im Gegensatz zum klassischen Vorentwurf, der oft bereits spezifische architektonische Lösungen fixiert, definiert das BoD primär funktionale Qualitäten und Systementscheidungen, die notwendig sind, um die \textit{Conditions of Satisfaction} zu erfüllen. Es dient als technischer Nachweis, dass die Anforderungen des Kunden innerhalb des Budgets realisierbar sind, ohne bereits eine detaillierte Planung vorwegzunehmen \autocite[Vgl.][S. 25 f]{hill_target_2017}\,
 
+\clearpage
+
 Methodisch folgt dieser Prozess einer streng iterativen Logik. Anstatt Planung und Kalkulation sequenziell zu trennen, arbeiten Architekten und Kalkulatoren in kurzen Zyklen zusammen: Lösungsansätze werden skizziert und unmittelbar einer kostentechnischen Bewertung unterzogen. Dies ermöglicht ein sofortiges Feedback (\textit{Rapid Estimating}), wodurch Fehlentwicklungen frühzeitig erkannt und korrigiert werden können, noch bevor sie sich im Entwurf verfestigen.\autocite[Vgl.][S.]{ballard_target_2012} % TODO: Seitenzahl ergänzen — Ballard 2012
 
 Als zentrales Steuerungsinstrument dient hierbei das \textbf{Cost Modeling} (Kostenmodellierung). Da in dieser frühen Phase oft noch keine detaillierten Mengen für eine klassische Kalkulation vorliegen, werden parametrische Kostenmodelle genutzt. Diese basieren auf historischen Daten und identifizieren die wesentlichen Kostentreiber (\textit{Cost Drivers}) des Entwurfs. Das Ziel ist es, die Kostenentwicklung proaktiv zu prognostizieren, anstatt sie nur reaktiv zu erfassen. \autocite[Vgl.] [S.5]{ballard_target_2025}
@@ -151,7 +153,9 @@ Dieser Prozess mündet in einem kontinuierlichen \textbf{Validierungs-Check}. Da
 
 Die Ergebnisse der Validierungsphase werden abschließend im \textbf{Validierungsbericht} zusammengeführt. Dieses Dokument dient dem Bauherrn als fundierte Entscheidungsgrundlage: Es weist nach, dass das entwickelte \textit{Basis of Design} die funktionalen Anforderungen und \textit{Conditions of Satisfaction} erfüllt und innerhalb des gesteckten Kostenrahmens realisierbar ist. Auf dieser Basis trifft der Bauherr die formale \textbf{Budgetfreigabe} (\textit{Go / No-Go Decision}). Nur bei einem positiven Nachweis der Machbarkeit erfolgt der Startschuss für die nächste Projektphase, andernfalls wird das Projekt abgebrochen oder neu definiert, um Fehlinvestitionen (\textit{Sunk Costs}) zu vermeiden. \autocite[Vgl.][ S. 15]{ballard_target_2025}
 
-Mit der Projektfreigabe erfolgt die formale Fixierung der Ziele im \textbf{Target Value Statement}. Ein zentraler Aspekt ist dabei die Festlegung der \textbf{Basiszielkosten} (\textit{Target Cost}). Diese leiten sich aus den validierten Marktkosten (\textit{Estimated Cost}) ab, werden jedoch im TVD-Verfahren typischerweise unterhalb dieser Prognose angesetzt. Diese Differenz dient als bewusster Puffer gegen Unvorhergesehenes und schafft einen Innovationsdruck für das Team, die Kosten durch intelligentes Design weiter zu senken \autocite[Vgl.][ S.10]{ballard_target_2025}
+\clearpage
+
+Mit der Projektfreigabe erfolgt die formale Fixierung der Ziele im \textbf{Target Value Statement}. Ein zentraler Aspekt ist dabei die Festlegung der \textbf{Basiszielkosten} (\textit{Target Cost}). Diese leiten sich aus den validierten Marktkosten (\textit{Estimated Cost}) ab, werden jedoch im TVD-Verfahren typischerweise unterhalb dieser Prognose angesetzt. Diese Differenz dient als bewusster Puffer gegen Unvorhergesehenes und schafft einen Innovationsdruck für das Team, die Kosten durch intelligentes Design weiter zu senken. \autocite[Vgl.][ S.10]{ballard_target_2025} Der idealtypische Ablauf der Phase 1 ist in \cref{fig:phase1} zusammenfassend dargestellt.
 
 Zur Absicherung dieser Verpflichtung wird mit der Festlegung der Zielkosten auch der kommerzielle \textbf{Pain/Gain-Share-Mechanismus} aktiviert. Unterschreitet das Team durch Optimierungen in der Folgephase die Basiszielkosten, wird die Einsparung zwischen Bauherr und Planungsteam geteilt (\textit{Gain}). Überschreiten die Kosten hingegen den Zielwert, haftet das Team bis zu einer definierten Grenze mit seinem Risikopool (\textit{Pain}). Diese vertragliche Kopplung von Projekterfolg und Unternehmensgewinn stellt sicher, dass die Einhaltung der Zielkosten für alle Beteiligten nicht nur eine vertragliche Pflicht, sondern ein ökonomisches Eigeninteresse darstellt. \autocite[Vgl.][S.14]{ballard_target_2012}\,\autocite[Vgl.][S.30]{ballard_target_2025}
 
@@ -266,7 +270,7 @@ Muss zwischen technisch gleichwertigen Varianten entschieden werden, kommt die M
 Der Abschluss der Phase 2 ist erreicht, wenn das \enquote{Definitive Design} vorliegt. Dieser Meilenstein unterscheidet sich qualitativ von einer klassischen Ausführungsplanung.
 
 Das Design ist zu diesem Zeitpunkt nicht nur zeichnerisch dargestellt, sondern bereits \enquote{produktionsreif} (Production Ready). Durch die Mitwirkung der \enquote{Makers} sind Fertigungsdetails, Montageabläufe und Materialverfügbarkeiten bereits geklärt.
-Das entscheidende Kriterium für den Übergang in Phase 3 ist jedoch die Preissicherheit: Das Team gibt ein verbindliches Commitment ab, dass das Design innerhalb der Target Cost realisierbar ist.\autocite[Vgl.][S. 137]{ballard_target_2025}
+Das entscheidende Kriterium für den Übergang in Phase 3 ist jedoch die Preissicherheit: Das Team gibt ein verbindliches Commitment ab, dass das Design innerhalb der Target Cost realisierbar ist.\autocite[Vgl.][S. 137]{ballard_target_2025} Der idealtypische Ablauf der Phase 2 mit dem zyklischen Steuerungsloop ist in \cref{fig:phase2} zusammenfassend dargestellt.
 
 \textbf{Das finale Gate (Release for Construction):}
 Erst wenn die Prognosekosten (Expected Cost) sicher unterhalb der Allowable Cost liegen, wird das Projekt zur physischen Realisierung freigegeben.\autocite[Vgl.][S.129]{hill_target_2017}
@@ -331,13 +335,15 @@ Die Art der Kostensteuerung ändert sich fundamental. Während in Phase 2 noch a
 
 \subsection{Abschluss und Lernen}
 \label{sec:4.5.3}
-Das TVD-Modell endet nicht mit der Schlüsselübergabe, sondern mit einer formalen Feedback-Schleife. Die tatsächlichen Endkosten werden final mit den Target Costs abgeglichen.\autocite[Vgl.][S.143]{hill_target_2017}
+Das TVD-Modell endet nicht mit der Schlüsselübergabe, sondern mit einer formalen Feedback-Schleife. Die tatsächlichen Endkosten werden final mit den Target Costs abgeglichen.\autocite[Vgl.][S.143]{hill_target_2017} Dieser Abschluss umfasst zwei wesentliche Aspekte:
 \begin{itemize}
     \item \textbf{Incentivierung:} Eventuelle Einsparungen (Underrun) werden gemäß dem vorab definierten Schlüssel zwischen Bauherr und Risikopool ausgeschüttet.
     \item \textbf{Wissenssicherung:} Im besten Fall werden Abweichungen (sowohl positive als auch negative) analysiert, um die Kennzahlen für zukünftige Projekte (\enquote{Benchmarks} für Phase 0) zu schärfen.
 \end{itemize}
-
+Der idealtypische Ablauf der Phase 3 ist in \cref{fig:phase3} zusammenfassend dargestellt.
 \input{05_figures/Phase_3.tex}
+\FloatBarrier
+
 
 \subsection{Hürden bei Abschluss und langfristiger Wertgenerierung}
 \label{sec:4.5.4}
