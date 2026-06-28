@@ -27,7 +27,7 @@ Dieser methodische Ablauf und die Zuordnung der einzelnen Arbeitsschritte zu den
   \fcolorbox{gray!50}{white}{%
     \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
       \centering
-      \vspace{0.4cm}
+      \vspace{0 cm}
       \begin{tikzpicture}
         \tikzset{
           phase/.style={rectangle, rounded corners, draw=black, fill=gray!10,
@@ -42,19 +42,19 @@ Dieser methodische Ablauf und die Zuordnung der einzelnen Arbeitsschritte zu den
         };
 
         % PHASE 2: Datengrundlage (angepasst auf deine neuen Kap 3.2/3.3)
-        \node[phase, below=0.8cm of phase1] (phase2) {
+        \node[phase, below=0.7cm of phase1] (phase2) {
           \textbf{Phase 2: Datenerhebung \& Analyse (Kap. 3.2 \& 3.3)}\\
           \small Identifikation von Leitquellen, Strukturierende Inhaltsanalyse
         };
 
         % PHASE 3: Modell (Das ist das Ergebnis in Kap 4)
-        \node[phase, below=0.8cm of phase2] (phase3) {
+        \node[phase, below=0.7cm of phase2] (phase3) {
           \textbf{Phase 3: Modellsynthese (Kap. 4)}\\
           \small Entwicklung des idealtypischen TVD-Prozesses (Phasen 0--3)
         };
 
         % PHASE 4: Transfer (Das ist die Diskussion in Kap 5)
-        \node[phase, below=0.8cm of phase3] (phase4) {
+        \node[phase, below=0.7cm of phase3] (phase4) {
           \textbf{Phase 4: Kontextanalyse \& Transfer (Kap. 5)}\\
           \small Fit-Gap-Analyse (VOB/HOAI), Diskussion der Dilemmata
         };
@@ -64,10 +64,10 @@ Dieser methodische Ablauf und die Zuordnung der einzelnen Arbeitsschritte zu den
         \draw[pfeil] (phase3) -- (phase4);
 
       \end{tikzpicture}
-      \vspace{0.3cm}
+      \vspace{0cm}
     \end{minipage}%
   }
-  \caption{Schematische Darstellung des vierphasigen Forschungsprozesses (Quelle: Eigene Darstellung)}
+  \caption{Schematische Darstellung des Forschungsprozesses (Quelle: Eigene Darstellung)}
   \label{fig:forschungsprozess_tikz}
 \end{figure}
 \FloatBarrier
