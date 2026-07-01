@@ -3,6 +3,7 @@
 a4paper,
 oneside,
 ngerman,
+listof=totoc,
 ]{scrbook}
 
 % === KONFIGURATION LADEN (richtige Reihenfolge!) ===
@@ -20,7 +21,6 @@ ngerman,
 % === VORSPANN (römische Seitenzahlen) ===
 \frontmatter
 \tableofcontents
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
 \listoffigures
 \thispagestyle{plain}
 \cleardoublepage
@@ -51,8 +51,7 @@ ngerman,
 \renewcommand{\thepage}{\Roman{page}}
 
 % Literaturverzeichnis (wird ins Inhaltsverzeichnis aufgenommen)
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\printbibliography[title=Literaturverzeichnis]
+\printbibliography[title=Literaturverzeichnis, heading=bibintoc]
 
 
 
@@ -60,7 +59,7 @@ ngerman,
 
 % Eidesstattliche Erklärung als PDF einfügen
 % Die Überschrift ist bereits im PDF enthalten
-\addcontentsline{toc}{chapter}{Eidesstattliche Erklärung}
+\addcontentsline{toc}{chapter}{Eidesstattliche Versicherung}
 \includepdf[pages=-, pagecommand={\thispagestyle{plain}}]{03_backmatter/eidesstattliche_erklaerung_signed.pdf}
 
 
